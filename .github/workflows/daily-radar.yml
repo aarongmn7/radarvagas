@@ -2,8 +2,8 @@ name: Radar Diário de Vagas Remotas
 
 on:
   schedule:
-    # Roda diariamente às 09:00 UTC (06:00 BRT)
-    - cron: '0 9 * * *'
+    # Roda diariamente às 12:00 UTC (09:00 BRT)
+    - cron: '0 12 * * *'
   workflow_dispatch: # Permite disparar manualmente pelo painel do GitHub
 
 jobs:

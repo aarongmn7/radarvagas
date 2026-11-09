@@ -366,7 +366,7 @@ jobs.sort((a, b) => b.score - a.score);
 
   const payload = {
     lastUpdated: radarSweepIso,
-    nextEditionSchedule: '06:00 BRT (09:00 UTC)',
+    nextEditionSchedule: '09:00 BRT (12:00 UTC)',
     totalJobs: jobs.length,
     editorial,
     jobs: jobs

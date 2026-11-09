@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const jrCount = jobs.filter(j => j.isStudentFriendly).length;
 
     if (statTotal) statTotal.textContent = jobs.length;
-    if (statBra) statBra.textContent = saCount;
+    if (statBra) statBra.textContent = braCount;
     if (statJr) statJr.textContent = jrCount;
 
     const setChip = (id, val) => {
@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Relógio do Jornal Diário de Vagas (Varredura Real + Próxima Edição)
+  // 4. Relógio do Jornal Diário de Vagas (Varredura Real + Próxima Edição às 09:00 BRT / 12:00 UTC)
   function startLiveTimer(isoDateStr) {
     const sweepTime = new Date(isoDateStr).getTime();
     const cycleMs = 24 * 60 * 60 * 1000;
@@ -271,8 +271,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const d = new Date(sweepTime);
     const pad = (n) => String(n).padStart(2, '0');
-    const formattedDate = `${pad(d.getDate())}/${pad(d.getMonth() + 1)}/${d.getFullYear()}`;
-    const formattedHour = `${pad(d.getHours())}:${pad(d.getMinutes())} BRT`;
+
+    // Formata sempre no fuso de Brasília (America/Sao_Paulo = BRT / UTC-3) para evitar divergência com fusos locais (ex: MT UTC-4)
+    const brtFormatter = new Intl.DateTimeFormat('pt-BR', {
+      timeZone: 'America/Sao_Paulo',
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false
+    });
+    const parts = brtFormatter.formatToParts(d);
+    const getPart = (type) => (parts.find(p => p.type === type) || {}).value || '00';
+    const formattedDate = `${getPart('day')}/${getPart('month')}/${getPart('year')}`;
+    const formattedHour = `${getPart('hour')}:${getPart('minute')} BRT`;
 
     if (exactSyncDate) {
       exactSyncDate.textContent = `REPO SYNC: ${formattedDate}`;
@@ -292,12 +305,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const elM = Math.floor((elapsedSec % 3600) / 60);
       const elS = elapsedSec % 60;
 
-      // Calcula a próxima edição diária:
-      // Se o levantamento foi feito há menos de 24h, a próxima edição oficial é 24h após o levantamento (ou às 06:00 BRT da manhã seguinte)
-      let nextEdition = new Date(now);
-      nextEdition.setHours(6, 0, 0, 0);
+      // Calcula a próxima edição diária exatamente às 12:00 UTC (09:00 BRT / 08:00 AMT)
+      const nextEdition = new Date(now);
+      nextEdition.setUTCHours(12, 0, 0, 0);
       if (nextEdition.getTime() <= now) {
-        nextEdition.setDate(nextEdition.getDate() + 1);
+        nextEdition.setUTCDate(nextEdition.getUTCDate() + 1);
       }
       const nextTargetTime = nextEdition.getTime();
 
@@ -316,12 +328,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      // Relógio Direito: Contagem regressiva até a edição de amanhã às 06:00 BRT
+      // Relógio Direito: Contagem regressiva até a próxima edição às 09:00 BRT (12:00 UTC)
       if (heroNextUpdate) {
         heroNextUpdate.textContent = `${pad(remH)}h ${pad(remM)}m ${pad(remS)}s`;
       }
 
-      // Barra de progresso até a nova edição das 06:00
+      // Barra de progresso até a nova edição das 09:00 BRT
       if (syncProgressBar) {
         const pct = Math.min(100, Math.max(4, ((cycleMs - remainingMs) / cycleMs) * 100));
         syncProgressBar.style.width = `${pct.toFixed(1)}%`;

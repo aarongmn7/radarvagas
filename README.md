@@ -2,7 +2,7 @@
 
 Jornal diário automatizado e **Zero-Dependency** de oportunidades 100% remotas para estudantes de Ciência da Computação, desenvolvedores Júnior/Pleno, Analistas de Sistemas/QA e Engenheiros de IA.
 
-Atualizado automaticamente todos os dias às **06:00 BRT (09:00 UTC)** via GitHub Actions.
+Atualizado automaticamente todos os dias às **09:00 BRT (12:00 UTC)** via GitHub Actions.
 
 ---
 
