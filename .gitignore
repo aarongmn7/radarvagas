@@ -1,0 +1,10 @@
+# Variáveis de Ambiente Locais (Nunca comitar a chave da API!)
+.env
+.env.local
+.env.*.local
+
+# Dependências e Logs
+node_modules/
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,52 @@
+name: Radar Diário de Vagas Remotas
+
+on:
+  schedule:
+    # Roda diariamente às 09:00 UTC (06:00 BRT)
+    - cron: '0 9 * * *'
+  workflow_dispatch: # Permite disparar manualmente pelo painel do GitHub
+
+jobs:
+  update-radar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout do Repositório
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Executar Varredura do Job Radar (Zero-Loss)
+        run: |
+          if [ -f "scripts/job_radar.js" ]; then
+            node scripts/job_radar.js all all 24
+          elif [ -f "pessoal/projetos pessoais/radar-web/scripts/job_radar.js" ]; then
+            node "pessoal/projetos pessoais/radar-web/scripts/job_radar.js" all all 24
+          else
+            node .agents/skills/job-radar/scripts/job_radar.js all all 24
+          fi
+
+      - name: Atualizar Banco JSON do Site
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [ -f "scripts/build_jobs_data.js" ]; then
+            node scripts/build_jobs_data.js
+          elif [ -f "pessoal/projetos pessoais/radar-web/scripts/build_jobs_data.js" ]; then
+            node "pessoal/projetos pessoais/radar-web/scripts/build_jobs_data.js"
+          else
+            node pessoal/radar-web/scripts/build_jobs_data.js
+          fi
+
+      - name: Comitar e Publicar Atualizações
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action Radar Bot"
+          git add data/vagas_do_dia.md data/jobs.json 2>/dev/null || git add -A
+          git commit -m "chore(radar): atualização diária automática de vagas [skip ci]" || echo "Nenhuma alteração para comitar"
+          git push

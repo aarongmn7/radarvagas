@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aaron Nascimento — Boletim Diário de Vagas Remotas Tech</title>
+  <meta name="description" content="Jornal diário de oportunidades 100% remotas para estudantes de TI, desenvolvedores e analistas. Atualizado todos os dias às 06:00 BRT.">
+  <!-- OpenGraph / WhatsApp Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aaron Nascimento // Boletim Diário de Vagas Remotas Tech">
+  <meta property="og:description" content="Levantamento diário das vagas 100% remotas abertas nas últimas 24h (Brasil, EUA, Europa e Ásia) com filtro de Candidatura Simplificada e Estágio/Júnior.">
+  <meta property="og:image" content="assets/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- 1. HEADER OFICIAL LIMPO (Logo AN à Esquerda, Status & Controles à Direita) -->
+  <header class="header">
+    <!-- Esquerda: Logo Oficial AN -->
+    <div class="logo-container">
+      <a href="https://aaron.dev.br/" target="_blank" rel="noopener noreferrer" class="brand-link" title="Aaron Nascimento — Portfólio">
+        <img src="assets/logo.svg" alt="Aaron Nascimento Logo" class="logo-img" />
+        <div class="brand-text">
+          <span class="brand-name">AARON.DEV</span>
+          <span class="brand-sub">// JORNAL_DE_VAGAS</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Direita: Status do Repositório, Sequência Diária (Streak), Switch de Tema, LinkedIn e Portfólio -->
+    <div class="nav-controls">
+      <!-- Pilar 2: Retenção Sem Login (Streak Diária de Visitas) -->
+      <div class="streak-pill" id="streak-badge" title="Sua sequência diária acompanhando o Boletim de Vagas">
+        <span class="streak-fire">🔥</span>
+        <span id="streak-count">1d</span>
+        <span class="streak-label">SEQUÊNCIA</span>
+      </div>
+
+      <div class="status-pill" id="last-updated-badge" title="Última atualização publicada no repositório">
+        <span class="live-dot"></span>
+        <span id="timer-text">Sincronizando...</span>
+      </div>
+
+      <!-- Alavanca Deslizante de Tema (Idêntica ao Portfólio) -->
+      <label class="theme-switch-container" title="Alternar Tema Claro / Escuro">
+        <input type="checkbox" id="theme-checkbox" checked />
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+        <div class="theme-slider-ball"></div>
+      </label>
+
+      <a href="https://www.linkedin.com/in/aaron-nascimento-dev/" target="_blank" rel="noopener noreferrer" class="btn-contact">
+        LinkedIn <i class="fa-brands fa-linkedin-in" style="margin-left: 6px; font-size: 0.75rem;"></i>
+      </a>
+
+      <a href="https://aaron.dev.br/" target="_blank" rel="noopener noreferrer" class="btn-contact">
+        Portfólio <i class="fas fa-arrow-up-right-from-square" style="margin-left: 6px; font-size: 0.7rem;"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- 2. CONTAINER PRINCIPAL (Bento Box Layer 0 Sem Bordas Artificiais) -->
+  <main class="feed-container">
+
+    <!-- HERO SECTION ASSIMÉTRICO (Estilo Jornal Diário de Vagas / Portfólio) -->
+    <section class="hero-editorial">
+      <div class="hero-left">
+        <span class="section-label" id="edition-badge">// EDIÇÃO DO DIA • JORNAL DIÁRIO DE VAGAS REMOTAS</span>
+        <h1 class="hero-title">Boletim Diário de Oportunidades Remotas</h1>
+        <p class="hero-desc">
+          Levantamento diário automatizado das vagas abertas nas últimas 24h em 5 redes globais (LinkedIn Guest, Himalayas, Jobicy, Arbeitnow e Remotive). Uma nova edição é publicada todos os dias às <strong>06:00 BRT</strong>.
+        </p>
+
+        <!-- Pilar 1: Motor de Viralização da Edição Completa (WhatsApp / Grupos Universitários) -->
+        <div class="hero-cta-row">
+          <button type="button" id="share-edition-btn" class="btn-share-edition">
+            <i class="fa-brands fa-whatsapp"></i> Compartilhar Edição de Hoje
+          </button>
+          <button type="button" id="copy-edition-btn" class="btn-copy-edition" title="Copiar resumo e link da edição para colar no WhatsApp ou Discord">
+            <i class="fa-regular fa-copy"></i> Copiar Boletim para Grupo
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-right-stack">
+        <!-- PAINEL DE TELEMETRIA DA EDIÇÃO DO JORNAL (GRANDE E VISÍVEL) -->
+        <div class="sync-telemetry-card">
+          <div class="telemetry-header">
+            <span class="telemetry-badge">
+              <span class="live-dot"></span> LEVANTAMENTO OFICIAL DO DIA
+            </span>
+            <span class="telemetry-exact-date" id="exact-sync-date">EDIÇÃO: --/--/----</span>
+          </div>
+
+          <div class="telemetry-clocks">
+            <div class="clock-block">
+              <span class="clock-label">ÚLTIMA ATUALIZAÇÃO DO REPO</span>
+              <strong class="clock-value" id="hero-last-updated">--:--:--</strong>
+              <span class="clock-sub" id="hero-last-exact-sub">Último push sincronizado</span>
+            </div>
+
+            <div class="clock-divider"></div>
+
+            <div class="clock-block">
+              <span class="clock-label">PRÓXIMA EDIÇÃO DIÁRIA (06:00)</span>
+              <strong class="clock-value next-cycle" id="hero-next-update">--:--:--</strong>
+              <span class="clock-sub">Tempo até o novo levantamento</span>
+            </div>
+          </div>
+
+          <div class="telemetry-progress-track" title="Progresso até o fechamento da próxima edição diária às 06:00 BRT">
+            <div class="telemetry-progress-fill" id="sync-progress-bar" style="width: 5%;"></div>
+          </div>
+        </div>
+
+        <!-- MÉTRICAS SECUNDÁRIAS -->
+        <div class="hero-metrics-box">
+          <div class="metric-card">
+            <span class="metric-label">TOTAL MAPEADO</span>
+            <strong class="metric-value" id="stat-total">--</strong>
+            <span class="metric-sub">Últimas 24 horas</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">BRASIL & LATAM</span>
+            <strong class="metric-value" id="stat-bra">--</strong>
+            <span class="metric-sub">Contratação direta</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">ESTÁGIO & JÚNIOR</span>
+            <strong class="metric-value" id="stat-jr">--</strong>
+            <span class="metric-sub">Porta de entrada</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2.5 CAPA DO JORNAL: EDITORIAL DO DIA + TOP 3 VAGAS DE OURO (Pilar 3) -->
+    <section class="editorial-frontpage" id="editorial-section">
+      <div class="editorial-banner">
+        <div class="editorial-meta-top">
+          <span class="editorial-kicker">// MANCHETE DE CAPA • ANÁLISE DO MERCADO HOJE</span>
+          <span class="editorial-engine-tag" id="editorial-engine-badge">SÍNTESE DIÁRIA</span>
+        </div>
+        <h2 class="editorial-headline" id="editorial-headline">Carregando síntese editorial da edição de hoje...</h2>
+        <p class="editorial-summary" id="editorial-summary">Processando métricas de demanda por stack, vagas nacionais e oportunidades de entrada.</p>
+      </div>
+
+      <div class="top-picks-header">
+        <span class="filter-tag-title">★ DESTAQUES DE CAPA // TOP 3 OPORTUNIDADES DA EDIÇÃO</span>
+        <span class="top-picks-sub">Curadoria automática por maior índice de compatibilidade</span>
+      </div>
+
+      <div class="top-picks-grid" id="top-picks-grid">
+        <!-- Injetado via app.js a partir de data.editorial.topPicks -->
+      </div>
+    </section>
+
+    <!-- 3. BARRA DE COMANDO E FILTROS (Bento Surface Minimalista) -->
+    <section class="control-deck" id="vagas">
+      
+      <!-- Busca Principal + Ordenação -->
+      <div class="deck-top-row">
+        <div class="search-wrapper">
+          <i class="fa-solid fa-terminal search-icon"></i>
+          <input type="text" id="search-input" placeholder="Filtrar por stack, cargo ou empresa (ex: Node, React, Python, SQL, Estágio, Santander)..." autocomplete="off">
+          <span class="search-counter" id="search-stats">0 resultados</span>
+        </div>
+
+        <div class="sort-wrapper">
+          <span class="sort-label">ORDEM:</span>
+          <select id="sort-select">
+            <option value="score-desc">Maior Compatibilidade (Score)</option>
+            <option value="recent">Mais Recentes</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Grade de Filtros Táticos -->
+      <div class="deck-filters-grid">
+        <!-- Bloco Continente / Região -->
+        <div class="filter-row">
+          <span class="filter-tag-title">01 // REGIÃO</span>
+          <div class="segmented-pills" id="continent-pills">
+            <button class="seg-btn active" data-continent="WORLD">WORLD <span class="count-chip" id="cnt-WORLD"></span></button>
+            <button class="seg-btn" data-continent="BRA">BRA <span class="count-chip" id="cnt-BRA"></span></button>
+            <button class="seg-btn" data-continent="SOUTH_AME">SOUTH AME <span class="count-chip" id="cnt-SOUTH_AME"></span></button>
+            <button class="seg-btn" data-continent="NORTH_AME">NORTH AME <span class="count-chip" id="cnt-NORTH_AME"></span></button>
+            <button class="seg-btn" data-continent="EUR">EUR <span class="count-chip" id="cnt-EUR"></span></button>
+            <button class="seg-btn" data-continent="ASIA">ASIA <span class="count-chip" id="cnt-ASIA"></span></button>
+            <button class="seg-btn" data-continent="AFRICA">AFRICA <span class="count-chip" id="cnt-AFRICA"></span></button>
+          </div>
+        </div>
+
+        <!-- Bloco Arquétipo / Trilha -->
+        <div class="filter-row">
+          <span class="filter-tag-title">02 // TRILHA</span>
+          <div class="segmented-pills" id="archetype-pills">
+            <button class="pill active" data-filter="all">Todas</button>
+            <button class="pill" data-filter="student">Estágio & Júnior</button>
+            <button class="pill" data-filter="DEV">Full Stack & QA</button>
+            <button class="pill" data-filter="AI">Engenharia de IA</button>
+            <button class="pill" data-filter="SUPPORT">Suporte & Sistemas ERP</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toggles Rápidos no Rodapé do Deck -->
+      <div class="deck-bottom-row">
+        <div class="toggles-group">
+          <label class="clean-toggle">
+            <input type="checkbox" id="only-easy-apply-check">
+            <span class="toggle-box"></span>
+            <span>⚡ Apenas Candidatura Simplificada (LinkedIn 1-Click)</span>
+          </label>
+          <label class="clean-toggle">
+            <input type="checkbox" id="only-contractor-check">
+            <span class="toggle-box"></span>
+            <span>Apenas Worldwide / Contractor B2B (Aceita Brasil)</span>
+          </label>
+          <label class="clean-toggle">
+            <input type="checkbox" id="only-student-check">
+            <span class="toggle-box"></span>
+            <span>Apenas Vagas de Entrada (Júnior / Estágio / Trainee)</span>
+          </label>
+        </div>
+
+        <button id="reset-filters-btn" class="btn-reset">
+          <i class="fa-solid fa-rotate-left"></i> Limpar Filtros
+        </button>
+      </div>
+
+    </section>
+
+    <!-- 4. GRID BENTO DE VAGAS -->
+    <section class="jobs-section">
+      <div id="jobs-grid" class="bento-jobs-grid">
+        <!-- Cards injetados pelo app.js -->
+      </div>
+
+      <div id="empty-state" class="empty-state" style="display: none;">
+        <div class="empty-code">404 // NO_MATCHING_JOBS</div>
+        <h3>Nenhuma oportunidade encontrada para esta combinação</h3>
+        <p>Experimente alternar a região para <strong>WORLD</strong> ou limpar o campo de busca.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 5. FOOTER MINIMALISTA (Padrão Portfólio) -->
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="https://aaron.dev.br/" target="_blank" rel="noopener">Portfólio Oficial</a>
+      <a href="https://github.com/aarongmn7" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/aaron-nascimento-dev/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="footer-copy">AARON NASCIMENTO // CIÊNCIA DA COMPUTAÇÃO UNEMAT • ENGINE ZERO-DEPENDENCY</p>
+  </footer>
+
+  <!-- Toast de Feedback de Compartilhamento -->
+  <div id="share-toast" class="share-toast" aria-live="polite">
+    <i class="fa-solid fa-check-circle"></i>
+    <span id="share-toast-text">Resumo da edição copiado! Cole no grupo da turma.</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
