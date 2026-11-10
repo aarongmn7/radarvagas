@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AARON.DEV // 3D Core Preview (Meio Globo + Meia Logo 3D)</title>
+  <title>AARON.DEV // 3D Geodesic Lattice Globe V4 (Smooth Continents + Diagonal Spin)</title>
   <style>
     :root {
-      --bg: #000000;
+      --bg: #050507;
       --text: #fafafa;
-      --muted: #71717a;
+      --muted: #a1a1aa;
       --border: #27272a;
     }
     body.light {
-      --bg: #f8fafc;
+      --bg: #f4f4f6;
       --text: #09090b;
+      --muted: #52525b;
       --border: #d4d4d8;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -30,8 +31,8 @@
       transition: background 0.3s ease;
     }
     #canvas-container {
-      width: 460px;
-      height: 460px;
+      width: 580px;
+      height: 580px;
       position: relative;
       cursor: grab;
     }
@@ -40,20 +41,20 @@
       position: fixed;
       top: 24px;
       display: flex;
-      gap: 12px;
+      gap: 10px;
       align-items: center;
-      background: rgba(24, 24, 27, 0.8);
+      background: rgba(24, 24, 27, 0.88);
       border: 1px solid var(--border);
       padding: 10px 18px;
       border-radius: 999px;
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(10px);
       z-index: 10;
     }
     .hud span {
       font-size: 12px;
       font-family: monospace;
-      letter-spacing: 0.08em;
-      color: #a1a1aa;
+      letter-spacing: 0.06em;
+      color: #e4e4e7;
     }
     .btn {
       background: #18181b;
@@ -67,11 +68,11 @@
     }
     .btn:hover { border-color: #fff; transform: translateY(-1px); }
     .caption {
-      margin-top: 12px;
+      margin-top: 6px;
       font-family: monospace;
       font-size: 12px;
       color: var(--muted);
-      letter-spacing: 0.08em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
     }
   </style>
@@ -79,13 +80,15 @@
 <body>
 
   <div class="hud">
-    <span>// NÚCLEO 3D: MEIO GLOBO + LOGO AARON.DEV EXTRUDADA</span>
-    <button class="btn" id="btnPulse">⚡ Simular Filtro (Spin)</button>
-    <button class="btn" id="btnTheme">🌗 Alternar Tema</button>
+    <span>// V4: CONTINENTES VETORIAIS LISOS (ZERO PIXELADO) + LUZ INVISÍVEL + GIRO DIAGONAL</span>
+    <button class="btn" id="btnFaceMap">🌎 Focar Globo</button>
+    <button class="btn" id="btnFaceLogo">🎯 Focar Logo 3D</button>
+    <button class="btn" id="btnAuto">🔄 Giro Diagonal</button>
+    <button class="btn" id="btnTheme">🌗 Tema</button>
   </div>
 
   <div id="canvas-container"></div>
-  <div class="caption">Arraste com o mouse para girar em qualquer ângulo • 100% Código Puro (Zero Assinatura)</div>
+  <div class="caption" id="statusText">Construindo malha 3D vetorial lisa dos continentes (Zero Pixelado)...</div>
 
   <script type="importmap">
     {
@@ -99,185 +102,361 @@
     import * as THREE from 'three';
 
     const container = document.getElementById('canvas-container');
+    const statusText = document.getElementById('statusText');
     const scene = new THREE.Scene();
 
-    const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 1000);
-    camera.position.set(0, 0, 6.2);
+    const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 1000);
+    camera.position.set(0, 0, 6.8);
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setSize(460, 460);
+    renderer.setSize(580, 580);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    renderer.toneMappingExposure = 1.25;
+    renderer.toneMappingExposure = 1.4;
     container.appendChild(renderer.domElement);
 
-    // Grupo principal que gira no centro
+    // Pivot externo inclinado na diagonal (axial tilt ~28 graus) para rodar elegante na diagonal!
+    const tiltPivot = new THREE.Group();
+    tiltPivot.rotation.z = -0.45; // Inclinação diagonal do eixo de rotação
+    tiltPivot.rotation.x = 0.18;
+    scene.add(tiltPivot);
+
     const coreGroup = new THREE.Group();
-    scene.add(coreGroup);
+    tiltPivot.add(coreGroup);
 
     // =========================================================================
-    // ILUMINAÇÃO DE ESTÚDIO (Destaca o chanfro 3D e diferencia do fundo OLED)
+    // ILUMINAÇÃO + LUZES INTERNAS INVISÍVEIS (Sem nenhuma bola branca no meio!)
     // =========================================================================
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1.45);
     scene.add(ambientLight);
 
-    const keyLight = new THREE.DirectionalLight(0xffffff, 2.6);
-    keyLight.position.set(4, 5, 6);
+    const keyLight = new THREE.DirectionalLight(0xffffff, 3.8);
+    keyLight.position.set(5, 6, 7);
     scene.add(keyLight);
 
-    const rimLight = new THREE.DirectionalLight(0xa1a1aa, 1.8);
-    rimLight.position.set(-5, -4, -4);
-    scene.add(rimLight);
+    const fillLight = new THREE.DirectionalLight(0xd4d4d8, 2.8);
+    fillLight.position.set(-6, -3, 5);
+    scene.add(fillLight);
 
-    const topLight = new THREE.PointLight(0xffffff, 1.4, 15);
-    topLight.position.set(0, 4, 3);
-    scene.add(topLight);
+    const backRimLight = new THREE.DirectionalLight(0xffffff, 3.2);
+    backRimLight.position.set(0, 5, -6);
+    scene.add(backRimLight);
 
-    const RADIUS = 1.65;
+    // Luzes internas puras (PointLights invisíveis! Iluminam a logo e a treliça por dentro sem bola visível)
+    const innerLightCenter = new THREE.PointLight(0xffffff, 6.5, 5.5);
+    innerLightCenter.position.set(0, 0, 0);
+    coreGroup.add(innerLightCenter);
+
+    const innerLightFront = new THREE.PointLight(0xffffff, 4.0, 4.5);
+    innerLightFront.position.set(0, 0, 0.65);
+    coreGroup.add(innerLightFront);
+
+    const innerLightBack = new THREE.PointLight(0xe4e4e7, 4.0, 4.5);
+    innerLightBack.position.set(0, 0, -0.65);
+    coreGroup.add(innerLightBack);
+
+    const RADIUS = 1.78;
+
+    // Materiais Metálicos / Carbono Acetinado de Alto Contraste
+    const darkStrutMat = new THREE.MeshStandardMaterial({
+      color: 0x1a1a20,
+      roughness: 0.38,
+      metalness: 0.55
+    });
+
+    const continentArmorMat = new THREE.MeshStandardMaterial({
+      color: 0x2f2f38,
+      roughness: 0.28,
+      metalness: 0.65
+    });
+
+    const brazilHighlightMat = new THREE.MeshStandardMaterial({
+      color: 0x52525b,
+      roughness: 0.22,
+      metalness: 0.78
+    });
+
+    const logoArmorMat = new THREE.MeshStandardMaterial({
+      color: 0x2e2e36,
+      roughness: 0.24,
+      metalness: 0.72
+    });
+
+    const accentTitaniumMat = new THREE.MeshStandardMaterial({
+      color: 0x8e8e99,
+      roughness: 0.2,
+      metalness: 0.85
+    });
 
     // =========================================================================
-    // LADO A (Z <= 0): MEIO GLOBO MINIMALISTA EM GRAFITE ESCURO / WIREFRAME
+    // 1. GAIOLA GEODÉSICA TRIANGULAR VAZADA (Treliça 3D igual à referência)
     // =========================================================================
-    const globeGroup = new THREE.Group();
-    coreGroup.add(globeGroup);
+    function buildHollowGeodesicStruts(radius, detail, strutRadius) {
+      const ico = new THREE.IcosahedronGeometry(radius, detail);
+      const pos = ico.attributes.position;
+      const edgesMap = new Map();
 
-    // 1. Casca Sólida da Meia Terra (Grafite Escuro #16161a para destacar do fundo #000)
-    const hemiGeo = new THREE.SphereGeometry(RADIUS, 64, 32, 0, Math.PI * 2, 0, Math.PI);
-    // Cortamos ou achatamos apenas no hemisfério traseiro (Z < 0) usando escala/clip ou phi
-    const backHemiGeo = new THREE.SphereGeometry(RADIUS * 0.995, 48, 32, Math.PI, Math.PI);
-    const globeCoreMat = new THREE.MeshStandardMaterial({
-      color: 0x16161a,
-      roughness: 0.65,
-      metalness: 0.35,
-      side: THREE.DoubleSide
-    });
-    const backHemiMesh = new THREE.Mesh(backHemiGeo, globeCoreMat);
-    globeGroup.add(backHemiMesh);
+      function addEdge(i1, i2) {
+        const v1 = new THREE.Vector3().fromBufferAttribute(pos, i1);
+        const v2 = new THREE.Vector3().fromBufferAttribute(pos, i2);
+        if (v1.z > 0.06 && v2.z > 0.06) return;
 
-    // 2. Malha Geodésica / Paralelos & Meridianos Minimalistas Cinza Metálico
-    const wireGeo = new THREE.SphereGeometry(RADIUS * 1.002, 24, 16, Math.PI, Math.PI);
-    const wireMat = new THREE.MeshBasicMaterial({
-      color: 0x3f3f46,
-      wireframe: true,
-      transparent: true,
-      opacity: 0.55
-    });
-    const wireMesh = new THREE.Mesh(wireGeo, wireMat);
-    globeGroup.add(wireMesh);
+        const k1 = `${v1.x.toFixed(3)},${v1.y.toFixed(3)},${v1.z.toFixed(3)}`;
+        const k2 = `${v2.x.toFixed(3)},${v2.y.toFixed(3)},${v2.z.toFixed(3)}`;
+        const key = k1 < k2 ? `${k1}|${k2}` : `${k2}|${k1}`;
+        if (!edgesMap.has(key)) {
+          edgesMap.set(key, [v1, v2]);
+        }
+      }
 
-    // 3. Pontos Luminosos de Cidades/Continentes no Meio Globo
-    const dotsGeo = new THREE.BufferGeometry();
-    const dotPositions = [];
-    for (let i = 0; i < 260; i++) {
-      const u = Math.random();
-      const v = Math.random();
-      const theta = Math.PI + u * Math.PI; // Apenas no hemisfério do globo (Z < 0)
-      const phi = Math.acos(2 * v - 1);
-      const r = RADIUS * 1.012;
-      const x = r * Math.sin(phi) * Math.cos(theta);
-      const y = r * Math.cos(phi);
-      const z = r * Math.sin(phi) * Math.sin(theta);
-      dotPositions.push(x, y, z);
+      for (let i = 0; i < pos.count; i += 3) {
+        addEdge(i, i + 1);
+        addEdge(i + 1, i + 2);
+        addEdge(i + 2, i);
+      }
+
+      const strutGroup = new THREE.Group();
+      const up = new THREE.Vector3(0, 1, 0);
+
+      for (const [v1, v2] of edgesMap.values()) {
+        const dir = new THREE.Vector3().subVectors(v2, v1);
+        const len = dir.length();
+        const cylGeo = new THREE.CylinderGeometry(strutRadius, strutRadius, len, 10);
+        const mesh = new THREE.Mesh(cylGeo, darkStrutMat);
+
+        const mid = new THREE.Vector3().addVectors(v1, v2).multiplyScalar(0.5);
+        mesh.position.copy(mid);
+        mesh.quaternion.setFromUnitVectors(up, dir.normalize());
+        strutGroup.add(mesh);
+      }
+
+      return strutGroup;
     }
-    dotsGeo.setAttribute('position', new THREE.Float32BufferAttribute(dotPositions, 3));
-    const dotsMat = new THREE.PointsMaterial({
-      color: 0xd4d4d8,
-      size: 0.038,
-      transparent: true,
-      opacity: 0.85
-    });
-    const dotsSystem = new THREE.Points(dotsGeo, dotsMat);
-    globeGroup.add(dotsSystem);
 
-    // 4. Anel Equatorial Metálico (Une o Meio Globo à Face da Logo 3D)
-    const collarGeo = new THREE.CylinderGeometry(RADIUS * 1.01, RADIUS * 1.01, 0.16, 72);
-    collarGeo.rotateX(Math.PI / 2);
-    const collarMat = new THREE.MeshStandardMaterial({
-      color: 0x27272a,
-      metalness: 0.85,
-      roughness: 0.25
-    });
-    const collarMesh = new THREE.Mesh(collarGeo, collarMat);
-    coreGroup.add(collarMesh);
+    const geodesicCage = buildHollowGeodesicStruts(RADIUS, 3, 0.022);
+    coreGroup.add(geodesicCage);
 
-    // Base circular escura onde a Logo 3D se apoia na frente (Z >= 0)
-    const plateGeo = new THREE.CylinderGeometry(RADIUS * 0.99, RADIUS * 0.99, 0.08, 72);
-    plateGeo.rotateX(Math.PI / 2);
-    const plateMat = new THREE.MeshStandardMaterial({
-      color: 0x0c0c0e,
-      roughness: 0.8,
-      metalness: 0.2
-    });
-    const plateMesh = new THREE.Mesh(plateGeo, plateMat);
-    plateMesh.position.z = 0.02;
-    coreGroup.add(plateMesh);
+    // Anel Equatorial Estrutural
+    const equatorTorusGeo = new THREE.TorusGeometry(RADIUS, 0.052, 24, 108);
+    coreGroup.add(new THREE.Mesh(equatorTorusGeo, logoArmorMat));
 
     // =========================================================================
-    // LADO B (Z > 0): SUA LOGO "AARON.DEV" COM GROSSURA E PROFUNDIDADE 3D REAL
-    // Construída matematicamente a partir do seu logo.svg com corte circular exato
+    // 2. CONTINENTES VETORIAIS LISOS CURVADOS NA ESFERA (ZERO PIXELADO!)
+    // Em vez de quadradinhos pixelados, triangulamos os polígonos vetoriais reais
+    // do GeoJSON com `THREE.ShapeUtils.triangulateShape`, subdividimos os triângulos
+    // internos e projetamos suavemente na curvatura exata da esfera com parede 3D!
+    // =========================================================================
+    const continentsGroup = new THREE.Group();
+    coreGroup.add(continentsGroup);
+
+    // Converte (lon, lat) para ponto 3D na meia-esfera traseira com Brasil centralizado
+    function mapWorldLonLatToSphereVec3(lon, lat, r) {
+      const centerLon = -38; // Brasil e Atlântico centralizados
+      let dLon = lon - centerLon;
+      while (dLon < -180) dLon += 360;
+      while (dLon > 180) dLon -= 360;
+
+      const azimuth = (dLon / 180) * (Math.PI * 0.485);
+      const latRad = (lat * Math.PI) / 180 * 0.88;
+
+      const x = -r * Math.cos(latRad) * Math.sin(azimuth);
+      const y = r * Math.sin(latRad);
+      const z = -r * Math.cos(latRad) * Math.cos(azimuth);
+      return new THREE.Vector3(x, y, z);
+    }
+
+    // Subdivide um triângulo 2D (lon, lat) recursivamente se suas arestas forem longas,
+    // garantindo que o continente curve perfeitamente redondo sobre a esfera sem quinas retas!
+    function subdivideTriangle2D(p0, p1, p2, maxDeg, outTriangles) {
+      const d01 = Math.hypot(p1.x - p0.x, p1.y - p0.y);
+      const d12 = Math.hypot(p2.x - p1.x, p2.y - p1.y);
+      const d20 = Math.hypot(p0.x - p2.x, p0.y - p2.y);
+
+      if (Math.max(d01, d12, d20) <= maxDeg) {
+        outTriangles.push([p0, p1, p2]);
+        return;
+      }
+
+      const m01 = new THREE.Vector2((p0.x + p1.x) * 0.5, (p0.y + p1.y) * 0.5);
+      const m12 = new THREE.Vector2((p1.x + p2.x) * 0.5, (p1.y + p2.y) * 0.5);
+      const m20 = new THREE.Vector2((p2.x + p0.x) * 0.5, (p2.y + p0.y) * 0.5);
+
+      subdivideTriangle2D(p0, m01, m20, maxDeg, outTriangles);
+      subdivideTriangle2D(m01, p1, m12, maxDeg, outTriangles);
+      subdivideTriangle2D(m20, m12, p2, maxDeg, outTriangles);
+      subdivideTriangle2D(m01, m12, m20, maxDeg, outTriangles);
+    }
+
+    // Densifica as bordas costeiras para acompanhar a curvatura da esfera com precisão cirúrgica
+    function densifyRing(ringCoords, maxStepDeg = 2.2) {
+      const pts = [];
+      for (let i = 0; i < ringCoords.length - 1; i++) {
+        const [lonA, latA] = ringCoords[i];
+        const [lonB, latB] = ringCoords[i + 1];
+        // Evita linhas cruzando o antimeridiano
+        if (Math.abs(lonB - lonA) > 120) continue;
+        const dist = Math.hypot(lonB - lonA, latB - latA);
+        const steps = Math.max(1, Math.ceil(dist / maxStepDeg));
+        for (let s = 0; s < steps; s++) {
+          const t = s / steps;
+          pts.push(new THREE.Vector2(lonA + (lonB - lonA) * t, latA + (latB - latA) * t));
+        }
+      }
+      // Remove duplicados consecutivos
+      const clean = [];
+      for (const p of pts) {
+        if (clean.length === 0 || p.distanceTo(clean[clean.length - 1]) > 0.05) {
+          clean.push(p);
+        }
+      }
+      return clean;
+    }
+
+    function buildSmoothSphericalPolygonBuffers(ringCoords, innerR, outerR, posArr, normArr) {
+      const contour = densifyRing(ringCoords, 2.0);
+      if (contour.length < 3) return;
+
+      // Verifica orientação (garante CCW para triangulação limpa)
+      if (THREE.ShapeUtils.isClockWise(contour)) {
+        contour.reverse();
+      }
+
+      const faces = THREE.ShapeUtils.triangulateShape(contour, []);
+      const fineTriangles = [];
+
+      for (const [i0, i1, i2] of faces) {
+        subdivideTriangle2D(contour[i0], contour[i1], contour[i2], 4.0, fineTriangles);
+      }
+
+      // 1. Camada Superior Curva e Lisa (Tampo 3D do país/continente)
+      for (const [a, b, c] of fineTriangles) {
+        const va = mapWorldLonLatToSphereVec3(a.x, a.y, outerR);
+        const vb = mapWorldLonLatToSphereVec3(b.x, b.y, outerR);
+        const vc = mapWorldLonLatToSphereVec3(c.x, c.y, outerR);
+
+        posArr.push(va.x, va.y, va.z, vc.x, vc.y, vc.z, vb.x, vb.y, vb.z);
+        // Normais esféricas suaves para brilho metálico contínuo!
+        const na = va.clone().normalize();
+        const nb = vb.clone().normalize();
+        const nc = vc.clone().normalize();
+        normArr.push(na.x, na.y, na.z, nc.x, nc.y, nc.z, nb.x, nb.y, nb.z);
+      }
+
+      // 2. Parede Costeira Lateral 3D Contínua (dá espessura real de peça usinada/impressa sem serrilhado!)
+      for (let i = 0; i < contour.length; i++) {
+        const pA = contour[i];
+        const pB = contour[(i + 1) % contour.length];
+        if (Math.abs(pB.x - pA.x) > 90) continue;
+
+        const topA = mapWorldLonLatToSphereVec3(pA.x, pA.y, outerR);
+        const topB = mapWorldLonLatToSphereVec3(pB.x, pB.y, outerR);
+        const botA = mapWorldLonLatToSphereVec3(pA.x, pA.y, innerR);
+        const botB = mapWorldLonLatToSphereVec3(pB.x, pB.y, innerR);
+
+        const edge1 = new THREE.Vector3().subVectors(botB, botA);
+        const edge2 = new THREE.Vector3().subVectors(topA, botA);
+        const wallNorm = new THREE.Vector3().crossVectors(edge1, edge2).normalize();
+
+        // Triângulo 1 da parede costeira
+        posArr.push(botA.x, botA.y, botA.z, botB.x, botB.y, botB.z, topB.x, topB.y, topB.z);
+        normArr.push(wallNorm.x, wallNorm.y, wallNorm.z, wallNorm.x, wallNorm.y, wallNorm.z, wallNorm.x, wallNorm.y, wallNorm.z);
+
+        // Triângulo 2 da parede costeira
+        posArr.push(botA.x, botA.y, botA.z, topB.x, topB.y, topB.z, topA.x, topA.y, topA.z);
+        normArr.push(wallNorm.x, wallNorm.y, wallNorm.z, wallNorm.x, wallNorm.y, wallNorm.z, wallNorm.x, wallNorm.y, wallNorm.z);
+      }
+    }
+
+    async function loadSmoothVectorContinents() {
+      try {
+        const res = await fetch('https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson');
+        const geojson = await res.json();
+
+        const innerR = RADIUS * 0.998;
+        const worldOuterR = RADIUS * 1.052;
+        const brazilOuterR = RADIUS * 1.072; // Brasil com destaque em alto-relevo
+
+        const landPos = [], landNorm = [];
+        const brPos = [], brNorm = [];
+
+        for (const feat of geojson.features) {
+          if (!feat.geometry) continue;
+          const name = (feat.properties && feat.properties.name) || '';
+          if (name === 'Antarctica') continue;
+          const isBrazil = name === 'Brazil';
+
+          const targetPos = isBrazil ? brPos : landPos;
+          const targetNorm = isBrazil ? brNorm : landNorm;
+          const targetR = isBrazil ? brazilOuterR : worldOuterR;
+
+          if (feat.geometry.type === 'Polygon') {
+            buildSmoothSphericalPolygonBuffers(feat.geometry.coordinates[0], innerR, targetR, targetPos, targetNorm);
+          } else if (feat.geometry.type === 'MultiPolygon') {
+            for (const poly of feat.geometry.coordinates) {
+              buildSmoothSphericalPolygonBuffers(poly[0], innerR, targetR, targetPos, targetNorm);
+            }
+          }
+        }
+
+        const landGeo = new THREE.BufferGeometry();
+        landGeo.setAttribute('position', new THREE.Float32BufferAttribute(landPos, 3));
+        landGeo.setAttribute('normal', new THREE.Float32BufferAttribute(landNorm, 3));
+        const landMesh = new THREE.Mesh(landGeo, continentArmorMat);
+        continentsGroup.add(landMesh);
+
+        const brGeo = new THREE.BufferGeometry();
+        brGeo.setAttribute('position', new THREE.Float32BufferAttribute(brPos, 3));
+        brGeo.setAttribute('normal', new THREE.Float32BufferAttribute(brNorm, 3));
+        const brMesh = new THREE.Mesh(brGeo, brazilHighlightMat);
+        continentsGroup.add(brMesh);
+
+        statusText.textContent = 'Arraste para girar • Continentes Vetoriais Lisos + Luz Interna Invisível + Giro Diagonal';
+      } catch (err) {
+        statusText.textContent = 'Modelo 3D Carregado';
+      }
+    }
+
+    loadSmoothVectorContinents();
+
+    // =========================================================================
+    // 3. LADO DA SUA LOGO "AARON.DEV": VAZADA COM BARRAS 3D GROSSAS E CHANFRO FINO
     // =========================================================================
     const logoGroup = new THREE.Group();
     coreGroup.add(logoGroup);
 
-    const mainLogoMat = new THREE.MeshStandardMaterial({
-      color: 0xf4f4f5, // Prata/Branco Acetinado Puro
-      metalness: 0.55,
-      roughness: 0.22
-    });
-
-    const accentLineMat = new THREE.MeshStandardMaterial({
-      color: 0x71717a, // Cinza Médio para a linha central (2º nível de profundidade)
-      metalness: 0.7,
-      roughness: 0.3
-    });
-
-    // Escala das coordenadas do SVG (0..100 com centro em 50,50 -> -RADIUS..+RADIUS)
     const scale = RADIUS / 50;
+    const tan18 = Math.tan((-18 * Math.PI) / 180);
+    const INNER_R = 39;
 
-    // 1. ARO EXTERNO REDONDO 3D (r_out = 48, r_in = 42 no SVG)
     const outerRingShape = new THREE.Shape();
-    outerRingShape.absarc(0, 0, 48 * scale, 0, Math.PI * 2, false);
+    outerRingShape.absarc(0, 0, 49.5 * scale, 0, Math.PI * 2, false);
     const outerHole = new THREE.Path();
     outerHole.absarc(0, 0, 42 * scale, 0, Math.PI * 2, true);
     outerRingShape.holes.push(outerHole);
 
-    const extrudeRingSettings = {
-      depth: 0.26,
-      bevelEnabled: true,
-      bevelThickness: 0.045,
-      bevelSize: 0.035,
-      bevelSegments: 5,
-      curveSegments: 64
-    };
     const outerRingMesh = new THREE.Mesh(
-      new THREE.ExtrudeGeometry(outerRingShape, extrudeRingSettings),
-      mainLogoMat
+      new THREE.ExtrudeGeometry(outerRingShape, {
+        depth: 0.34,
+        bevelEnabled: true,
+        bevelThickness: 0.06,
+        bevelSize: 0.045,
+        bevelSegments: 8,
+        curveSegments: 96
+      }),
+      logoArmorMat
     );
-    outerRingMesh.position.z = 0.03;
+    outerRingMesh.position.z = 0.02;
     logoGroup.add(outerRingMesh);
 
-    // Função utilitária que converte qualquer polígono do seu SVG inclinado (skewX -18)
-    // recortado exatamente dentro do círculo interno (r = 37) em um bloco 3D chanfrado
-    const tan18 = Math.tan((-18 * Math.PI) / 180); // -0.32491969623
-    const INNER_R = 37;
-
     function transformSvgPoint(px, py) {
-      // No SVG: translate(16.25, 0) skewX(-18) e centro em (50, 50)
       const xSvg = px + 16.25 + py * tan18;
       const ySvg = py;
-      // Converte para centro (0,0) e inverte eixo Y do SVG para coordenadas 3D
-      return {
-        x: (xSvg - 50),
-        y: -(ySvg - 50)
-      };
+      return { x: (xSvg - 50), y: -(ySvg - 50) };
     }
 
-    // Recorta um polígono convexo pelo círculo de raio R usando amostragem de alta precisão
     function clipPolygonToCircleShape(svgPts, circleRadius) {
-      // Converte vértices do polígono para espaço centrado
       const poly = svgPts.map(([px, py]) => transformSvgPoint(px, py));
 
-      // Verifica se ponto (x,y) está dentro do polígono (Ray-casting)
       function insidePoly(x, y) {
         let inside = false;
         for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
@@ -290,9 +469,8 @@
         return inside;
       }
 
-      // Gera contorno denso do polígono e projeta/restringe ao círculo (Interseção Exata Convexa)
       const sampled = [];
-      const stepsPerEdge = 60;
+      const stepsPerEdge = 100;
       for (let i = 0; i < poly.length; i++) {
         const a = poly[i];
         const b = poly[(i + 1) % poly.length];
@@ -304,22 +482,18 @@
           if (dist <= circleRadius) {
             sampled.push({ x: px, y: py });
           } else {
-            // Projeta na borda circular se aquele ângulo estiver dentro do polígono infinito
             const cx = (px / dist) * circleRadius;
             const cy = (py / dist) * circleRadius;
-            if (insidePoly(cx, cy)) {
-              sampled.push({ x: cx, y: cy });
-            }
+            if (insidePoly(cx, cy)) sampled.push({ x: cx, y: cy });
           }
         }
       }
 
-      // Remove pontos duplicados muito próximos
       const clean = [];
       for (const pt of sampled) {
         if (
           clean.length === 0 ||
-          Math.hypot(pt.x - clean[clean.length - 1].x, pt.y - clean[clean.length - 1].y) > 0.15
+          Math.hypot(pt.x - clean[clean.length - 1].x, pt.y - clean[clean.length - 1].y) > 0.08
         ) {
           clean.push(pt);
         }
@@ -341,44 +515,40 @@
       const geo = new THREE.ExtrudeGeometry(shape, {
         depth,
         bevelEnabled: true,
-        bevelThickness: 0.038,
-        bevelSize: 0.028,
-        bevelSegments: 4
+        bevelThickness: 0.055,
+        bevelSize: 0.038,
+        bevelSegments: 6
       });
       const mesh = new THREE.Mesh(geo, material);
       mesh.position.z = zOffset;
       logoGroup.add(mesh);
     }
 
-    // ================= LETRA "A" (Esquerda) + Barra Horizontal Unificada =================
-    // Haste direita do A
-    addLogoBlock([[30, -20], [46, -20], [46, 120], [30, 120]], 0.25, 0.03, mainLogoMat);
-    // Haste diagonal esquerda do A
-    addLogoBlock([[-50, -20], [30, -20], [-2, 120], [-50, 120]], 0.25, 0.03, mainLogoMat);
-    // Ponte horizontal do A
-    addLogoBlock([[-10, 55], [32, 55], [32, 73], [-10, 73]], 0.24, 0.03, mainLogoMat);
+    // LETRA "A" (Esquerda)
+    addLogoBlock([[30, -20], [46, -20], [46, 120], [30, 120]], 0.34, 0.02, logoArmorMat);
+    addLogoBlock([[-50, -20], [30, -20], [-2, 120], [-50, 120]], 0.34, 0.02, logoArmorMat);
+    addLogoBlock([[-10, 55], [32, 55], [32, 73], [-10, 73]], 0.32, 0.02, logoArmorMat);
 
-    // ================= LINHA DIVISÓRIA CENTRAL (Profundidade Intermediária Cinza) =================
-    addLogoBlock([[48.8, -20], [51.2, -20], [51.2, 120], [48.8, 120]], 0.16, 0.03, accentLineMat);
+    // LINHA DIVISÓRIA CENTRAL
+    addLogoBlock([[48.4, -20], [51.6, -20], [51.6, 120], [48.4, 120]], 0.24, 0.04, accentTitaniumMat);
 
-    // ================= LETRA "N" (Direita) =================
-    // Haste esquerda do N
-    addLogoBlock([[54, -20], [70, -20], [70, 120], [54, 120]], 0.25, 0.03, mainLogoMat);
-    // Haste direita do N
-    addLogoBlock([[94, -20], [150, -20], [150, 120], [94, 120]], 0.25, 0.03, mainLogoMat);
-    // Diagonal central do N
-    addLogoBlock([[54, -20], [70, -20], [110, 120], [94, 120]], 0.255, 0.03, mainLogoMat);
+    // LETRA "N" (Direita)
+    addLogoBlock([[54, -20], [70, -20], [70, 120], [54, 120]], 0.34, 0.02, logoArmorMat);
+    addLogoBlock([[94, -20], [150, -20], [150, 120], [94, 120]], 0.34, 0.02, logoArmorMat);
+    addLogoBlock([[54, -20], [70, -20], [110, 120], [94, 120]], 0.35, 0.02, logoArmorMat);
 
     // =========================================================================
-    // ANIMAÇÃO & INTERAÇÃO (Rotação Contínua + Arrastar + Impulso de Filtro)
+    // GIRO DIAGONAL CONTÍNUO & CONTROLES
     // =========================================================================
     let isDragging = false;
+    let autoRotate = true;
+    let targetRotY = null;
     let prevX = 0;
     let prevY = 0;
-    let spinBoost = 0;
 
     container.addEventListener('pointerdown', e => {
       isDragging = true;
+      targetRotY = null;
       prevX = e.clientX;
       prevY = e.clientY;
     });
@@ -390,39 +560,46 @@
       const dx = e.clientX - prevX;
       const dy = e.clientY - prevY;
       coreGroup.rotation.y += dx * 0.01;
-      coreGroup.rotation.x = Math.max(-0.6, Math.min(0.6, coreGroup.rotation.x + dy * 0.008));
+      coreGroup.rotation.x += dy * 0.008;
       prevX = e.clientX;
       prevY = e.clientY;
     });
 
-    document.getElementById('btnPulse').addEventListener('click', () => {
-      spinBoost = 0.22; // Dá um giro rápido quando o usuário clica num filtro
+    document.getElementById('btnFaceMap').addEventListener('click', () => {
+      autoRotate = false;
+      targetRotY = Math.PI;
+    });
+
+    document.getElementById('btnFaceLogo').addEventListener('click', () => {
+      autoRotate = false;
+      targetRotY = 0;
+    });
+
+    document.getElementById('btnAuto').addEventListener('click', () => {
+      targetRotY = null;
+      autoRotate = true;
     });
 
     let isLight = false;
     document.getElementById('btnTheme').addEventListener('click', () => {
       isLight = !isLight;
       document.body.classList.toggle('light', isLight);
-      if (isLight) {
-        mainLogoMat.color.setHex(0x18181b);
-        plateMat.color.setHex(0xe4e4e7);
-        globeCoreMat.color.setHex(0x27272a);
-      } else {
-        mainLogoMat.color.setHex(0xf4f4f5);
-        plateMat.color.setHex(0x0c0c0e);
-        globeCoreMat.color.setHex(0x16161a);
-      }
     });
 
-    // Inclinação inicial elegante para mostrar a grossura 3D logo de cara
-    coreGroup.rotation.x = 0.12;
-    coreGroup.rotation.y = -0.35;
+    // Posição inicial mostrando o Globo Geodésico com inclinação diagonal
+    coreGroup.rotation.y = Math.PI - 0.2;
 
     function animate() {
       requestAnimationFrame(animate);
       if (!isDragging) {
-        coreGroup.rotation.y += 0.008 + spinBoost;
-        spinBoost *= 0.93;
+        if (targetRotY !== null) {
+          coreGroup.rotation.y += (targetRotY - coreGroup.rotation.y) * 0.08;
+          coreGroup.rotation.x += (0 - coreGroup.rotation.x) * 0.08;
+        } else if (autoRotate) {
+          // Roda suavemente na diagonal (combinando rotação no eixo inclinado + leve precessão)
+          coreGroup.rotation.y += 0.0065;
+          coreGroup.rotation.x = Math.sin(coreGroup.rotation.y * 0.5) * 0.14;
+        }
       }
       renderer.render(scene, camera);
     }
