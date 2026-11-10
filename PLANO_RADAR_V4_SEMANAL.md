@@ -61,10 +61,40 @@ Para não precisar testar milhares de links no sábado à noite, o funil opera e
 
 ---
 
-## 5. Checklist de Implementação Futura (Passo a Passo para Próxima Sessão)
+## 5. Redesign da Experiência de Busca (Hub Radial "On-Demand" / Zero-Scroll Inicial)
+
+### 5.1. O Que Permanece Intacto
+* **Dobra Superior (Hero + Métricas + Manchete de Capa + Top 3 Destaques):** Continua exatamente como está hoje (Bento Grid Monochrome OLED Dark/Light).
+
+### 5.2. Nova Experiência na Seção de Vagas (Conceito "Orbital / Hub Central")
+Substituir a caixa de filtro retangular e a listagem infinita pré-carregada por uma **experiência visual guiada sob demanda**:
+
+1. **Estado Inicial (Zero-Scroll / Sem Lista de Vagas):**
+   * Ao rolar além do Top 3 Destaques, **nenhum card de vaga é renderizado inicialmente** (elimina o scroll infinito imediato e a sobrecarga visual de 1.000+ cards).
+   * A página termina exatamente no **Hub Orbital de Exploração**.
+
+2. **Anatomia do Hub Orbital (Baseado no Sketch Oficial):**
+   * **Centro (Núcleo Visual / Editorial Art):**
+     * Uma arte gráfica interativa/editorial (ex: Globo/Radar estilizado em SVG monochrome ou card de artigo central com campo de busca rápida e contador dinâmico do filtro).
+   * **Arco Esquerdo — `PAÍSES / REGIÕES` (Nodos Orbitais):**
+     * Pílulas/nodos dispostos em arco à esquerda do núcleo central: `WORLD`, `BRAZIL`, `LATAM`, `NORTH AMERICA`, `EUROPE`, `ASIA/PACIFIC`, `MIDDLE EAST`.
+   * **Arco Direito — `VAGAS / TRILHAS` (Nodos Orbitais):**
+     * Pílulas/nodos dispostos em arco à direita do núcleo central com as áreas: `Estágio & Júnior`, `Engenharia & Dev`, `IA & Automação`, `Suporte & Sistemas`, `Design Digital`, `Produto & PM`, `Growth & Marketing`.
+   * **Arco Inferior — `OPÇÕES ADICIONAIS` (Toggles Rápidos):**
+     * Nodos na base do núcleo: `⚡ Simplificada (1-Click)`, `🌎 Worldwide / B2B`, `🏆 Melhores da Semana (Edição de Sábado)`.
+
+3. **Comportamento de Revelação Sob Demanda (Click-to-Reveal):**
+   * As vagas ficam ocultas (`display: none` / container recolhido) até que o usuário clique em qualquer nodo (País, Área, Opção Adicional ou pesquise no centro).
+   * Ao clicar em uma opção, o nodo acende (estado ativo), o centro atualiza a contagem exata do cruzamento e a **grade de vagas se revela abaixo com transição suave (`fade-in + slide-down`)**, fazendo scroll suave até os resultados.
+   * Se o usuário desmarcar tudo ou clicar em "Fechar/Resetar Radar", a lista se recolhe novamente, voltando ao estado limpo sem scroll.
+
+---
+
+## 6. Checklist de Implementação Futura (Passo a Passo para Próxima Sessão)
 
 - [ ] **Passo 1:** Atualizar `scripts/job_radar.js` e `scripts/build_jobs_data.js` com os 6 arquétipos (`DEV`, `AI`, `SUPPORT`, `DESIGN`, `PRODUCT`, `MARKETING`) e salvar cópia diária em `data/weekly/YYYY-MM-DD.json`.
 - [ ] **Passo 2:** Adicionar o filtro Anti-Ghost (`seen_signatures.json` + filtro de empresas de farming).
 - [ ] **Passo 3:** Criar `scripts/build_weekly_report.js` (consolidação + check ao vivo de vaga aberta + limpeza de `data/weekly/`).
-- [ ] **Passo 4:** Adicionar aba **"🏆 Melhores da Semana (Abertas)"** e filtros das novas áreas no front-end (`index.html` e `app.js`).
+- [ ] **Passo 4 (UI Orbital & Zero-Scroll Inicial):** Substituir a barra de filtros tradicional em `index.html`, `style.css` e `app.js` pelo **Hub Orbital Central** (Arte/Filtro no meio, Países à esquerda, Vagas/Trilhas à direita, Opções Adicionais embaixo) e ocultar a grade de cards até que o usuário interaja.
 - [ ] **Passo 5:** Adicionar segundo cronjob no `cron-job.org` para Sábado às `20:00` disparando a rotina semanal.
+
