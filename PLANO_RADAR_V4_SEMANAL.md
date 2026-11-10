@@ -73,15 +73,36 @@ Substituir a caixa de filtro retangular e a listagem infinita pré-carregada por
    * Ao rolar além do Top 3 Destaques, **nenhum card de vaga é renderizado inicialmente** (elimina o scroll infinito imediato e a sobrecarga visual de 1.000+ cards).
    * A página termina exatamente no **Hub Orbital de Exploração**.
 
-2. **Anatomia do Hub Orbital (Baseado no Sketch Oficial):**
-   * **Centro (Núcleo Visual / Editorial Art):**
-     * Uma arte gráfica interativa/editorial (ex: Globo/Radar estilizado em SVG monochrome ou card de artigo central com campo de busca rápida e contador dinâmico do filtro).
+2. **Anatomia do Hub Orbital (Baseado no Sketch Oficial + Núcleo 3D):**
+   * **Barra de Pesquisa Dinâmica (Sincronizada com a Animação):**
+     * A barra de busca (`input`) permanece em destaque logo acima/integrada ao núcleo.
+     * **Sincronia Busca ↔ Nodos:** Conforme o usuário digita (ex: `"React"`, `"Python"`, `"Brazil"`, `"Design"`), os nodos correspondentes ao redor da esfera **acendem/pulsam automaticamente na animação** indicando os filtros ativados em tempo real.
+   * **Centro (Moeda/Esfera 3D Dupla Face — Meio Globo / Meia Logo `AARON.DEV`):**
+     * **Conceito Visual:** Um objeto 3D esférico/orbital girando continuamente no centro:
+       * **Face A (Hemisfério 1):** Globo terrestre estilizado (wireframe/pontos luminosos representando os países rastreados).
+       * **Face B (Hemisfério 2):** A **Logo Redonda `AARON.DEV`** modelada em 3D com relevo e textura metálica/monochrome (OLED Dark/Silver).
+     * *(Nota: O avatar do rosto seguindo o mouse fica reservado exclusivamente para o Portfólio principal, mantendo o Radar com estética de artefato tecnológico global).*
    * **Arco Esquerdo — `PAÍSES / REGIÕES` (Nodos Orbitais):**
-     * Pílulas/nodos dispostos em arco à esquerda do núcleo central: `WORLD`, `BRAZIL`, `LATAM`, `NORTH AMERICA`, `EUROPE`, `ASIA/PACIFIC`, `MIDDLE EAST`.
+     * Pílulas/nodos dispostos em arco à esquerda da esfera: `WORLD`, `BRAZIL`, `LATAM`, `NORTH AMERICA`, `EUROPE`, `ASIA/PACIFIC`, `MIDDLE EAST`.
    * **Arco Direito — `VAGAS / TRILHAS` (Nodos Orbitais):**
-     * Pílulas/nodos dispostos em arco à direita do núcleo central com as áreas: `Estágio & Júnior`, `Engenharia & Dev`, `IA & Automação`, `Suporte & Sistemas`, `Design Digital`, `Produto & PM`, `Growth & Marketing`.
+     * Pílulas/nodos dispostos em arco à direita da esfera com as áreas: `Estágio & Júnior`, `Engenharia & Dev`, `IA & Automação`, `Suporte & Sistemas`, `Design Digital`, `Produto & PM`, `Growth & Marketing`.
    * **Arco Inferior — `OPÇÕES ADICIONAIS` (Toggles Rápidos):**
      * Nodos na base do núcleo: `⚡ Simplificada (1-Click)`, `🌎 Worldwide / B2B`, `🏆 Melhores da Semana (Edição de Sábado)`.
+
+---
+
+## 5.3. Ferramentas Recomendadas para Criar a Esfera 3D (Meio Globo / Meia Logo)
+
+Para criar e rodar esse ativo 3D no centro do site sem pesar o carregamento na Vercel:
+
+1. **Spline.design (🏆 Mais Recomendado para Web Interativa):**
+   * **O que é:** Ferramenta 3D direto no navegador (estilo Figma, porém 3D) gratuita.
+   * **Como fazer lá:** Você importa o arquivo `.svg` da sua logo redonda `AARON.DEV`, aplica extrusão 3D + textura metálica/vidro fosco de um lado, acopla a meia esfera do globo do outro e coloca uma animação de rotação contínua (e reação ao mouse).
+   * **Como entra no site:** Exporta como embed leve ou WebGL Canvas (`<spline-viewer>`).
+2. **Three.js Puro via Código (Zero Ferramenta Externa):**
+   * Podemos gerar a esfera direto via código JavaScript no próprio site (`Three.js` via CDN): um hemisfério com shader de pontos dos continentes e o outro hemisfério extrudando o seu `assets/logo.svg` em 3D com iluminação reativa ao filtro.
+3. **Blender → Exportação `.GLB` + `<model-viewer>` do Google:**
+   * Se quiser esculpir com textura ultra-detalhada no Blender, exporta um único arquivo `.glb` (< 1MB) e roda nativo no HTML.
 
 3. **Comportamento de Revelação Sob Demanda (Click-to-Reveal):**
    * As vagas ficam ocultas (`display: none` / container recolhido) até que o usuário clique em qualquer nodo (País, Área, Opção Adicional ou pesquise no centro).
