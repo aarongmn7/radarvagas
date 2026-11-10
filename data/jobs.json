@@ -1,28 +1,28 @@
 {
-  "lastUpdated": "2026-11-10T13:47:00.000Z",
+  "lastUpdated": "2026-11-10T14:12:00.000Z",
   "nextEditionSchedule": "09:00 BRT (12:00 UTC)",
-  "totalJobs": 1176,
+  "totalJobs": 1180,
   "editorial": {
-    "headline": "Mercado remoto abre 1176 oportunidades nas últimas 24h com 349 vagas diretas no Brasil",
-    "summary": "O levantamento de hoje destaca forte demanda em Suporte & ERP (340) e Python (53). Foram mapeadas 66 posições de entrada (Estágio/Júnior) e 21 contratos globais abertos para candidatos baseados no Brasil.",
+    "headline": "Mercado remoto abre 1180 oportunidades nas últimas 24h com 351 vagas diretas no Brasil",
+    "summary": "O levantamento de hoje destaca forte demanda em Suporte & ERP (339) e Python (52). Foram mapeadas 66 posições de entrada (Estágio/Júnior) e 23 contratos globais abertos para candidatos baseados no Brasil.",
     "generatedBy": "DETERMINISTIC_ENGINE",
     "stats": {
-      "total": 1176,
-      "brazil": 349,
+      "total": 1180,
+      "brazil": 351,
       "junior": 66,
-      "globalB2b": 21,
+      "globalB2b": 23,
       "topStacks": [
         {
           "name": "Suporte & ERP",
-          "count": 340
+          "count": 339
         },
         {
           "name": "Python",
-          "count": 53
+          "count": 52
         },
         {
           "name": "Node.js",
-          "count": 34
+          "count": 33
         }
       ]
     },
@@ -1525,34 +1525,6 @@
       "isStudentFriendly": true
     },
     {
-      "id": "NA-132",
-      "title": "Junior Systems Analyst - Contingent",
-      "company": "Aretum",
-      "location": "McLean, VA",
-      "source": "LINKEDIN",
-      "isEasyApply": true,
-      "geo": {
-        "isBrazil": false,
-        "isSouthAmerica": false,
-        "isNorthAmerica": true,
-        "isEurope": false,
-        "isAsia": false,
-        "isAfrica": false,
-        "flag": "🇺🇸"
-      },
-      "archetype": "SUPPORT",
-      "eligibility": "🌐 Remoto Internacional • ⚡ Simplificada",
-      "posted": "Publicada em 09/11/2026",
-      "postedIso": "2026-11-09",
-      "url": "https://www.linkedin.com/jobs/view/junior-systems-analyst-contingent-at-aretum-4487914715",
-      "score": 93,
-      "matchReasons": [
-        "⚡ SIMPLIFICADA",
-        "TRILHA: SUPORTE & ERP"
-      ],
-      "isStudentFriendly": true
-    },
-    {
       "id": "SA-65",
       "title": "Data Engineer Junior GCP / Santiago CL",
       "company": "Stefanini LATAM",
@@ -1581,7 +1553,7 @@
       "isStudentFriendly": true
     },
     {
-      "id": "EU-239",
+      "id": "EU-240",
       "title": "Intern Software Developer (JavaScript & React)",
       "company": "Motorola Solutions",
       "location": "Cracow, Małopolskie, Poland",
@@ -2103,7 +2075,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-78",
+      "id": "EU-79",
       "title": "Python + IA Developer @Portugal",
       "company": "KCS iT",
       "location": "Portugal",
@@ -2488,7 +2460,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-135",
+      "id": "EU-137",
       "title": "Backend Developer (Node.js, JavaScript, TypeScript)",
       "company": "Action1",
       "location": "Poland",
@@ -2740,7 +2712,7 @@
       "isStudentFriendly": true
     },
     {
-      "id": "EU-67",
+      "id": "EU-68",
       "title": "Technical Founder’s Associate (Internship)",
       "company": "Arclumina AG",
       "location": "Lucerne, Lucerne, Switzerland",
@@ -2767,7 +2739,7 @@
       "isStudentFriendly": true
     },
     {
-      "id": "EU-94",
+      "id": "EU-95",
       "title": "Graduate AI software engineer",
       "company": "Bending Spoons",
       "location": "Poland",
@@ -2787,6 +2759,33 @@
       "posted": "Publicada em 10/11/2026",
       "postedIso": "2026-11-10",
       "url": "https://pl.linkedin.com/jobs/view/graduate-ai-software-engineer-at-bending-spoons-4487970998",
+      "score": 86,
+      "matchReasons": [
+        "TRILHA: IA & LLMs"
+      ],
+      "isStudentFriendly": true
+    },
+    {
+      "id": "EU-115",
+      "title": "Desarrollador/a IA (AI/ML Engineer) Junior - Madrid",
+      "company": "Galadrim",
+      "location": "Greater Madrid Metropolitan Area",
+      "source": "LINKEDIN",
+      "isEasyApply": false,
+      "geo": {
+        "isBrazil": false,
+        "isSouthAmerica": false,
+        "isNorthAmerica": false,
+        "isEurope": true,
+        "isAsia": false,
+        "isAfrica": false,
+        "flag": "🇪🇺"
+      },
+      "archetype": "DEV",
+      "eligibility": "🌐 Remoto Internacional",
+      "posted": "Publicada em 10/11/2026",
+      "postedIso": "2026-11-10",
+      "url": "https://es.linkedin.com/jobs/view/desarrollador-a-ia-ai-ml-engineer-junior-madrid-at-galadrim-4489483109",
       "score": 86,
       "matchReasons": [
         "TRILHA: IA & LLMs"
@@ -2983,7 +2982,7 @@
       "isStudentFriendly": true
     },
     {
-      "id": "EU-290",
+      "id": "EU-292",
       "title": "Interim Associate GDCM Deployment PEP (Fixed Term Contract Dec 2027)",
       "company": "Hilton",
       "location": "Watford, England, United Kingdom",
@@ -3010,7 +3009,7 @@
       "isStudentFriendly": true
     },
     {
-      "id": "EU-355",
+      "id": "EU-358",
       "title": "Junior Support Engineer – Multilingual (Healthcare)",
       "company": "Tata Consultancy Services",
       "location": "Letterkenny, County Donegal, Ireland",
@@ -3064,18 +3063,18 @@
       "isStudentFriendly": true
     },
     {
-      "id": "HIM-4",
-      "title": "Junior Systems Analyst - Contingent",
-      "company": "Aretum",
-      "location": "United States",
-      "source": "HIMALAYAS",
+      "id": "ME-76",
+      "title": "Associate Product Owner",
+      "company": "Clarivate",
+      "location": "Jerusalem District, Israel",
+      "source": "LINKEDIN",
       "isEasyApply": false,
       "geo": {
         "isBrazil": false,
         "isSouthAmerica": false,
         "isNorthAmerica": true,
         "isEurope": false,
-        "isAsia": false,
+        "isAsia": true,
         "isAfrica": false,
         "flag": "🇺🇸"
       },
@@ -3083,7 +3082,7 @@
       "eligibility": "🌐 Remoto Internacional",
       "posted": "Publicada em 10/11/2026",
       "postedIso": "2026-11-10",
-      "url": "https://himalayas.app/companies/aretum/jobs/junior-systems-analyst-contingent",
+      "url": "https://il.linkedin.com/jobs/view/associate-product-owner-at-clarivate-4489182471",
       "score": 85,
       "matchReasons": [
         "TRILHA: SUPORTE & ERP"
@@ -3091,7 +3090,7 @@
       "isStudentFriendly": true
     },
     {
-      "id": "EU-115",
+      "id": "EU-117",
       "title": "Junior Developer with JavaScript",
       "company": "BBHT Solutions",
       "location": "Cluj-Napoca, Cluj, Romania",
@@ -3727,7 +3726,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-106",
+      "id": "EU-107",
       "title": "Software Developer",
       "company": "Drillin",
       "location": "Tallinn, Harjumaa, Estonia",
@@ -4799,7 +4798,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "NA-128",
+      "id": "NA-129",
       "title": "Finance Application Support Engineer (Exp with Coupa Admin)Only w2",
       "company": "Astir IT Solutions, Inc.",
       "location": "New Jersey, United States",
@@ -4828,7 +4827,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "NA-129",
+      "id": "NA-130",
       "title": "Epic Prelude Analyst",
       "company": "Beacon Hill",
       "location": "Raleigh, NC",
@@ -4857,7 +4856,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "NA-130",
+      "id": "NA-131",
       "title": "SAP Support Analyst",
       "company": "Delta System & Software, Inc.",
       "location": "United States",
@@ -4944,7 +4943,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-100",
+      "id": "EU-101",
       "title": "AI Engineer (Python Software Engineer + GenAI)  -  Digital&IPA (freelance)",
       "company": "PwC Polska",
       "location": "Warsaw, Mazowieckie, Poland",
@@ -4973,7 +4972,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-132",
+      "id": "EU-134",
       "title": "Backend Developer (Node.js / Database Specialist)",
       "company": "Infoser Technological solutions, Hardware, Big Data Experts",
       "location": "Madrid, Community of Madrid, Spain",
@@ -5002,7 +5001,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-134",
+      "id": "EU-136",
       "title": "Backend Developer Node.js (Portugal, remote)",
       "company": "Zero to One Search  -  Recruitment Agency",
       "location": "Portugal",
@@ -5031,7 +5030,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-180",
+      "id": "EU-181",
       "title": "Technical AI & Support Engineer",
       "company": "Fynch Mobility",
       "location": "Utrecht, Utrecht, Netherlands",
@@ -5060,7 +5059,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-262",
+      "id": "EU-264",
       "title": "Systems Engineer (Enterprise Applications Support)",
       "company": "PSI CRO",
       "location": "Tallinn, Harjumaa, Estonia",
@@ -5089,7 +5088,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-271",
+      "id": "EU-273",
       "title": "Platform Operations - Support Engineer  -  n8n  -  AWS & Kubernetes",
       "company": "Capitole",
       "location": "Spain",
@@ -5118,7 +5117,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-281",
+      "id": "EU-283",
       "title": "Analista Tecnico IT - Categorie Protette Legge 68/99",
       "company": "Fabrick",
       "location": "Rome, Latium, Italy",
@@ -5147,7 +5146,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-282",
+      "id": "EU-284",
       "title": "Engenheiro de suporte de aplicativos",
       "company": "Prime Nearshore",
       "location": "Lisbon, Portugal",
@@ -5429,36 +5428,6 @@
         "NÍVEL: PLENO",
         "STACK: SQL & DADOS",
         "TRILHA: IA & LLMs"
-      ],
-      "isStudentFriendly": false
-    },
-    {
-      "id": "SA-152",
-      "title": "Desenvolvedor(a) Back-end Node.js Sênior em Florianópolis",
-      "company": "Anestech",
-      "location": "Florianópolis, Santa Catarina, Brazil",
-      "source": "LINKEDIN",
-      "isEasyApply": true,
-      "geo": {
-        "isBrazil": true,
-        "isSouthAmerica": true,
-        "isNorthAmerica": false,
-        "isEurope": false,
-        "isAsia": false,
-        "isAfrica": false,
-        "flag": "🇧🇷"
-      },
-      "archetype": "DEV",
-      "eligibility": "🇧🇷 Remoto Nacional (Brasil) • ⚡ Simplificada",
-      "posted": "Publicada em 09/11/2026",
-      "postedIso": "2026-11-09",
-      "url": "https://br.linkedin.com/jobs/view/desenvolvedor-a-back-end-node-js-s%C3%AAnior-em-florian%C3%B3polis-at-anestech-4487157622",
-      "score": 80,
-      "matchReasons": [
-        "NÍVEL: SÊNIOR",
-        "VAGA NACIONAL (BR)",
-        "⚡ SIMPLIFICADA",
-        "STACK: NODE.JS"
       ],
       "isStudentFriendly": false
     },
@@ -5871,7 +5840,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-118",
+      "id": "EU-120",
       "title": "Software Engineer (Nodejs & React) (d/f/m)",
       "company": "Haufe Group",
       "location": "Barcelona, Catalonia, Spain",
@@ -5987,7 +5956,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "SA-329",
+      "id": "SA-330",
       "title": "Data Engineer II, Credit Reporting",
       "company": "Sezzle",
       "location": "Buenos Aires, Buenos Aires Province, Argentina",
@@ -6016,7 +5985,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-127",
+      "id": "EU-128",
       "title": "Software Engineer API (f/m/d) - Node.js, SQL",
       "company": "smartclip",
       "location": "Berlin, Berlin, Germany",
@@ -6045,7 +6014,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-133",
+      "id": "EU-135",
       "title": "Software Engineer API (f/m/d) - Node.js, SQL",
       "company": "Instaffo",
       "location": "Berlin, Berlin, Germany",
@@ -6074,7 +6043,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-236",
+      "id": "EU-237",
       "title": "Software Engineer (Node.js, Javascript/Typescript)",
       "company": "ALTEN",
       "location": "Poland",
@@ -6465,7 +6434,7 @@
       "isStudentFriendly": true
     },
     {
-      "id": "EU-165",
+      "id": "EU-167",
       "title": "Junior Full Stack Entwickler (w/m/d) für Cloud-Lösungen",
       "company": "DekaBank",
       "location": "Frankfurt am Main, Hesse, Germany",
@@ -6490,7 +6459,7 @@
       "isStudentFriendly": true
     },
     {
-      "id": "EU-179",
+      "id": "EU-180",
       "title": "Junior software developer",
       "company": "Starapple",
       "location": "Amsterdam, North Holland, Netherlands",
@@ -8535,7 +8504,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-45",
+      "id": "EU-46",
       "title": "Machine Learning Engineer",
       "company": "ClickHouse",
       "location": "Amsterdam, North Holland, Netherlands",
@@ -8563,7 +8532,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-46",
+      "id": "EU-47",
       "title": "Computer Vision Engineer",
       "company": "FAIR SYSTEMS BV",
       "location": "Amsterdam, North Holland, Netherlands",
@@ -8591,7 +8560,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-52",
+      "id": "EU-53",
       "title": "Machine Learning Engineer",
       "company": "KickstartAI",
       "location": "Delft, South Holland, Netherlands",
@@ -8619,7 +8588,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-54",
+      "id": "EU-55",
       "title": "AI Product Engineer - ClickStack",
       "company": "ClickHouse",
       "location": "Amsterdam, North Holland, Netherlands",
@@ -8647,7 +8616,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-57",
+      "id": "EU-58",
       "title": "AI & Automation Engineer",
       "company": "Tools4ever B.V.",
       "location": "Baarn, Utrecht, Netherlands",
@@ -8675,7 +8644,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-59",
+      "id": "EU-60",
       "title": "AI Developer",
       "company": "Jobgether",
       "location": "Switzerland",
@@ -8703,7 +8672,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-62",
+      "id": "EU-63",
       "title": "AI Engineer – Intelligent Platforms & AI Security (m/w/d)",
       "company": "Rocken®",
       "location": "Zurich, Zurich, Switzerland",
@@ -8731,7 +8700,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-69",
+      "id": "EU-70",
       "title": "Forward Deployed Engineer (m/f/d)",
       "company": "Allianz Technology",
       "location": "Wallisellen / Hof, Zurich, Switzerland",
@@ -8759,7 +8728,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-70",
+      "id": "EU-71",
       "title": "Machine Learning Engineer",
       "company": "ClickHouse",
       "location": "Porto, Porto, Portugal",
@@ -8787,7 +8756,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-79",
+      "id": "EU-80",
       "title": "Forward Deployed Engineer (Remote)",
       "company": "Joblet-AI",
       "location": "Ireland",
@@ -8815,7 +8784,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-86",
+      "id": "EU-87",
       "title": "UKI Technology Consulting - AI & Data - Forward Deployed AI Engineer, Manager",
       "company": "EY",
       "location": "Dublin 2, County Dublin, Ireland",
@@ -8843,7 +8812,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-88",
+      "id": "EU-89",
       "title": "AI Engineer",
       "company": "Creatio",
       "location": "Poland",
@@ -8871,7 +8840,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-90",
+      "id": "EU-91",
       "title": "Forward Deployed AI Engineer (f/m/x)",
       "company": "Sii Poland",
       "location": "Toruń, Kujawsko-pomorskie, Poland",
@@ -8899,7 +8868,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-91",
+      "id": "EU-92",
       "title": "Forward Deployed AI Engineer (f/m/x)",
       "company": "Sii Poland",
       "location": "Wrocław, Dolnośląskie, Poland",
@@ -8927,7 +8896,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-98",
+      "id": "EU-99",
       "title": "Forward Deployed AI Engineer (f/m/x)",
       "company": "Sii Poland",
       "location": "Lublin, Lubelskie, Poland",
@@ -8955,7 +8924,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-99",
+      "id": "EU-100",
       "title": "Forward Deployed AI Engineer (f/m/x)",
       "company": "Sii Poland",
       "location": "Szczecin, Zachodniopomorskie, Poland",
@@ -8983,7 +8952,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-101",
+      "id": "EU-102",
       "title": "AI Engineer",
       "company": "Luxoft",
       "location": "Wrocław, Dolnośląskie, Poland",
@@ -9011,7 +8980,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-103",
+      "id": "EU-104",
       "title": "Solution Engineer",
       "company": "Katana Cloud Inventory",
       "location": "Harjumaa, Estonia",
@@ -9039,7 +9008,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-112",
+      "id": "EU-113",
       "title": "Software Developer Web, Mobile & Cloud",
       "company": "TEC-IT",
       "location": "Austria",
@@ -9067,7 +9036,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-113",
+      "id": "EU-114",
       "title": "Full Stack Engineer",
       "company": "Palau",
       "location": "Flemish Region, Belgium",
@@ -9095,7 +9064,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-116",
+      "id": "EU-118",
       "title": "Software Engineer – Growth",
       "company": "TreeBlock",
       "location": "Italy",
@@ -9123,7 +9092,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-119",
+      "id": "EU-121",
       "title": "Software Engineer II (Poland)",
       "company": "Sezzle",
       "location": "Polańczyk, Podkarpackie, Poland",
@@ -9151,7 +9120,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-120",
+      "id": "EU-122",
       "title": "Full Stack Developer",
       "company": "Titan OS",
       "location": "Barcelona, Catalonia, Spain",
@@ -9179,7 +9148,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-121",
+      "id": "EU-123",
       "title": "Fullstack Shopify Developer (w/m/d)",
       "company": "Hob by Horse GmbH",
       "location": "Osnabrück, Lower Saxony, Germany",
@@ -9207,7 +9176,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-122",
+      "id": "EU-124",
       "title": "Software Engineer Fullstack - CDI Paris - Theodo",
       "company": "Theodo",
       "location": "Greater Paris Metropolitan Region",
@@ -9235,7 +9204,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-123",
+      "id": "EU-125",
       "title": "FullStack Developer",
       "company": "LCG",
       "location": "Porto Metropolitan Area",
@@ -9263,7 +9232,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-129",
+      "id": "EU-131",
       "title": "Software Engineer",
       "company": "Hays",
       "location": "Madrid, Community of Madrid, Spain",
@@ -9291,7 +9260,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-141",
+      "id": "EU-143",
       "title": "Back End Developer",
       "company": "Fantastic.jobs",
       "location": "France",
@@ -9319,7 +9288,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-149",
+      "id": "EU-151",
       "title": "Applied AI Engineer",
       "company": "AssemblyAI",
       "location": "London, England, United Kingdom",
@@ -9347,7 +9316,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-210",
+      "id": "EU-211",
       "title": "Software Engineer (Applied AI)",
       "company": "JobCloud SA  -  jobup.ch - jobs.ch",
       "location": "Porto, Porto, Portugal",
@@ -9375,7 +9344,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-223",
+      "id": "EU-224",
       "title": "Full-Stack Software Developer - AI Applications",
       "company": "MWeds Global Advisory",
       "location": "Dublin, County Dublin, Ireland",
@@ -9403,7 +9372,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-234",
+      "id": "EU-235",
       "title": "AI Developer",
       "company": "Jacobs",
       "location": "Cracow, Małopolskie, Poland",
@@ -9431,7 +9400,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-235",
+      "id": "EU-236",
       "title": "AI Developer",
       "company": "Jacobs",
       "location": "Warsaw, Mazowieckie, Poland",
@@ -9459,7 +9428,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-243",
+      "id": "EU-245",
       "title": "Forward Deployed AI Engineer (f/m/x)",
       "company": "Sii Poland",
       "location": "Warsaw, Mazowieckie, Poland",
@@ -11061,6 +11030,62 @@
       "isStudentFriendly": false
     },
     {
+      "id": "SA-49",
+      "title": "Environmental Specialist  -  Remote",
+      "company": "Crossing Hurdles",
+      "location": "Latin America",
+      "source": "LINKEDIN",
+      "isEasyApply": false,
+      "geo": {
+        "isBrazil": true,
+        "isSouthAmerica": true,
+        "isNorthAmerica": false,
+        "isEurope": false,
+        "isAsia": false,
+        "isAfrica": false,
+        "flag": "🇧🇷"
+      },
+      "archetype": "AI",
+      "eligibility": "🌎 Worldwide / Contractor B2B",
+      "posted": "Publicada em 10/11/2026",
+      "postedIso": "2026-11-10",
+      "url": "https://www.linkedin.com/jobs/view/environmental-specialist-remote-at-crossing-hurdles-4488367146",
+      "score": 73,
+      "matchReasons": [
+        "CONTRATO: GLOBAL B2B",
+        "TRILHA: IA & LLMs"
+      ],
+      "isStudentFriendly": false
+    },
+    {
+      "id": "SA-50",
+      "title": "Biologist  -  Remote",
+      "company": "Crossing Hurdles",
+      "location": "Latin America",
+      "source": "LINKEDIN",
+      "isEasyApply": false,
+      "geo": {
+        "isBrazil": true,
+        "isSouthAmerica": true,
+        "isNorthAmerica": false,
+        "isEurope": false,
+        "isAsia": false,
+        "isAfrica": false,
+        "flag": "🇧🇷"
+      },
+      "archetype": "AI",
+      "eligibility": "🌎 Worldwide / Contractor B2B",
+      "posted": "Publicada em 10/11/2026",
+      "postedIso": "2026-11-10",
+      "url": "https://www.linkedin.com/jobs/view/biologist-remote-at-crossing-hurdles-4488364448",
+      "score": 73,
+      "matchReasons": [
+        "CONTRATO: GLOBAL B2B",
+        "TRILHA: IA & LLMs"
+      ],
+      "isStudentFriendly": false
+    },
+    {
       "id": "SA-118",
       "title": "SENAI – Bolsista em Desenvolvimento de Software e Plataforma Web",
       "company": "Sistema Findes",
@@ -11234,6 +11259,35 @@
     },
     {
       "id": "SA-150",
+      "title": "Senior Solutions Engineer",
+      "company": "Blip",
+      "location": "Brazil",
+      "source": "LINKEDIN",
+      "isEasyApply": true,
+      "geo": {
+        "isBrazil": true,
+        "isSouthAmerica": true,
+        "isNorthAmerica": false,
+        "isEurope": false,
+        "isAsia": false,
+        "isAfrica": false,
+        "flag": "🇧🇷"
+      },
+      "archetype": "DEV",
+      "eligibility": "🇧🇷 Remoto Nacional (Brasil) • ⚡ Simplificada",
+      "posted": "Publicada em 10/11/2026",
+      "postedIso": "2026-11-10",
+      "url": "https://br.linkedin.com/jobs/view/senior-solutions-engineer-at-blip-4488373468",
+      "score": 73,
+      "matchReasons": [
+        "NÍVEL: SÊNIOR",
+        "VAGA NACIONAL (BR)",
+        "⚡ SIMPLIFICADA"
+      ],
+      "isStudentFriendly": false
+    },
+    {
+      "id": "SA-151",
       "title": "Tech Lead",
       "company": "Ademicon",
       "location": "Brazil",
@@ -11262,7 +11316,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "SA-151",
+      "id": "SA-152",
       "title": "Desenvolvedor(a) Fullstack SR",
       "company": "Nexco  -  Talent Solutions",
       "location": "São Paulo, São Paulo, Brazil",
@@ -12048,7 +12102,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "SA-331",
+      "id": "SA-332",
       "title": "Software Support Analyst II",
       "company": "NCR Atleos",
       "location": "Buenos Aires Province, Argentina",
@@ -12076,7 +12130,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "SA-332",
+      "id": "SA-333",
       "title": "Business Systems Analyst- SAP Commerce Cloud (Hybris)",
       "company": "Rockwell Automation",
       "location": "Buenos Aires, Buenos Aires Province, Argentina",
@@ -12104,7 +12158,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "SA-339",
+      "id": "SA-340",
       "title": "IT Service Desk Engineer (L1/L2)",
       "company": "unosquare",
       "location": "Colombia",
@@ -12132,7 +12186,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "SA-340",
+      "id": "SA-341",
       "title": "NOC Engineer (Night Shift)",
       "company": "unosquare",
       "location": "Colombia",
@@ -12160,7 +12214,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "SA-341",
+      "id": "SA-342",
       "title": "Production Support Engineer",
       "company": "StoneX Group Inc.",
       "location": "Bogota, D.C., Capital District, Colombia",
@@ -12188,7 +12242,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "SA-342",
+      "id": "SA-343",
       "title": "Integration Technical Analyst",
       "company": "MioDottore",
       "location": "Bogota, D.C., Capital District, Colombia",
@@ -12216,7 +12270,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "SA-343",
+      "id": "SA-344",
       "title": "Integration Technical Analyst",
       "company": "Docplanner",
       "location": "Bogota, D.C., Capital District, Colombia",
@@ -12244,7 +12298,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "SA-344",
+      "id": "SA-345",
       "title": "Integration Technical Analyst",
       "company": "Jameda",
       "location": "Bogota, D.C., Capital District, Colombia",
@@ -12272,7 +12326,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "SA-345",
+      "id": "SA-346",
       "title": "Integration Technical Analyst",
       "company": "Doctoralia México",
       "location": "Bogota, D.C., Capital District, Colombia",
@@ -12300,7 +12354,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "SA-346",
+      "id": "SA-347",
       "title": "Integration Technical Analyst",
       "company": "Doctoralia Brasil",
       "location": "Bogota, D.C., Capital District, Colombia",
@@ -12328,7 +12382,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "SA-347",
+      "id": "SA-348",
       "title": "Integration Technical Analyst",
       "company": "TuoTempo",
       "location": "Bogota, D.C., Capital District, Colombia",
@@ -12356,7 +12410,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "SA-349",
+      "id": "SA-350",
       "title": "IT Helpdesk Analyst",
       "company": "Power Digital Marketing",
       "location": "Colombia",
@@ -12722,7 +12776,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-117",
+      "id": "EU-119",
       "title": "Fullstack Developer - Java & React Native",
       "company": "MC Engineering",
       "location": "Turin, Piedmont, Italy",
@@ -12750,7 +12804,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-157",
+      "id": "EU-159",
       "title": "Polyglot Engineer (JS/Python/Go)",
       "company": "YLD",
       "location": "United Kingdom",
@@ -12778,7 +12832,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-168",
+      "id": "EU-170",
       "title": "SAP Cloud Frontend/Fullstack Developer",
       "company": "PwC Deutschland",
       "location": "Munich, Bavaria, Germany",
@@ -12806,7 +12860,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-169",
+      "id": "EU-171",
       "title": "SAP Cloud Frontend/Fullstack Developer",
       "company": "PwC Deutschland",
       "location": "Hamburg, Hamburg, Germany",
@@ -12834,7 +12888,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-242",
+      "id": "EU-244",
       "title": "Python Developer - MyDr (100% Remote within Poland)",
       "company": "TuoTempo",
       "location": "Warsaw, Mazowieckie, Poland",
@@ -12862,7 +12916,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-244",
+      "id": "EU-246",
       "title": "Python Developer - MyDr (100% Remote within Poland)",
       "company": "Jameda",
       "location": "Warsaw, Mazowieckie, Poland",
@@ -12890,7 +12944,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-245",
+      "id": "EU-247",
       "title": "Python Developer - MyDr (100% Remote within Poland)",
       "company": "Doctoralia México",
       "location": "Warsaw, Mazowieckie, Poland",
@@ -12918,7 +12972,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-246",
+      "id": "EU-248",
       "title": "Python Developer - MyDr (100% Remote within Poland)",
       "company": "MioDottore",
       "location": "Warsaw, Mazowieckie, Poland",
@@ -12946,7 +13000,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-259",
+      "id": "EU-261",
       "title": "Technical Support Engineer - Oracle Health  -  Afternoon Shift (2 PM - 11 PM)",
       "company": "Oracle",
       "location": "Bucharest, Bucharest, Romania",
@@ -12974,7 +13028,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-260",
+      "id": "EU-262",
       "title": "Technical Support Engineer - Oracle Health  -  Afternoon Shift (2 PM–11 PM)",
       "company": "Oracle",
       "location": "Bucharest, Bucharest, Romania",
@@ -13002,7 +13056,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-261",
+      "id": "EU-263",
       "title": "Technical Customer Support Engineer - EMEA",
       "company": "ClickHouse",
       "location": "Amsterdam, North Holland, Netherlands",
@@ -13030,7 +13084,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-263",
+      "id": "EU-265",
       "title": "Systems Engineer (Enterprise Applications Support)",
       "company": "PSI CRO",
       "location": "Riga, Riga, Latvia",
@@ -13058,7 +13112,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-283",
+      "id": "EU-285",
       "title": "Technical Customer Support Engineer - EMEA",
       "company": "ClickHouse",
       "location": "London, England, United Kingdom",
@@ -13086,7 +13140,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-285",
+      "id": "EU-287",
       "title": "ADMS Solutions & Support Engineer",
       "company": "GE Vernova",
       "location": "London, England, United Kingdom",
@@ -13114,7 +13168,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-289",
+      "id": "EU-291",
       "title": "2nd Line Support Engineer",
       "company": "Nine Twenty Recruitment",
       "location": "Scotland, United Kingdom",
@@ -13142,7 +13196,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-293",
+      "id": "EU-295",
       "title": "HR Systems Analyst (Oracle HCM)",
       "company": "Sherborne Talent Solutions",
       "location": "North West, England, United Kingdom",
@@ -13170,7 +13224,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-294",
+      "id": "EU-296",
       "title": "Application Support Analyst",
       "company": "Brown & Brown UK",
       "location": "London Area, United Kingdom",
@@ -13198,7 +13252,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-296",
+      "id": "EU-298",
       "title": "Application Support Engineer",
       "company": "Spectrum IT Recruitment",
       "location": "Fareham, England, United Kingdom",
@@ -13226,7 +13280,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-297",
+      "id": "EU-299",
       "title": "Development & Support Analyst",
       "company": "Objectway",
       "location": "London Area, United Kingdom",
@@ -13254,7 +13308,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-299",
+      "id": "EU-301",
       "title": "Customer Support Engineer Klinische Anwendungen (m/w/d)",
       "company": "Meierhofer AG",
       "location": "Munich, Bavaria, Germany",
@@ -13282,7 +13336,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-300",
+      "id": "EU-302",
       "title": "Support Engineer (all genders) - Köthen",
       "company": "SEEBURGER",
       "location": "Köthen, Saxony-Anhalt, Germany",
@@ -13310,7 +13364,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-302",
+      "id": "EU-304",
       "title": "Salesforce Developer",
       "company": "TaskVerse",
       "location": "Germany",
@@ -13338,7 +13392,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-307",
+      "id": "EU-309",
       "title": "Customer Operations Engineer",
       "company": "Sectra",
       "location": "Almere, Flevoland, Netherlands",
@@ -13366,7 +13420,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-311",
+      "id": "EU-313",
       "title": "Application Analyst IT Store Applications",
       "company": "Action",
       "location": "Zwaagdijk-Oost, North Holland, Netherlands",
@@ -13394,7 +13448,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-314",
+      "id": "EU-316",
       "title": "Engineer beheer",
       "company": "Acknowledge Benelux B.V.",
       "location": "Eindhoven, North Brabant, Netherlands",
@@ -13422,7 +13476,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-317",
+      "id": "EU-319",
       "title": "System Engineer & IT Service Manager (m/w/d)",
       "company": "Rocken®",
       "location": "Zurich, Zurich, Switzerland",
@@ -13450,7 +13504,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-320",
+      "id": "EU-322",
       "title": "IT Support Engineer - Microsoft & Cloud (m/w) 80-100%",
       "company": "yellowshark® AG",
       "location": "Winkeln, St Gallen, Switzerland",
@@ -13478,7 +13532,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-321",
+      "id": "EU-323",
       "title": "Operations Support Engineer (a) 80 - 100%",
       "company": "Axians in Switzerland",
       "location": "Gerlafingen, Solothurn, Switzerland",
@@ -13506,7 +13560,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-323",
+      "id": "EU-325",
       "title": "Technical Business Analyst",
       "company": "Adroit People Limited (UK)",
       "location": "Geneva, Switzerland",
@@ -13534,7 +13588,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-325",
+      "id": "EU-327",
       "title": "Solution Engineer Input-/Output-Management",
       "company": "ELCA Group",
       "location": "Zurich, Zurich, Switzerland",
@@ -13562,7 +13616,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-335",
+      "id": "EU-337",
       "title": "Technical Support Engineer (shift 9 PM - 4 AM Eastern Time)",
       "company": "Dellent",
       "location": "Aveiro, Aveiro, Portugal",
@@ -13590,7 +13644,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-336",
+      "id": "EU-338",
       "title": "ServiceDesk Engineer",
       "company": "Tabby  -  تابي",
       "location": "Lisboa, Lisbon, Portugal",
@@ -13618,7 +13672,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-337",
+      "id": "EU-339",
       "title": "Analista de Suporte Aplicacional",
       "company": "Mutua dos Pescadores",
       "location": "Lisbon, Portugal",
@@ -13646,7 +13700,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-339",
+      "id": "EU-341",
       "title": "Database Analyst",
       "company": "QUANTEAM - Portugal (RAINBOW PARTNERS Group)",
       "location": "Porto, Portugal",
@@ -13674,7 +13728,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-340",
+      "id": "EU-342",
       "title": "Application Integration Support Engineer",
       "company": "IRIUM Portugal",
       "location": "Lisbon, Lisbon, Portugal",
@@ -13702,7 +13756,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-341",
+      "id": "EU-343",
       "title": "Application Support Engineer",
       "company": "workfully",
       "location": "Lisboa, Lisbon, Portugal",
@@ -13730,7 +13784,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-342",
+      "id": "EU-344",
       "title": "Integration Platform Engineer (MuleSoft)",
       "company": "PrimeIT",
       "location": "Lisbon, Portugal",
@@ -13758,7 +13812,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-343",
+      "id": "EU-345",
       "title": "Business Technology Support Engineer",
       "company": "Sensor Tower",
       "location": "Lisboa, Lisbon, Portugal",
@@ -13786,7 +13840,63 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-347",
+      "id": "EU-348",
+      "title": "Application Support Engineer",
+      "company": "Inetum",
+      "location": "Lisbon Metropolitan Area",
+      "source": "LINKEDIN",
+      "isEasyApply": false,
+      "geo": {
+        "isBrazil": false,
+        "isSouthAmerica": false,
+        "isNorthAmerica": false,
+        "isEurope": true,
+        "isAsia": false,
+        "isAfrica": false,
+        "flag": "🇪🇺"
+      },
+      "archetype": "SUPPORT",
+      "eligibility": "🌐 Remoto Internacional",
+      "posted": "Publicada em 09/11/2026",
+      "postedIso": "2026-11-09",
+      "url": "https://pt.linkedin.com/jobs/view/application-support-engineer-at-inetum-4453699636",
+      "score": 73,
+      "matchReasons": [
+        "NÍVEL: PLENO",
+        "TRILHA: SUPORTE & ERP"
+      ],
+      "isStudentFriendly": false
+    },
+    {
+      "id": "EU-349",
+      "title": "Production Support Engineer (Hybrid@Lisbon)",
+      "company": "Bee Engineering ICT",
+      "location": "Lisbon, Portugal",
+      "source": "LINKEDIN",
+      "isEasyApply": false,
+      "geo": {
+        "isBrazil": false,
+        "isSouthAmerica": false,
+        "isNorthAmerica": false,
+        "isEurope": true,
+        "isAsia": false,
+        "isAfrica": false,
+        "flag": "🇪🇺"
+      },
+      "archetype": "SUPPORT",
+      "eligibility": "🌐 Remoto Internacional",
+      "posted": "Publicada em 09/11/2026",
+      "postedIso": "2026-11-09",
+      "url": "https://pt.linkedin.com/jobs/view/production-support-engineer-hybrid%40lisbon-at-bee-engineering-ict-4487911576",
+      "score": 73,
+      "matchReasons": [
+        "NÍVEL: PLENO",
+        "TRILHA: SUPORTE & ERP"
+      ],
+      "isStudentFriendly": false
+    },
+    {
+      "id": "EU-350",
       "title": "Technical Application Support Analyst - ERP",
       "company": "MCS Group  -  Your Specialist Recruitment Consultancy",
       "location": "Dublin, County Dublin, Ireland",
@@ -13814,7 +13924,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-348",
+      "id": "EU-351",
       "title": "IT Support Engineer with German",
       "company": "Methodius IT Recruitment",
       "location": "County Donegal, Ireland",
@@ -13842,7 +13952,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-350",
+      "id": "EU-353",
       "title": "Application Support Analyst",
       "company": "Nicoll Curtin",
       "location": "Greater Dublin",
@@ -13870,7 +13980,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-351",
+      "id": "EU-354",
       "title": "Customer Experience Engineer",
       "company": "Microsoft",
       "location": "Dublin, County Dublin, Ireland",
@@ -13898,7 +14008,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-352",
+      "id": "EU-355",
       "title": "Systems Analyst, SaaS Operations Onboarding",
       "company": "State Street",
       "location": "Dublin, County Dublin, Ireland",
@@ -13926,7 +14036,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-362",
+      "id": "EU-365",
       "title": "ServiceDesk Engineer",
       "company": "Tabby  -  تابي",
       "location": "Warsaw, Mazowieckie, Poland",
@@ -13954,7 +14064,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-363",
+      "id": "EU-366",
       "title": "ServiceDesk Engineer",
       "company": "Tabby  -  تابي",
       "location": "Poland",
@@ -13982,7 +14092,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-365",
+      "id": "EU-368",
       "title": "Cloud Support Engineer",
       "company": "Strategy",
       "location": "Warsaw Metropolitan Area",
@@ -14010,7 +14120,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-371",
+      "id": "EU-374",
       "title": "Data Warehouse Analyst",
       "company": "LHV",
       "location": "Tallinn, Harjumaa, Estonia",
@@ -14990,34 +15100,6 @@
       "isStudentFriendly": false
     },
     {
-      "id": "HIM-7",
-      "title": "S/4HANA Customer Management (CM)/ Business Analyst",
-      "company": "Peraton",
-      "location": "United States",
-      "source": "HIMALAYAS",
-      "isEasyApply": false,
-      "geo": {
-        "isBrazil": false,
-        "isSouthAmerica": false,
-        "isNorthAmerica": true,
-        "isEurope": false,
-        "isAsia": false,
-        "isAfrica": false,
-        "flag": "🇺🇸"
-      },
-      "archetype": "SUPPORT",
-      "eligibility": "🌐 Remoto Internacional",
-      "posted": "Publicada em 10/11/2026",
-      "postedIso": "2026-11-10",
-      "url": "https://himalayas.app/companies/peraton/jobs/s-4hana-customer-management-cm-business-analyst",
-      "score": 73,
-      "matchReasons": [
-        "NÍVEL: PLENO",
-        "TRILHA: SUPORTE & ERP"
-      ],
-      "isStudentFriendly": false
-    },
-    {
       "id": "GL-4",
       "title": "AI Trainer - Video Annotation",
       "company": "iMerit Technology",
@@ -15330,7 +15412,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "SA-330",
+      "id": "SA-331",
       "title": "Hypercare Representative (LATAM)",
       "company": "Cloudbeds",
       "location": "Argentina",
@@ -15358,7 +15440,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "SA-338",
+      "id": "SA-339",
       "title": "Soporte de Field Service Certificaciones B2B",
       "company": "Millicom (Tigo)",
       "location": "Fernando de la Mora, Central Department, Paraguay",
@@ -15416,7 +15498,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-131",
+      "id": "EU-133",
       "title": "Senior Full Stack Developer (React + Python)  -  Remote Romania",
       "company": "DXC Technology",
       "location": "Romania",
@@ -15446,35 +15528,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-178",
-      "title": "Software Engineer – Backend / Data Platform (TypeScript) (m/f/d)",
-      "company": "EnOcean",
-      "location": "Munich, Bavaria, Germany",
-      "source": "LINKEDIN",
-      "isEasyApply": false,
-      "geo": {
-        "isBrazil": false,
-        "isSouthAmerica": false,
-        "isNorthAmerica": false,
-        "isEurope": true,
-        "isAsia": false,
-        "isAfrica": false,
-        "flag": "🇪🇺"
-      },
-      "archetype": "DEV",
-      "eligibility": "🌐 Remoto Internacional",
-      "posted": "Publicada em 10/11/2026",
-      "postedIso": "2026-11-10",
-      "url": "https://de.linkedin.com/jobs/view/software-engineer-%E2%80%93-backend-data-platform-typescript-m-f-d-at-enocean-4487486219",
-      "score": 72,
-      "matchReasons": [
-        "NÍVEL: PLENO",
-        "STACK: TS/JS"
-      ],
-      "isStudentFriendly": false
-    },
-    {
-      "id": "EU-183",
+      "id": "EU-184",
       "title": "Software Engineer – Backend / Data Platform (TypeScript) (m/f/d)",
       "company": "EnOcean",
       "location": "Utrecht, Utrecht, Netherlands",
@@ -15526,6 +15580,35 @@
       "matchReasons": [
         "NÍVEL: PLENO",
         "STACK: TS/JS"
+      ],
+      "isStudentFriendly": false
+    },
+    {
+      "id": "HIM-5",
+      "title": "Senior React Full-stack Developer",
+      "company": "lemon.io",
+      "location": "Albania, Andorra, Argentina, Australia, Austria, Belgium, Belize, Bolivia, Bosnia and Herzegovina, Brazil, Bulgaria, Canada, Chile, Colombia, Costa Rica, Croatia, Cyprus, Czechia, Denmark, Dominican Republic, Ecuador, El Salvador, Estonia, Finland, France, Germany, Greece, Guatemala, Haiti, Honduras, Iceland, Indonesia, Ireland, Israel, Italy, Jamaica, Japan, Latvia, Lithuania, Luxembourg, Malaysia, Malta, Mexico, Moldova, Montenegro, Morocco, Netherlands, New Zealand, North Macedonia, Norway, Panama, Papua New Guinea, Paraguay, Peru, Philippines, Poland, Portugal, Puerto Rico, Romania, Saudi Arabia, Singapore, Slovakia, Slovenia, South Africa, South Korea, Spain, Sweden, Switzerland, Thailand, Turkey, Ukraine, United Arab Emirates, United Kingdom, United States, Uruguay, Vietnam",
+      "source": "HIMALAYAS",
+      "isEasyApply": false,
+      "geo": {
+        "isBrazil": true,
+        "isSouthAmerica": true,
+        "isNorthAmerica": true,
+        "isEurope": true,
+        "isAsia": true,
+        "isAfrica": true,
+        "flag": "🇧🇷"
+      },
+      "archetype": "DEV",
+      "eligibility": "🇧🇷 Remoto Nacional (Brasil)",
+      "posted": "Publicada em 10/11/2026",
+      "postedIso": "2026-11-10",
+      "url": "https://himalayas.app/companies/lemon-io/jobs/senior-react-full-stack-developer",
+      "score": 72,
+      "matchReasons": [
+        "NÍVEL: SÊNIOR",
+        "VAGA NACIONAL (BR)",
+        "STACK: REACT"
       ],
       "isStudentFriendly": false
     },
@@ -15587,7 +15670,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-154",
+      "id": "EU-156",
       "title": "Senior Product Engineer - Python focused  -  Django, FastAPI, AWS, JavaScript  -  Building Human Intelligence > AI Infra  -  Research + Healthcare  -  Fully Remote (UK)  -  £80-100k base, Bonus + Equity",
       "company": "Owen Thomas  -  B Corp™",
       "location": "United Kingdom",
@@ -15617,7 +15700,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-232",
+      "id": "EU-233",
       "title": "Senior Backend Engineer – TypeScript, Node.js & Applied AI",
       "company": "Archer Recruitment",
       "location": "Dublin, County Dublin, Ireland",
@@ -16926,7 +17009,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-111",
+      "id": "EU-112",
       "title": "Fullstack Software Engineer (Remote)",
       "company": "Joblet-AI",
       "location": "Ireland",
@@ -16953,7 +17036,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-114",
+      "id": "EU-116",
       "title": "Full Stack Developer",
       "company": "BBHT Solutions",
       "location": "Cluj-Napoca, Cluj, Romania",
@@ -16980,7 +17063,34 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-145",
+      "id": "EU-129",
+      "title": "Fullstack Software Engineer (x/f/m) - Product Platform",
+      "company": "Alan",
+      "location": "Spain",
+      "source": "LINKEDIN",
+      "isEasyApply": false,
+      "geo": {
+        "isBrazil": false,
+        "isSouthAmerica": false,
+        "isNorthAmerica": false,
+        "isEurope": true,
+        "isAsia": false,
+        "isAfrica": false,
+        "flag": "🇪🇺"
+      },
+      "archetype": "DEV",
+      "eligibility": "🌐 Remoto Internacional",
+      "posted": "Publicada em 09/11/2026",
+      "postedIso": "2026-11-09",
+      "url": "https://es.linkedin.com/jobs/view/fullstack-software-engineer-x-f-m-product-platform-at-alan-4469887842",
+      "score": 66,
+      "matchReasons": [
+        "NÍVEL: PLENO"
+      ],
+      "isStudentFriendly": false
+    },
+    {
+      "id": "EU-147",
       "title": "Fullstack Software Engineer (Remote)",
       "company": "Joblet-AI",
       "location": "United Kingdom",
@@ -17007,7 +17117,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-146",
+      "id": "EU-148",
       "title": "Full Stack Engineer",
       "company": "Hadean",
       "location": "London Area, United Kingdom",
@@ -17034,7 +17144,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-147",
+      "id": "EU-149",
       "title": "Full Stack Developer",
       "company": "AeroCloud",
       "location": "Manchester, England, United Kingdom",
@@ -17061,7 +17171,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-148",
+      "id": "EU-150",
       "title": "Software Engineer",
       "company": "Pod",
       "location": "London, England, United Kingdom",
@@ -17088,7 +17198,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-150",
+      "id": "EU-152",
       "title": "Full Stack Engineer",
       "company": "Reposit",
       "location": "London, England, United Kingdom",
@@ -17115,7 +17225,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-151",
+      "id": "EU-153",
       "title": "Full Stack Engineer",
       "company": "Codal",
       "location": "Lincoln, England, United Kingdom",
@@ -17142,7 +17252,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-152",
+      "id": "EU-154",
       "title": "Software Developer",
       "company": "The AA",
       "location": "Cardiff, Wales, United Kingdom",
@@ -17169,7 +17279,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-153",
+      "id": "EU-155",
       "title": "Full Stack Engineer",
       "company": "SoTalent",
       "location": "London Area, United Kingdom",
@@ -17196,7 +17306,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-160",
+      "id": "EU-162",
       "title": "Backend Software Engineer - Distributed Systems",
       "company": "Client Server",
       "location": "London, England, United Kingdom",
@@ -17223,7 +17333,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-161",
+      "id": "EU-163",
       "title": "Back End Engineer",
       "company": "BIT",
       "location": "London Area, United Kingdom",
@@ -17250,7 +17360,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-164",
+      "id": "EU-166",
       "title": "Software Engineer (f/m/d)",
       "company": "WhyBrilliant",
       "location": "Berlin, Berlin, Germany",
@@ -17277,7 +17387,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-166",
+      "id": "EU-168",
       "title": "Fullstack Software Developer - Schwerpunkt Backend & Cloud (all genders welcome) (all genders welcome)",
       "company": "COSMO CONSULT",
       "location": "Würzburg, Bavaria, Germany",
@@ -17304,7 +17414,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-174",
+      "id": "EU-176",
       "title": "Full Stack Software Engineer - Control Plane",
       "company": "ClickHouse",
       "location": "Berlin, Berlin, Germany",
@@ -17331,7 +17441,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-175",
+      "id": "EU-177",
       "title": "Product Engineer (m/f/d)",
       "company": "Operations1",
       "location": "Germany",
@@ -17358,7 +17468,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-176",
+      "id": "EU-178",
       "title": "Back End Developer",
       "company": "Salt",
       "location": "Germany",
@@ -17385,7 +17495,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-177",
+      "id": "EU-179",
       "title": "Back End Developer",
       "company": "RemoteStar",
       "location": "Germany",
@@ -17412,7 +17522,34 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-181",
+      "id": "EU-182",
+      "title": "Full stack-Developer",
+      "company": "Starapple",
+      "location": "Utrecht, Utrecht, Netherlands",
+      "source": "LINKEDIN",
+      "isEasyApply": false,
+      "geo": {
+        "isBrazil": false,
+        "isSouthAmerica": false,
+        "isNorthAmerica": false,
+        "isEurope": true,
+        "isAsia": false,
+        "isAfrica": false,
+        "flag": "🇪🇺"
+      },
+      "archetype": "DEV",
+      "eligibility": "🌐 Remoto Internacional",
+      "posted": "Publicada em 10/11/2026",
+      "postedIso": "2026-11-10",
+      "url": "https://nl.linkedin.com/jobs/view/full-stack-developer-at-starapple-4489472785",
+      "score": 66,
+      "matchReasons": [
+        "NÍVEL: PLENO"
+      ],
+      "isStudentFriendly": false
+    },
+    {
+      "id": "EU-183",
       "title": "Software engineer",
       "company": "Belastingdienst",
       "location": "Apeldoorn, Gelderland, Netherlands",
@@ -17439,7 +17576,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-185",
+      "id": "EU-186",
       "title": "Java Fullstack Software Engineer (Spring Boot / Angular)",
       "company": "Jobgether",
       "location": "Netherlands",
@@ -17466,7 +17603,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-186",
+      "id": "EU-187",
       "title": "Solution Engineer I",
       "company": "Mollie",
       "location": "Amsterdam, North Holland, Netherlands",
@@ -17493,7 +17630,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-187",
+      "id": "EU-188",
       "title": "Software Engineer",
       "company": "Infiniot",
       "location": "Eindhoven, North Brabant, Netherlands",
@@ -17520,7 +17657,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-188",
+      "id": "EU-189",
       "title": "Engineer E&I met affiniteit voor programmeren",
       "company": "Engineering Data Management B.V.",
       "location": "Delft, South Holland, Netherlands",
@@ -17547,7 +17684,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-192",
+      "id": "EU-193",
       "title": "Back End Developer",
       "company": "QGROUP",
       "location": "The Randstad, Netherlands",
@@ -17574,7 +17711,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-194",
+      "id": "EU-195",
       "title": "Backend Software Engineer",
       "company": "Huspy",
       "location": "Netherlands",
@@ -17601,7 +17738,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-195",
+      "id": "EU-196",
       "title": "Software Engineer: Core",
       "company": "Jobgether",
       "location": "Netherlands",
@@ -17628,7 +17765,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-198",
+      "id": "EU-199",
       "title": ".NET Software Engineer",
       "company": "Noir",
       "location": "Zurich, Switzerland",
@@ -17655,7 +17792,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-199",
+      "id": "EU-200",
       "title": "Java Fullstack Software Engineer (Spring Boot / Angular)",
       "company": "Jobgether",
       "location": "Switzerland",
@@ -17682,7 +17819,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-201",
+      "id": "EU-202",
       "title": "Full Stack Engineer im sicherheitsrelevanten IT-Consulting Umfeld - Bern (German-speaking)",
       "company": "ipt Innovation Process Technology",
       "location": "Bern, Berne, Switzerland",
@@ -17709,7 +17846,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-205",
+      "id": "EU-206",
       "title": "DevOps Engineer / Ingenieur (m/w/d) (Golang)",
       "company": "Jobs via eFinancialCareers",
       "location": "Zurich, Zurich, Switzerland",
@@ -17736,7 +17873,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-206",
+      "id": "EU-207",
       "title": "Backend Developer",
       "company": "TransferChain",
       "location": "Baar, Zug, Switzerland",
@@ -17763,7 +17900,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-209",
+      "id": "EU-210",
       "title": "Backend Engineer - Integration Platform",
       "company": "BLP",
       "location": "Zurich, Zurich, Switzerland",
@@ -17790,7 +17927,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-211",
+      "id": "EU-212",
       "title": "Software Engineer (Partner Products)",
       "company": "JobCloud SA  -  jobup.ch - jobs.ch",
       "location": "Porto, Porto, Portugal",
@@ -17817,7 +17954,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-212",
+      "id": "EU-213",
       "title": "Software Developer (French Speaking)",
       "company": "AG Solution Group",
       "location": "Senhora da Hora, Porto, Portugal",
@@ -17844,7 +17981,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-213",
+      "id": "EU-214",
       "title": "Full Stack Developer",
       "company": "Continental",
       "location": "Lousado, Braga, Portugal",
@@ -17871,7 +18008,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-214",
+      "id": "EU-215",
       "title": "Java Full Stack Developer",
       "company": "MOZAYDO",
       "location": "Lisbon, Portugal",
@@ -17898,7 +18035,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-215",
+      "id": "EU-216",
       "title": "Java Fullstack Software Engineer (Spring Boot / Angular)",
       "company": "Jobgether",
       "location": "Portugal",
@@ -17925,7 +18062,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-216",
+      "id": "EU-217",
       "title": "Software Engineer",
       "company": "emagine",
       "location": "Portugal",
@@ -17952,7 +18089,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-218",
+      "id": "EU-219",
       "title": "Future Opportunity - Fullstack Developer (m/f/d)",
       "company": "7.1 Tech Hub - a ProSiebenSat.1 Media SE company",
       "location": "Porto, Portugal",
@@ -17979,7 +18116,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-219",
+      "id": "EU-220",
       "title": "Full Stack Software Engineer - Control Plane",
       "company": "ClickHouse",
       "location": "Porto, Porto, Portugal",
@@ -18006,7 +18143,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-222",
+      "id": "EU-223",
       "title": "Software Engineer  -  Remote (UTC - UTC+3)",
       "company": "JUMO",
       "location": "Portugal",
@@ -18033,7 +18170,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-225",
+      "id": "EU-226",
       "title": "Java Software Engineer - Hybrid - Ref: 1503237-JAV",
       "company": "Information Providers Ltd /IP",
       "location": "Longford, County Longford, Ireland",
@@ -18060,7 +18197,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-226",
+      "id": "EU-227",
       "title": "Frontend Engineer (Remote)",
       "company": "Joblet-AI",
       "location": "Ireland",
@@ -18087,7 +18224,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-227",
+      "id": "EU-228",
       "title": "Java Fullstack Software Engineer (Spring Boot / Angular)",
       "company": "Jobgether",
       "location": "Ireland",
@@ -18114,7 +18251,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-228",
+      "id": "EU-229",
       "title": "Forward Deployed Engineer",
       "company": "Kota",
       "location": "Dublin, County Dublin, Ireland",
@@ -18141,7 +18278,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-230",
+      "id": "EU-231",
       "title": "Software Benchmark Engineer (Remote)",
       "company": "Joblet-AI",
       "location": "Ireland",
@@ -18168,7 +18305,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-233",
+      "id": "EU-234",
       "title": "Software Engineer - Analytics Platform",
       "company": "Genesys",
       "location": "Ireland",
@@ -18195,7 +18332,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-237",
+      "id": "EU-238",
       "title": "Software engineer",
       "company": "Bending Spoons",
       "location": "Warsaw, Mazowieckie, Poland",
@@ -18222,7 +18359,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-238",
+      "id": "EU-239",
       "title": "Software Engineer – Go",
       "company": "Software Mind",
       "location": "Cracow, Małopolskie, Poland",
@@ -18249,7 +18386,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-240",
+      "id": "EU-241",
       "title": "Software Developer - Market Data (m/f/d)",
       "company": "Commerzbank Digital Technology Centre Poland",
       "location": "Łódź, Łódzkie, Poland",
@@ -18276,7 +18413,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-241",
+      "id": "EU-242",
       "title": "Java Developer",
       "company": "Comarch",
       "location": "Katowice, Śląskie, Poland",
@@ -18303,7 +18440,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-254",
+      "id": "EU-256",
       "title": "Design Engineer - EU",
       "company": "Ashby",
       "location": "Estonia",
@@ -19167,10 +19304,10 @@
       "isStudentFriendly": false
     },
     {
-      "id": "HIM-2",
-      "title": "Developer - Web Development & UX",
-      "company": "Oceans",
-      "location": "Sri Lanka",
+      "id": "HIM-1",
+      "title": "Mid-Level DevOps Engineer - 1 Year - Remote - Octopus by RTG",
+      "company": "robusta",
+      "location": "Egypt",
       "source": "HIMALAYAS",
       "isEasyApply": false,
       "geo": {
@@ -19179,14 +19316,68 @@
         "isNorthAmerica": false,
         "isEurope": false,
         "isAsia": false,
-        "isAfrica": false,
-        "flag": "🌐"
+        "isAfrica": true,
+        "flag": "🌍"
       },
       "archetype": "DEV",
       "eligibility": "🌐 Remoto Internacional",
       "posted": "Publicada em 10/11/2026",
       "postedIso": "2026-11-10",
-      "url": "https://himalayas.app/companies/oceans/jobs/developer-web-development-ux",
+      "url": "https://himalayas.app/companies/robusta/jobs/mid-level-devops-engineer-1-year-remote-octopus-by-rtg",
+      "score": 66,
+      "matchReasons": [
+        "NÍVEL: PLENO"
+      ],
+      "isStudentFriendly": false
+    },
+    {
+      "id": "HIM-2",
+      "title": "Spring Boot Developer",
+      "company": "Bright Vision Technologies",
+      "location": "United States",
+      "source": "HIMALAYAS",
+      "isEasyApply": false,
+      "geo": {
+        "isBrazil": false,
+        "isSouthAmerica": false,
+        "isNorthAmerica": true,
+        "isEurope": false,
+        "isAsia": false,
+        "isAfrica": false,
+        "flag": "🇺🇸"
+      },
+      "archetype": "DEV",
+      "eligibility": "🌐 Remoto Internacional",
+      "posted": "Publicada em 10/11/2026",
+      "postedIso": "2026-11-10",
+      "url": "https://himalayas.app/companies/bright-vision-technologies/jobs/spring-boot-developer",
+      "score": 66,
+      "matchReasons": [
+        "NÍVEL: PLENO"
+      ],
+      "isStudentFriendly": false
+    },
+    {
+      "id": "HIM-4",
+      "title": "Real Time Management Analyst",
+      "company": "Western Growers Assurance Trust",
+      "location": "United States",
+      "source": "HIMALAYAS",
+      "isEasyApply": false,
+      "geo": {
+        "isBrazil": false,
+        "isSouthAmerica": false,
+        "isNorthAmerica": true,
+        "isEurope": false,
+        "isAsia": false,
+        "isAfrica": false,
+        "flag": "🇺🇸"
+      },
+      "archetype": "DEV",
+      "eligibility": "🌐 Remoto Internacional",
+      "posted": "Publicada em 10/11/2026",
+      "postedIso": "2026-11-10",
+      "url": "https://himalayas.app/companies/western-growers-assurance-trust/jobs/real-time-management-analyst",
       "score": 66,
       "matchReasons": [
         "NÍVEL: PLENO"
@@ -19751,7 +19942,35 @@
       "isStudentFriendly": false
     },
     {
-      "id": "NA-131",
+      "id": "NA-128",
+      "title": "SAP FICO L2/L3 functional support",
+      "company": "Qualis1 Inc.",
+      "location": "Texas, United States",
+      "source": "LINKEDIN",
+      "isEasyApply": true,
+      "geo": {
+        "isBrazil": false,
+        "isSouthAmerica": false,
+        "isNorthAmerica": true,
+        "isEurope": false,
+        "isAsia": false,
+        "isAfrica": false,
+        "flag": "🇺🇸"
+      },
+      "archetype": "SUPPORT",
+      "eligibility": "🌐 Remoto Internacional • ⚡ Simplificada",
+      "posted": "Publicada em 10/11/2026",
+      "postedIso": "2026-11-10",
+      "url": "https://www.linkedin.com/jobs/view/sap-fico-l2-l3-functional-support-at-qualis1-inc-4488358875",
+      "score": 65,
+      "matchReasons": [
+        "⚡ SIMPLIFICADA",
+        "TRILHA: SUPORTE & ERP"
+      ],
+      "isStudentFriendly": false
+    },
+    {
+      "id": "NA-132",
       "title": "REMOTE Enterprise SaaS Support Specialist - $60-$80k(WealthTech)",
       "company": "CyberCoders",
       "location": "United States",
@@ -19808,7 +20027,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-55",
+      "id": "EU-56",
       "title": "Principal Python Engineer — ML Infrastructure",
       "company": "Alignerr",
       "location": "Amsterdam, North Holland, Netherlands",
@@ -19837,7 +20056,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-264",
+      "id": "EU-266",
       "title": "Técnico/a de Sistemas Senior MicroStrategy",
       "company": "Profile Software Services",
       "location": "Spain",
@@ -19866,7 +20085,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-267",
+      "id": "EU-269",
       "title": "Technical Support  -  Development",
       "company": "Closer Consulting",
       "location": "Lisbon, Portugal",
@@ -19894,7 +20113,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-268",
+      "id": "EU-270",
       "title": "Database & Cloud Operations Specialist (Full Remote/ Milano)",
       "company": "F2Informatica  -  Consulenza, Cloud, NoSQL, IoT",
       "location": "Italy",
@@ -19922,7 +20141,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-269",
+      "id": "EU-271",
       "title": "TÉCNICO/A DE SISTEMAS SENIOR ORACLE",
       "company": "Ayesa Digital",
       "location": "Spain",
@@ -19951,7 +20170,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-270",
+      "id": "EU-272",
       "title": "Consultor/a funcional Dynamics",
       "company": "Capitole",
       "location": "Barcelona, Catalonia, Spain",
@@ -19979,7 +20198,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-272",
+      "id": "EU-274",
       "title": "Administrador/a de Bases de Datos Oracle - Remoto",
       "company": "Profile Software Services",
       "location": "Spain",
@@ -20007,7 +20226,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-273",
+      "id": "EU-275",
       "title": "Microsoft Dynamics 365 F&O Consultant",
       "company": "Hays",
       "location": "Italy",
@@ -20035,7 +20254,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-274",
+      "id": "EU-276",
       "title": "AMOS Technical Consultant / AMOS Application Manager (m/f/d)",
       "company": "TECHFRENS  -  ITXSO®",
       "location": "Hesse, Germany",
@@ -20063,7 +20282,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-279",
+      "id": "EU-281",
       "title": "Service Desk Second-Line Agent",
       "company": "SoftServe",
       "location": "Romania",
@@ -20091,7 +20310,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-280",
+      "id": "EU-282",
       "title": "Consultor/a Funcional SAP IS-U CM  -  100% Remoto",
       "company": "KEAPPS",
       "location": "Spain",
@@ -20119,7 +20338,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-330",
+      "id": "EU-332",
       "title": "AI Growth Ops",
       "company": "Ink Foundation",
       "location": "Switzerland",
@@ -20147,7 +20366,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-356",
+      "id": "EU-359",
       "title": "AI Growth Ops",
       "company": "Ink Foundation",
       "location": "Ireland",
@@ -20175,7 +20394,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-359",
+      "id": "EU-362",
       "title": "Service Desk Second-Line Agent",
       "company": "SoftServe",
       "location": "Poland",
@@ -20317,7 +20536,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-65",
+      "id": "EU-66",
       "title": "Senior (Gen)AI & Data Engineer (all genders)",
       "company": "AXA",
       "location": "Winterthur, Zurich, Switzerland",
@@ -20346,7 +20565,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-66",
+      "id": "EU-67",
       "title": "Senior (Gen)AI & Data Engineer (all genders)",
       "company": "AXA Switzerland",
       "location": "Winterthur, Zurich, Switzerland",
@@ -20490,36 +20709,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-125",
-      "title": "Senior Softwareentwickler (m/w/d) Python und TypeScript",
-      "company": "Institut für Angewandte Informatik e.V. an der Universität Leipzig",
-      "location": "Leipzig, Saxony, Germany",
-      "source": "LINKEDIN",
-      "isEasyApply": false,
-      "geo": {
-        "isBrazil": false,
-        "isSouthAmerica": false,
-        "isNorthAmerica": false,
-        "isEurope": true,
-        "isAsia": false,
-        "isAfrica": false,
-        "flag": "🇪🇺"
-      },
-      "archetype": "DEV",
-      "eligibility": "🌐 Remoto Internacional",
-      "posted": "Publicada em 09/11/2026",
-      "postedIso": "2026-11-09",
-      "url": "https://de.linkedin.com/jobs/view/senior-softwareentwickler-m-w-d-python-und-typescript-4488308629",
-      "score": 63,
-      "matchReasons": [
-        "NÍVEL: SÊNIOR",
-        "STACK: TS/JS",
-        "STACK: PYTHON"
-      ],
-      "isStudentFriendly": false
-    },
-    {
-      "id": "EU-326",
+      "id": "EU-328",
       "title": "Senior PostgreSQL Database Engineer (m/w/d) – Linux & Kubernetes",
       "company": "OLM Consultants",
       "location": "Jura, Switzerland",
@@ -20548,7 +20738,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-354",
+      "id": "EU-357",
       "title": "Senior PostgreSQL Engineer (Remote)",
       "company": "Joblet-AI",
       "location": "Ireland",
@@ -20852,60 +21042,6 @@
       "score": 58,
       "matchReasons": [
         "NÍVEL: SÊNIOR",
-        "TRILHA: IA & LLMs"
-      ],
-      "isStudentFriendly": false
-    },
-    {
-      "id": "SA-49",
-      "title": "Environmental Specialist  -  Remote",
-      "company": "Crossing Hurdles",
-      "location": "Costa Rica",
-      "source": "LINKEDIN",
-      "isEasyApply": false,
-      "geo": {
-        "isBrazil": true,
-        "isSouthAmerica": true,
-        "isNorthAmerica": false,
-        "isEurope": false,
-        "isAsia": false,
-        "isAfrica": false,
-        "flag": "🇧🇷"
-      },
-      "archetype": "AI",
-      "eligibility": "🌐 Remoto Internacional",
-      "posted": "Publicada em 10/11/2026",
-      "postedIso": "2026-11-10",
-      "url": "https://cr.linkedin.com/jobs/view/environmental-specialist-remote-at-crossing-hurdles-4488367146",
-      "score": 58,
-      "matchReasons": [
-        "TRILHA: IA & LLMs"
-      ],
-      "isStudentFriendly": false
-    },
-    {
-      "id": "SA-50",
-      "title": "Biologist  -  Remote",
-      "company": "Crossing Hurdles",
-      "location": "Costa Rica",
-      "source": "LINKEDIN",
-      "isEasyApply": false,
-      "geo": {
-        "isBrazil": true,
-        "isSouthAmerica": true,
-        "isNorthAmerica": false,
-        "isEurope": false,
-        "isAsia": false,
-        "isAfrica": false,
-        "flag": "🇧🇷"
-      },
-      "archetype": "AI",
-      "eligibility": "🌐 Remoto Internacional",
-      "posted": "Publicada em 10/11/2026",
-      "postedIso": "2026-11-10",
-      "url": "https://cr.linkedin.com/jobs/view/biologist-remote-at-crossing-hurdles-4488364448",
-      "score": 58,
-      "matchReasons": [
         "TRILHA: IA & LLMs"
       ],
       "isStudentFriendly": false
@@ -22443,7 +22579,35 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-47",
+      "id": "EU-45",
+      "title": "(Senior) Business Automation Developer",
+      "company": "Kaufland e-commerce",
+      "location": "Berlin, Berlin, Germany",
+      "source": "LINKEDIN",
+      "isEasyApply": false,
+      "geo": {
+        "isBrazil": false,
+        "isSouthAmerica": false,
+        "isNorthAmerica": false,
+        "isEurope": true,
+        "isAsia": false,
+        "isAfrica": false,
+        "flag": "🇪🇺"
+      },
+      "archetype": "AI",
+      "eligibility": "🌐 Remoto Internacional",
+      "posted": "Publicada em 09/11/2026",
+      "postedIso": "2026-11-09",
+      "url": "https://de.linkedin.com/jobs/view/senior-business-automation-developer-at-kaufland-e-commerce-4487927884",
+      "score": 58,
+      "matchReasons": [
+        "NÍVEL: SÊNIOR",
+        "TRILHA: IA & LLMs"
+      ],
+      "isStudentFriendly": false
+    },
+    {
+      "id": "EU-48",
       "title": "Senior AI Engineer, Marketing",
       "company": "Jobgether",
       "location": "Netherlands",
@@ -22471,7 +22635,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-48",
+      "id": "EU-49",
       "title": "Senior Software Engineer (Backend) - AI/ML",
       "company": "ClickHouse",
       "location": "Amsterdam, North Holland, Netherlands",
@@ -22499,7 +22663,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-49",
+      "id": "EU-50",
       "title": "AI Automation Specialist",
       "company": "Samako",
       "location": "Netherlands",
@@ -22526,7 +22690,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-50",
+      "id": "EU-51",
       "title": "(Senior) AI & Data Science Engineer (m/f/d)",
       "company": "EnOcean",
       "location": "Utrecht, Utrecht, Netherlands",
@@ -22554,7 +22718,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-51",
+      "id": "EU-52",
       "title": "Staff Data Scientist, Trust & Safety",
       "company": "Vinted",
       "location": "Amsterdam, North Holland, Netherlands",
@@ -22582,7 +22746,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-53",
+      "id": "EU-54",
       "title": "Senior AI Engineer",
       "company": "YorTeam B.V.",
       "location": "The Randstad, Netherlands",
@@ -22610,7 +22774,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-56",
+      "id": "EU-57",
       "title": "Senior/Lead Backend Engineer (Remote)",
       "company": "Fuse Energy",
       "location": "Netherlands",
@@ -22638,7 +22802,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-58",
+      "id": "EU-59",
       "title": "Senior Software Engineer — Infra Agent Systems",
       "company": "Together AI",
       "location": "Amsterdam, North Holland, Netherlands",
@@ -22666,7 +22830,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-60",
+      "id": "EU-61",
       "title": "Senior AI Engineer, Marketing",
       "company": "Jobgether",
       "location": "Switzerland",
@@ -22694,7 +22858,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-61",
+      "id": "EU-62",
       "title": "Senior Software Engineer – Agent Systems",
       "company": "Ink Foundation",
       "location": "Switzerland",
@@ -22722,7 +22886,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-63",
+      "id": "EU-64",
       "title": "Senior Software Engineer – Agent Systems",
       "company": "Kraken",
       "location": "Switzerland",
@@ -22750,7 +22914,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-64",
+      "id": "EU-65",
       "title": "Senior Data Scientist / AI Solutions Engineer",
       "company": "SGI",
       "location": "Zurich, Zurich, Switzerland",
@@ -22778,7 +22942,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-68",
+      "id": "EU-69",
       "title": "AI Scientist - LLM Systems",
       "company": "Artificialy",
       "location": "Zurich, Zurich, Switzerland",
@@ -22805,7 +22969,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-71",
+      "id": "EU-72",
       "title": "AI Tech Lead",
       "company": "Wire IT",
       "location": "Portugal",
@@ -22833,7 +22997,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-72",
+      "id": "EU-73",
       "title": "Senior AI Engineer, Marketing",
       "company": "Jobgether",
       "location": "Portugal",
@@ -22861,7 +23025,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-73",
+      "id": "EU-74",
       "title": "Senior Software Engineer – Agent Systems",
       "company": "Ink Foundation",
       "location": "Portugal",
@@ -22889,7 +23053,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-74",
+      "id": "EU-75",
       "title": "Senior Software Engineer – Agent Systems",
       "company": "Kraken",
       "location": "Portugal",
@@ -22917,7 +23081,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-75",
+      "id": "EU-76",
       "title": "Senior Software Engineer – AI Infrastructure",
       "company": "Ink Foundation",
       "location": "Portugal",
@@ -22945,7 +23109,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-76",
+      "id": "EU-77",
       "title": "Staff Software Engineer - AI Copilot (Backend)",
       "company": "Zendesk",
       "location": "Portugal",
@@ -22973,7 +23137,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-77",
+      "id": "EU-78",
       "title": "Senior Software Engineer - AI Copilot (Backend)",
       "company": "Zendesk",
       "location": "Portugal",
@@ -23001,7 +23165,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-80",
+      "id": "EU-81",
       "title": "Senior AI Engineer, Marketing",
       "company": "Jobgether",
       "location": "Ireland",
@@ -23029,7 +23193,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-81",
+      "id": "EU-82",
       "title": "Senior Software Engineer – Agent Systems",
       "company": "Kraken",
       "location": "Ireland",
@@ -23057,7 +23221,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-82",
+      "id": "EU-83",
       "title": "Senior Software Engineer – Agent Systems",
       "company": "Ink Foundation",
       "location": "Ireland",
@@ -23085,7 +23249,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-83",
+      "id": "EU-84",
       "title": "Senior Software Engineer – AI Infrastructure",
       "company": "Ink Foundation",
       "location": "Ireland",
@@ -23113,7 +23277,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-84",
+      "id": "EU-85",
       "title": "Technical Delivery Lead - AI & Transformation",
       "company": "HRM Search Partners",
       "location": "Waterford, County Waterford, Ireland",
@@ -23141,7 +23305,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-85",
+      "id": "EU-86",
       "title": "Staff Software ML Engineer",
       "company": "Arm",
       "location": "Galway, County Galway, Ireland",
@@ -23169,7 +23333,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-87",
+      "id": "EU-88",
       "title": "Senior Software Engineer - Integrations 3P - Platform",
       "company": "Elastic",
       "location": "Ireland",
@@ -23197,7 +23361,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-89",
+      "id": "EU-90",
       "title": "Senior Artificial Intelligence/Machine Learning Engineer",
       "company": "Ciklum",
       "location": "Poland",
@@ -23225,7 +23389,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-92",
+      "id": "EU-93",
       "title": "Lead ML Engineer",
       "company": "SoftServe",
       "location": "Poland",
@@ -23253,7 +23417,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-93",
+      "id": "EU-94",
       "title": "Lead Data Scientist",
       "company": "SoftServe",
       "location": "Poland",
@@ -23281,7 +23445,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-95",
+      "id": "EU-96",
       "title": "Senior Data Scientist (Recommendation Systems & GenAI)",
       "company": "whizdom.ai",
       "location": "Poland",
@@ -23309,7 +23473,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-96",
+      "id": "EU-97",
       "title": "AI Senior Backend Engineer (m/f/d)",
       "company": "Siemens Energy",
       "location": "Poland",
@@ -23337,7 +23501,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-97",
+      "id": "EU-98",
       "title": "Senior Software Engineer – Agent Systems",
       "company": "Ink Foundation",
       "location": "Poland",
@@ -23365,7 +23529,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-102",
+      "id": "EU-103",
       "title": "Senior Software Engineer – AI Infrastructure",
       "company": "Ink Foundation",
       "location": "Estonia",
@@ -23393,7 +23557,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-104",
+      "id": "EU-105",
       "title": "Senior AI Compute Infrastructure Engineer",
       "company": "Ink Foundation",
       "location": "Estonia",
@@ -23421,7 +23585,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-105",
+      "id": "EU-106",
       "title": "AI Generalist",
       "company": "Drillin",
       "location": "Estonia",
@@ -23448,7 +23612,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-107",
+      "id": "EU-108",
       "title": "Data Scientist",
       "company": "Gauss & Neumann",
       "location": "Estonia",
@@ -23475,7 +23639,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-108",
+      "id": "EU-109",
       "title": "Tarkvaraarendaja",
       "company": "Tervise ja Heaolu Infosüsteemide Keskus // Health and Welfare Information Systems Centre (TEHIK)",
       "location": "Estonia",
@@ -23502,7 +23666,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-109",
+      "id": "EU-110",
       "title": "Chief Data Officer",
       "company": "ESTO Group",
       "location": "Tallinn, Harjumaa, Estonia",
@@ -23529,7 +23693,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-110",
+      "id": "EU-111",
       "title": "Senior Software Engineer - Digital Workplace",
       "company": "Canonical",
       "location": "Tallinn, Harjumaa, Estonia",
@@ -23557,7 +23721,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-126",
+      "id": "EU-127",
       "title": "Senior Software Engineer",
       "company": "Runtime",
       "location": "Ireland",
@@ -23585,7 +23749,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-128",
+      "id": "EU-130",
       "title": "Full Stack Specialist",
       "company": "MDW",
       "location": "Spain",
@@ -23612,7 +23776,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-130",
+      "id": "EU-132",
       "title": "Senior Software Engineer - High Performance & Scale",
       "company": "Fever",
       "location": "Madrid, Community of Madrid, Spain",
@@ -23640,7 +23804,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-140",
+      "id": "EU-142",
       "title": "Senior Software Engineer - Remote - based in Cyprus",
       "company": "Reed Recruitment Malta",
       "location": "Cyprus",
@@ -23668,7 +23832,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-142",
+      "id": "EU-144",
       "title": "Senior Software Engineer - Remote",
       "company": "Reed Recruitment Malta",
       "location": "Cyprus",
@@ -23696,7 +23860,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-143",
+      "id": "EU-145",
       "title": "Lead Backend Engineer",
       "company": "Syncrent",
       "location": "Italy",
@@ -23724,7 +23888,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-144",
+      "id": "EU-146",
       "title": "Staff Full Stack Engineer – Production team",
       "company": "Jobgether",
       "location": "Ireland",
@@ -23752,7 +23916,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-156",
+      "id": "EU-158",
       "title": "Senior Software Engineer – Agentic Development",
       "company": "The Upstarts Club",
       "location": "London Area, United Kingdom",
@@ -23780,7 +23944,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-167",
+      "id": "EU-169",
       "title": "AI Tech Consultant (m/w/d)  -  eluna",
       "company": "elunic AG",
       "location": "Munich, Bavaria, Germany",
@@ -23807,7 +23971,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-170",
+      "id": "EU-172",
       "title": "Lead Software Engineer (m/f/d) AWS, Data Pipelines & AI Integration",
       "company": "GE Aerospace",
       "location": "Bavaria, Germany",
@@ -23835,7 +23999,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-204",
+      "id": "EU-205",
       "title": "Lead Software Engineer, AI",
       "company": "Thomson Reuters",
       "location": "Zug, Zug, Switzerland",
@@ -25299,9 +25463,9 @@
       "isStudentFriendly": false
     },
     {
-      "id": "HIM-5",
-      "title": "Senior Data Scientist",
-      "company": "Premier Inc.",
+      "id": "HIM-6",
+      "title": "Project Manager, AI Model Enablement and Agentic SDLC",
+      "company": "Crowdstrike",
       "location": "United States",
       "source": "HIMALAYAS",
       "isEasyApply": false,
@@ -25318,10 +25482,9 @@
       "eligibility": "🌐 Remoto Internacional",
       "posted": "Publicada em 10/11/2026",
       "postedIso": "2026-11-10",
-      "url": "https://himalayas.app/companies/premier-inc/jobs/senior-data-scientist",
+      "url": "https://himalayas.app/companies/crowdstrike/jobs/project-manager-ai-model-enablement-and-agentic-sdlc",
       "score": 58,
       "matchReasons": [
-        "NÍVEL: SÊNIOR",
         "TRILHA: IA & LLMs"
       ],
       "isStudentFriendly": false
@@ -25658,34 +25821,6 @@
     },
     {
       "id": "SA-302",
-      "title": "Senior Associate – ServiceNow Application Support Administrator",
-      "company": "Publicis Re:Sources",
-      "location": "San Jose, Costa Rica",
-      "source": "LINKEDIN",
-      "isEasyApply": false,
-      "geo": {
-        "isBrazil": true,
-        "isSouthAmerica": true,
-        "isNorthAmerica": false,
-        "isEurope": false,
-        "isAsia": false,
-        "isAfrica": false,
-        "flag": "🇧🇷"
-      },
-      "archetype": "SUPPORT",
-      "eligibility": "🌐 Remoto Internacional",
-      "posted": "Publicada em 10/11/2026",
-      "postedIso": "2026-11-10",
-      "url": "https://cr.linkedin.com/jobs/view/senior-associate-%E2%80%93-servicenow-application-support-administrator-at-publicis-re-sources-4489482426",
-      "score": 57,
-      "matchReasons": [
-        "NÍVEL: SÊNIOR",
-        "TRILHA: SUPORTE & ERP"
-      ],
-      "isStudentFriendly": false
-    },
-    {
-      "id": "SA-303",
       "title": "Senior HRIS Analyst",
       "company": "Cornerstone OnDemand",
       "location": "Heredia, Heredia, Costa Rica",
@@ -25705,6 +25840,34 @@
       "posted": "Publicada em 10/11/2026",
       "postedIso": "2026-11-10",
       "url": "https://cr.linkedin.com/jobs/view/senior-hris-analyst-at-cornerstone-ondemand-4481509063",
+      "score": 57,
+      "matchReasons": [
+        "NÍVEL: SÊNIOR",
+        "TRILHA: SUPORTE & ERP"
+      ],
+      "isStudentFriendly": false
+    },
+    {
+      "id": "SA-303",
+      "title": "Senior Associate – ServiceNow Application Support Administrator",
+      "company": "Publicis Re:Sources",
+      "location": "San Jose, Costa Rica",
+      "source": "LINKEDIN",
+      "isEasyApply": false,
+      "geo": {
+        "isBrazil": true,
+        "isSouthAmerica": true,
+        "isNorthAmerica": false,
+        "isEurope": false,
+        "isAsia": false,
+        "isAfrica": false,
+        "flag": "🇧🇷"
+      },
+      "archetype": "SUPPORT",
+      "eligibility": "🌐 Remoto Internacional",
+      "posted": "Publicada em 10/11/2026",
+      "postedIso": "2026-11-10",
+      "url": "https://cr.linkedin.com/jobs/view/senior-associate-%E2%80%93-servicenow-application-support-administrator-at-publicis-re-sources-4489482426",
       "score": 57,
       "matchReasons": [
         "NÍVEL: SÊNIOR",
@@ -25988,7 +26151,34 @@
       "isStudentFriendly": false
     },
     {
-      "id": "SA-333",
+      "id": "SA-329",
+      "title": "Technical Product Support Specialist",
+      "company": "Baseward Partners",
+      "location": "Argentina",
+      "source": "LINKEDIN",
+      "isEasyApply": false,
+      "geo": {
+        "isBrazil": true,
+        "isSouthAmerica": true,
+        "isNorthAmerica": false,
+        "isEurope": false,
+        "isAsia": false,
+        "isAfrica": false,
+        "flag": "🇧🇷"
+      },
+      "archetype": "SUPPORT",
+      "eligibility": "🌐 Remoto Internacional",
+      "posted": "Publicada em 10/11/2026",
+      "postedIso": "2026-11-10",
+      "url": "https://ar.linkedin.com/jobs/view/technical-product-support-specialist-at-baseward-partners-4487485805",
+      "score": 57,
+      "matchReasons": [
+        "TRILHA: SUPORTE & ERP"
+      ],
+      "isStudentFriendly": false
+    },
+    {
+      "id": "SA-334",
       "title": "Consultor SAP EAM / PM Senior – 100% Remoto  -  Argentina",
       "company": "Sapindex",
       "location": "Buenos Aires, Buenos Aires Province, Argentina",
@@ -26016,7 +26206,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "SA-334",
+      "id": "SA-335",
       "title": "Consultor funcional",
       "company": "Grupo MOST",
       "location": "Buenos Aires, Buenos Aires Province, Argentina",
@@ -26043,7 +26233,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "SA-335",
+      "id": "SA-337",
       "title": "Analista Funcional Senior SAP SuccessFactors Compensation – Mantenimiento AMS",
       "company": "MaxIT Consulting - Max Corporate Group",
       "location": "Buenos Aires, Buenos Aires Province, Argentina",
@@ -26071,7 +26261,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "SA-337",
+      "id": "SA-338",
       "title": "SAP S4/HANA MM / EAM & IAM Functional Analys",
       "company": "Chevron",
       "location": "Buenos Aires, Buenos Aires Province, Argentina",
@@ -26098,7 +26288,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "SA-348",
+      "id": "SA-349",
       "title": "Database Specialist",
       "company": "Abbott",
       "location": "Bogota, D.C., Capital District, Colombia",
@@ -26479,7 +26669,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-136",
+      "id": "EU-138",
       "title": "Middle/Senior Backend Engineer (NodeJS)",
       "company": "SoftServe",
       "location": "Poland",
@@ -26507,7 +26697,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-138",
+      "id": "EU-140",
       "title": "Senior Backend Developer - Node.JS",
       "company": "Legend",
       "location": "Bratislava, Bratislava, Slovakia",
@@ -26535,7 +26725,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-265",
+      "id": "EU-267",
       "title": "SAP UK Payroll, Sr. Support Engineer",
       "company": "Rimini Street",
       "location": "Spain",
@@ -26563,7 +26753,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-266",
+      "id": "EU-268",
       "title": "SAP UK Payroll, Sr. Support Engineer",
       "company": "Rimini Street",
       "location": "Netherlands",
@@ -26591,7 +26781,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-275",
+      "id": "EU-277",
       "title": "Application Support Specialist",
       "company": "Thread & Logic",
       "location": "Cologne, North Rhine-Westphalia, Germany",
@@ -26618,7 +26808,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-276",
+      "id": "EU-278",
       "title": "Application Support Specialist",
       "company": "Thread & Logic",
       "location": "Munich, Bavaria, Germany",
@@ -26645,7 +26835,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-277",
+      "id": "EU-279",
       "title": "Techn. Applikationsspezialist:in (m/w/d) Radiologie",
       "company": "Dedalus",
       "location": "Bonn, North Rhine-Westphalia, Germany",
@@ -26672,7 +26862,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-278",
+      "id": "EU-280",
       "title": "Applikationsbetreuer OMNITRACKER (m/w/d)",
       "company": "SoCura",
       "location": "Cologne, North Rhine-Westphalia, Germany",
@@ -26699,7 +26889,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-284",
+      "id": "EU-286",
       "title": "Sr. Support Engineer, SAP UK Payroll",
       "company": "Rimini Street",
       "location": "United Kingdom",
@@ -26727,7 +26917,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-286",
+      "id": "EU-288",
       "title": "Pigment Support Lead (Viridian)",
       "company": "NoBlue2",
       "location": "London, England, United Kingdom",
@@ -26755,7 +26945,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-287",
+      "id": "EU-289",
       "title": "Senior Application Support Engineer",
       "company": "Revoco",
       "location": "Stafford, England, United Kingdom",
@@ -26783,7 +26973,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-288",
+      "id": "EU-290",
       "title": "Senior Customer Success Engineer, French Speaking",
       "company": "Mitti by SafetyCulture",
       "location": "United Kingdom",
@@ -26811,7 +27001,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-291",
+      "id": "EU-293",
       "title": "Senior Applications Support Developer",
       "company": "Robert Walters",
       "location": "Chester, England, United Kingdom",
@@ -26839,7 +27029,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-292",
+      "id": "EU-294",
       "title": "Database Administrator",
       "company": "HiredBuddy",
       "location": "United Kingdom",
@@ -26866,7 +27056,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-295",
+      "id": "EU-297",
       "title": "Senior Analyst: Application Support",
       "company": "Norton Rose Fulbright",
       "location": "London, England, United Kingdom",
@@ -26894,7 +27084,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-298",
+      "id": "EU-300",
       "title": "SAP UK Payroll, Sr. Support Engineer",
       "company": "Rimini Street",
       "location": "Germany",
@@ -26922,7 +27112,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-301",
+      "id": "EU-303",
       "title": "ORBIS Applikationsspezialist:in (m/w/d) Security & Authentication",
       "company": "Dedalus",
       "location": "Bonn, North Rhine-Westphalia, Germany",
@@ -26949,7 +27139,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-303",
+      "id": "EU-305",
       "title": "ORBIS Applikationsspezialist:in (m/w/d) Mobile",
       "company": "Dedalus",
       "location": "Bonn, North Rhine-Westphalia, Germany",
@@ -26976,7 +27166,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-304",
+      "id": "EU-306",
       "title": "Bankkaufmann/-frau (m/w/d) in der IT",
       "company": "oraïse",
       "location": "Frankfurt am Main, Hesse, Germany",
@@ -27003,7 +27193,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-305",
+      "id": "EU-307",
       "title": "Consultant Interfaces/Koppelingen",
       "company": "Twentecs",
       "location": "Enter, Overijssel, Netherlands",
@@ -27030,7 +27220,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-306",
+      "id": "EU-308",
       "title": "Senior IT-Support Engineer",
       "company": "Fivespark",
       "location": "Amstelveen, North Holland, Netherlands",
@@ -27058,7 +27248,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-308",
+      "id": "EU-310",
       "title": "Technical Support Specialist",
       "company": "SnelStart",
       "location": "Alkmaar, North Holland, Netherlands",
@@ -27085,7 +27275,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-309",
+      "id": "EU-311",
       "title": "Technisch klantspecialist",
       "company": "Twentecs",
       "location": "Enter, Overijssel, Netherlands",
@@ -27112,7 +27302,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-310",
+      "id": "EU-312",
       "title": "Microsoft Dynamics Administrator",
       "company": "Nomios Netherlands",
       "location": "Leiden, South Holland, Netherlands",
@@ -27139,7 +27329,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-312",
+      "id": "EU-314",
       "title": "Functioneel applicatiebeheerder",
       "company": "Bureau Luider",
       "location": "Utrecht, Utrecht, Netherlands",
@@ -27166,7 +27356,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-313",
+      "id": "EU-315",
       "title": "Functioneel Applicatiebeheerder",
       "company": "Sterksen",
       "location": "Utrecht, Utrecht, Netherlands",
@@ -27193,7 +27383,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-315",
+      "id": "EU-317",
       "title": "Monitoring Specialist (Techniek & Security)",
       "company": "Brink's Solutions Nederland",
       "location": "Utrecht, Netherlands",
@@ -27220,7 +27410,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-316",
+      "id": "EU-318",
       "title": "Business IT Consultant Leven",
       "company": "a.s.r.",
       "location": "Utrecht, Utrecht, Netherlands",
@@ -27247,7 +27437,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-318",
+      "id": "EU-320",
       "title": "Consultant en bases de données Oracle - 80-100%",
       "company": "CONFIDENTIEL.",
       "location": "Nyon, Vaud, Switzerland",
@@ -27274,7 +27464,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-319",
+      "id": "EU-321",
       "title": "Application Manager Finnova (m/w/d)",
       "company": "Rocken®",
       "location": "Zurich, Zurich, Switzerland",
@@ -27301,7 +27491,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-322",
+      "id": "EU-324",
       "title": "Consultant Open Infrastructure - 80-100%",
       "company": "CONFIDENTIEL.",
       "location": "Basel, Basel, Switzerland",
@@ -27328,7 +27518,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-324",
+      "id": "EU-326",
       "title": "Spécialiste technique EPIC H/F – Lausanne",
       "company": "Smile",
       "location": "Lausanne, Vaud, Switzerland",
@@ -27355,7 +27545,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-327",
+      "id": "EU-329",
       "title": "Business Application Specialist (m/w/d)",
       "company": "Rocken®",
       "location": "Zurich, Zurich, Switzerland",
@@ -27382,7 +27572,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-328",
+      "id": "EU-330",
       "title": "SAP SuccessFactors ECP Consultant (80-100%)",
       "company": "FFI Advisory GmbH",
       "location": "Bern, Berne, Switzerland",
@@ -27409,7 +27599,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-329",
+      "id": "EU-331",
       "title": "IT Client Management Specialist (m/w/d)",
       "company": "Rocken®",
       "location": "Rheinfelden, Aargau, Switzerland",
@@ -27436,7 +27626,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-331",
+      "id": "EU-333",
       "title": "SAP SuccessFactors Consultant (80-100%)",
       "company": "FFI Advisory GmbH",
       "location": "Zurich, Zurich, Switzerland",
@@ -27463,7 +27653,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-332",
+      "id": "EU-334",
       "title": "Enterprise Support Specialist",
       "company": "Jobgether",
       "location": "Switzerland",
@@ -27490,7 +27680,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-333",
+      "id": "EU-335",
       "title": "System Administrator 80-100% (a)",
       "company": "MTF Solutions AG",
       "location": "Schaffhausen, Switzerland",
@@ -27517,7 +27707,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-334",
+      "id": "EU-336",
       "title": "IT Operations Specialist",
       "company": "Pflegewegweiser GmbH",
       "location": "Zurich, Switzerland",
@@ -27544,7 +27734,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-338",
+      "id": "EU-340",
       "title": "Suporte Aplicacional Sénior",
       "company": "Prime Nearshore",
       "location": "Lisbon, Portugal",
@@ -27571,34 +27761,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-344",
-      "title": "SharePoint / Microsoft 365 Consultant",
-      "company": "Inetum",
-      "location": "Lisboa, Lisbon, Portugal",
-      "source": "LINKEDIN",
-      "isEasyApply": false,
-      "geo": {
-        "isBrazil": false,
-        "isSouthAmerica": false,
-        "isNorthAmerica": false,
-        "isEurope": true,
-        "isAsia": false,
-        "isAfrica": false,
-        "flag": "🇪🇺"
-      },
-      "archetype": "SUPPORT",
-      "eligibility": "🌐 Remoto Internacional",
-      "posted": "Publicada em 09/11/2026",
-      "postedIso": "2026-11-09",
-      "url": "https://pt.linkedin.com/jobs/view/sharepoint-microsoft-365-consultant-at-inetum-4454012660",
-      "score": 57,
-      "matchReasons": [
-        "TRILHA: SUPORTE & ERP"
-      ],
-      "isStudentFriendly": false
-    },
-    {
-      "id": "EU-345",
+      "id": "EU-346",
       "title": "Consultor/a SAP HCM  -  Full Remote  -  €40K - €60K",
       "company": "Joppy",
       "location": "Portugal",
@@ -27625,7 +27788,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-346",
+      "id": "EU-347",
       "title": "Application Support",
       "company": "CodeWin",
       "location": "Porto, Portugal",
@@ -27652,7 +27815,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-349",
+      "id": "EU-352",
       "title": "Senior Support Engineer - Dublin",
       "company": "OpenAI",
       "location": "Dublin, County Dublin, Ireland",
@@ -27680,7 +27843,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-353",
+      "id": "EU-356",
       "title": "Enterprise Support Specialist",
       "company": "Jobgether",
       "location": "Ireland",
@@ -27707,7 +27870,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-357",
+      "id": "EU-360",
       "title": "IT Officer - Blackrock, Co Dublin",
       "company": "Lex Consultancy Recruitment",
       "location": "Dublin, County Dublin, Ireland",
@@ -27734,7 +27897,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-358",
+      "id": "EU-361",
       "title": "SAP UK Payroll, Sr. Support Engineer",
       "company": "Rimini Street",
       "location": "Poland",
@@ -27762,7 +27925,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-360",
+      "id": "EU-363",
       "title": "Senior Technical Support Engineer- Windows & Identity Security",
       "company": "SentinelOne",
       "location": "Poland",
@@ -27790,7 +27953,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-361",
+      "id": "EU-364",
       "title": "System Analyst - Senior",
       "company": "SOFTSWISS",
       "location": "Poland",
@@ -27818,7 +27981,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-364",
+      "id": "EU-367",
       "title": "Specjalista ds. wsparcia IT",
       "company": "SOLID.Jobs",
       "location": "Wrocław, Dolnośląskie, Poland",
@@ -27845,7 +28008,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-366",
+      "id": "EU-369",
       "title": "Senior BI Analyst",
       "company": "BlueSoft",
       "location": "Warsaw, Mazowieckie, Poland",
@@ -27873,7 +28036,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-367",
+      "id": "EU-370",
       "title": "Analityk DWH",
       "company": "Billennium",
       "location": "Warsaw, Mazowieckie, Poland",
@@ -27900,7 +28063,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-368",
+      "id": "EU-371",
       "title": "Sr Analyst, Maconomy",
       "company": "The Marketing Cloud",
       "location": "Warsaw, Mazowieckie, Poland",
@@ -27928,7 +28091,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-369",
+      "id": "EU-372",
       "title": "SAP SD Consultant – immediate availability (f/m/x)",
       "company": "Sii Poland",
       "location": "Cracow, Małopolskie, Poland",
@@ -27955,7 +28118,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-370",
+      "id": "EU-373",
       "title": "SAP SD Consultant – immediate availability (f/m/x)",
       "company": "Sii Poland",
       "location": "Warsaw, Mazowieckie, Poland",
@@ -27982,7 +28145,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-372",
+      "id": "EU-375",
       "title": "Product Owner",
       "company": "Nortal",
       "location": "Tallinn, Harjumaa, Estonia",
@@ -29184,61 +29347,6 @@
       "isStudentFriendly": false
     },
     {
-      "id": "ME-76",
-      "title": "QA Performance / COST team",
-      "company": "Tufin",
-      "location": "Tel Aviv-Yafo, Tel Aviv District, Israel",
-      "source": "LINKEDIN",
-      "isEasyApply": false,
-      "geo": {
-        "isBrazil": false,
-        "isSouthAmerica": false,
-        "isNorthAmerica": false,
-        "isEurope": false,
-        "isAsia": true,
-        "isAfrica": false,
-        "flag": "🇸🇬"
-      },
-      "archetype": "SUPPORT",
-      "eligibility": "🌐 Remoto Internacional",
-      "posted": "Publicada em 09/11/2026",
-      "postedIso": "2026-11-09",
-      "url": "https://il.linkedin.com/jobs/view/qa-performance-cost-team-at-tufin-4472422980",
-      "score": 57,
-      "matchReasons": [
-        "TRILHA: SUPORTE & ERP"
-      ],
-      "isStudentFriendly": false
-    },
-    {
-      "id": "HIM-1",
-      "title": "Senior Product Operations Analyst",
-      "company": "RSM",
-      "location": "United States",
-      "source": "HIMALAYAS",
-      "isEasyApply": false,
-      "geo": {
-        "isBrazil": false,
-        "isSouthAmerica": false,
-        "isNorthAmerica": true,
-        "isEurope": false,
-        "isAsia": false,
-        "isAfrica": false,
-        "flag": "🇺🇸"
-      },
-      "archetype": "SUPPORT",
-      "eligibility": "🌐 Remoto Internacional",
-      "posted": "Publicada em 10/11/2026",
-      "postedIso": "2026-11-10",
-      "url": "https://himalayas.app/companies/rsm/jobs/senior-product-operations-analyst",
-      "score": 57,
-      "matchReasons": [
-        "NÍVEL: SÊNIOR",
-        "TRILHA: SUPORTE & ERP"
-      ],
-      "isStudentFriendly": false
-    },
-    {
       "id": "JBC-6",
       "title": "Customer Support Team Lead",
       "company": "Clipboard",
@@ -30373,7 +30481,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-124",
+      "id": "EU-126",
       "title": "Senior Full Stack Engineer (Remote Ireland )",
       "company": "Qualio",
       "location": "Ireland",
@@ -30400,7 +30508,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-137",
+      "id": "EU-139",
       "title": "Senior Software Engineer",
       "company": "Filiz",
       "location": "Paris, Île-de-France, France",
@@ -30427,7 +30535,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-139",
+      "id": "EU-141",
       "title": "Staff Fullstack Engineer, Backend Focus (Wandy)",
       "company": "Wand AI",
       "location": "European Union",
@@ -30454,7 +30562,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-155",
+      "id": "EU-157",
       "title": "Senior Backend Engineer",
       "company": "The Growth Foundation",
       "location": "United Kingdom",
@@ -30481,7 +30589,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-158",
+      "id": "EU-160",
       "title": "Senior Software Engineer",
       "company": "Haven",
       "location": "United Kingdom",
@@ -30508,7 +30616,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-159",
+      "id": "EU-161",
       "title": "Senior Full Stack Engineer",
       "company": "Uneek Global",
       "location": "West Berkshire, England, United Kingdom",
@@ -30535,7 +30643,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-162",
+      "id": "EU-164",
       "title": "Staff Software Engineer",
       "company": "Dex",
       "location": "London Area, United Kingdom",
@@ -30562,7 +30670,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-163",
+      "id": "EU-165",
       "title": "Specialist T&L Technology für Applications & Automation (w/m/d)",
       "company": "BDO Germany",
       "location": "Frankfurt am Main, Hesse, Germany",
@@ -30587,7 +30695,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-171",
+      "id": "EU-173",
       "title": "Staff Full Stack Engineer – Production team",
       "company": "Jobgether",
       "location": "Germany",
@@ -30614,7 +30722,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-172",
+      "id": "EU-174",
       "title": "(Senior-)Data & Platform Engineer Netzbetrieb (m/w/d)",
       "company": "Net Zero Group",
       "location": "Germany",
@@ -30641,7 +30749,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-173",
+      "id": "EU-175",
       "title": "Senior Software Developer:in (m/w/d)",
       "company": "schulz.codes GmbH",
       "location": "Germany",
@@ -30668,32 +30776,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-182",
-      "title": "Full stack-ontwikkelaar",
-      "company": "Starapple",
-      "location": "Utrecht, Utrecht, Netherlands",
-      "source": "LINKEDIN",
-      "isEasyApply": false,
-      "geo": {
-        "isBrazil": false,
-        "isSouthAmerica": false,
-        "isNorthAmerica": false,
-        "isEurope": true,
-        "isAsia": false,
-        "isAfrica": false,
-        "flag": "🇪🇺"
-      },
-      "archetype": "DEV",
-      "eligibility": "🌐 Remoto Internacional",
-      "posted": "Publicada em 10/11/2026",
-      "postedIso": "2026-11-10",
-      "url": "https://nl.linkedin.com/jobs/view/full-stack-ontwikkelaar-at-starapple-4489482455",
-      "score": 55,
-      "matchReasons": [],
-      "isStudentFriendly": false
-    },
-    {
-      "id": "EU-184",
+      "id": "EU-185",
       "title": "Full stack-ontwikkelaar  -  Evenementenbranche",
       "company": "Haystack People",
       "location": "Rotterdam, South Holland, Netherlands",
@@ -30718,7 +30801,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-189",
+      "id": "EU-190",
       "title": "Staff Full Stack Engineer – Production team",
       "company": "Jobgether",
       "location": "Netherlands",
@@ -30745,7 +30828,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-190",
+      "id": "EU-191",
       "title": "Senior Software Engineer - Digital Workplace",
       "company": "Canonical",
       "location": "Amsterdam, North Holland, Netherlands",
@@ -30772,7 +30855,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-191",
+      "id": "EU-192",
       "title": "Principal Infrastructure Engineer",
       "company": "Sezzle",
       "location": "Amsterdam, North Holland, Netherlands",
@@ -30799,7 +30882,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-193",
+      "id": "EU-194",
       "title": "Senior Full Stack Engineer - ClickStack",
       "company": "ClickHouse",
       "location": "Amsterdam Area",
@@ -30826,7 +30909,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-196",
+      "id": "EU-197",
       "title": "Senior Fullstack Java Engineer",
       "company": "Just Eat Takeaway.com",
       "location": "Amsterdam, North Holland, Netherlands",
@@ -30853,7 +30936,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-197",
+      "id": "EU-198",
       "title": "Full-Stack Software Entwickler:in (80-100%)",
       "company": "CISTEC AG",
       "location": "Zurich, Switzerland",
@@ -30878,7 +30961,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-200",
+      "id": "EU-201",
       "title": "Java Softwareentwickler",
       "company": "ITech Consult AG",
       "location": "Bern, Berne, Switzerland",
@@ -30903,7 +30986,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-202",
+      "id": "EU-203",
       "title": "Staff Full Stack Engineer – Production team",
       "company": "Jobgether",
       "location": "Switzerland",
@@ -30930,7 +31013,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-203",
+      "id": "EU-204",
       "title": "Développeur/euse 1",
       "company": "University of Geneva",
       "location": "Geneva, Geneva, Switzerland",
@@ -30955,7 +31038,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-207",
+      "id": "EU-208",
       "title": "Senior Software Entwickler (m/w/d)",
       "company": "Rocken®",
       "location": "Köniz, Berne, Switzerland",
@@ -30982,7 +31065,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-208",
+      "id": "EU-209",
       "title": "Senior Web Engineer",
       "company": "Canonical",
       "location": "Zurich, Zurich, Switzerland",
@@ -31009,7 +31092,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-217",
+      "id": "EU-218",
       "title": "Mobility Sector  -  .NET (Umbraco)",
       "company": "Devoteam",
       "location": "Lisbon, Lisbon, Portugal",
@@ -31034,7 +31117,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-220",
+      "id": "EU-221",
       "title": "Senior Software Engineer - Integrations 3P - Platform",
       "company": "Elastic",
       "location": "Portugal",
@@ -31061,7 +31144,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-221",
+      "id": "EU-222",
       "title": "Senior Software Engineer - Digital Workplace",
       "company": "Canonical",
       "location": "Lisbon, Lisbon, Portugal",
@@ -31088,7 +31171,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-224",
+      "id": "EU-225",
       "title": "Software Engineering MTS",
       "company": "Salesforce",
       "location": "Dublin, County Dublin, Ireland",
@@ -31113,7 +31196,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-229",
+      "id": "EU-230",
       "title": "Senior Software Engineer - Digital Workplace",
       "company": "Canonical",
       "location": "Dublin, County Dublin, Ireland",
@@ -31140,7 +31223,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-231",
+      "id": "EU-232",
       "title": "Senior Software Engineer, Security Assurance  -  Ireland  -  Remote",
       "company": "Grafana Labs",
       "location": "Dublin, County Dublin, Ireland",
@@ -31167,7 +31250,34 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-247",
+      "id": "EU-243",
+      "title": "Senior Product Engineer [Backend]",
+      "company": "Attio",
+      "location": "Poland",
+      "source": "LINKEDIN",
+      "isEasyApply": false,
+      "geo": {
+        "isBrazil": false,
+        "isSouthAmerica": false,
+        "isNorthAmerica": false,
+        "isEurope": true,
+        "isAsia": false,
+        "isAfrica": false,
+        "flag": "🇪🇺"
+      },
+      "archetype": "DEV",
+      "eligibility": "🌐 Remoto Internacional",
+      "posted": "Publicada em 10/11/2026",
+      "postedIso": "2026-11-10",
+      "url": "https://pl.linkedin.com/jobs/view/senior-product-engineer-backend-at-attio-4340323892",
+      "score": 55,
+      "matchReasons": [
+        "NÍVEL: SÊNIOR"
+      ],
+      "isStudentFriendly": false
+    },
+    {
+      "id": "EU-249",
       "title": "Senior Software Engineer (Poland)",
       "company": "Sezzle",
       "location": "Polańczyk, Podkarpackie, Poland",
@@ -31194,7 +31304,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-248",
+      "id": "EU-250",
       "title": "Senior Full-Stack Engineer / Technical Lead (Remote)",
       "company": "Soundsnap",
       "location": "Poland",
@@ -31221,7 +31331,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-249",
+      "id": "EU-251",
       "title": "Staff Full Stack Engineer – Production team (remote within Europe)",
       "company": "FYUL",
       "location": "Poland",
@@ -31248,7 +31358,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-250",
+      "id": "EU-252",
       "title": "Sr. Backend Engineer II - US Stocks",
       "company": "Ajaib",
       "location": "Poland",
@@ -31275,7 +31385,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-251",
+      "id": "EU-253",
       "title": "Staff Full Stack Engineer - Inventory team (remote within Europe)",
       "company": "FYUL",
       "location": "Poland",
@@ -31302,7 +31412,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-252",
+      "id": "EU-254",
       "title": "Programista Full Stack",
       "company": "SOLID.Jobs",
       "location": "Cracow, Małopolskie, Poland",
@@ -31327,7 +31437,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-253",
+      "id": "EU-255",
       "title": "Staff Engineer - Growth - Verifications",
       "company": "Ink Foundation",
       "location": "Estonia",
@@ -31354,7 +31464,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-255",
+      "id": "EU-257",
       "title": "Senior Software Engineer - Frontend - Consumer",
       "company": "Ink Foundation",
       "location": "Estonia",
@@ -31381,7 +31491,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-256",
+      "id": "EU-258",
       "title": "Senior Web Engineer",
       "company": "Canonical",
       "location": "Tallinn, Harjumaa, Estonia",
@@ -31408,7 +31518,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-257",
+      "id": "EU-259",
       "title": "Senior Software Engineer (Consumer Service) (m/f/d)",
       "company": "Riverty",
       "location": "Tallinn, Harjumaa, Estonia",
@@ -31435,7 +31545,7 @@
       "isStudentFriendly": false
     },
     {
-      "id": "EU-258",
+      "id": "EU-260",
       "title": "Lead Engineer of Life Insurance Solutions",
       "company": "ERGO Lietuvoje",
       "location": "Tallinn, Harjumaa, Estonia",
@@ -32523,33 +32633,33 @@
     },
     {
       "id": "HIM-3",
-      "title": "Software Trainer",
-      "company": "Greystar",
-      "location": "United States",
+      "title": "Customer Service Operations Coordinator - Kenya (Non-IT, Remote)",
+      "company": "Cloverleaf Care",
+      "location": "Kenya",
       "source": "HIMALAYAS",
       "isEasyApply": false,
       "geo": {
         "isBrazil": false,
         "isSouthAmerica": false,
-        "isNorthAmerica": true,
+        "isNorthAmerica": false,
         "isEurope": false,
         "isAsia": false,
-        "isAfrica": false,
-        "flag": "🇺🇸"
+        "isAfrica": true,
+        "flag": "🌍"
       },
       "archetype": "DEV",
       "eligibility": "🌐 Remoto Internacional",
       "posted": "Publicada em 10/11/2026",
       "postedIso": "2026-11-10",
-      "url": "https://himalayas.app/companies/greystar/jobs/software-trainer",
+      "url": "https://himalayas.app/companies/cloverleaf-care/jobs/customer-service-operations-coordinator-kenya-non-it-remote",
       "score": 55,
       "matchReasons": [],
       "isStudentFriendly": false
     },
     {
-      "id": "HIM-6",
-      "title": "Lead Research Analyst",
-      "company": "University of Miami",
+      "id": "HIM-7",
+      "title": "Systems Administrator",
+      "company": "VivSoft Technologies",
       "location": "United States",
       "source": "HIMALAYAS",
       "isEasyApply": false,
@@ -32566,11 +32676,9 @@
       "eligibility": "🌐 Remoto Internacional",
       "posted": "Publicada em 10/11/2026",
       "postedIso": "2026-11-10",
-      "url": "https://himalayas.app/companies/university-of-miami/jobs/lead-research-analyst",
+      "url": "https://himalayas.app/companies/vivsoft-technologies/jobs/systems-administrator",
       "score": 55,
-      "matchReasons": [
-        "NÍVEL: SÊNIOR"
-      ],
+      "matchReasons": [],
       "isStudentFriendly": false
     },
     {
