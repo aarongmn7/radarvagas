@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AARON.DEV // 3D Core Preview (Meio Globo + Meia Logo 3D)</title>
+  <style>
+    :root {
+      --bg: #000000;
+      --text: #fafafa;
+      --muted: #71717a;
+      --border: #27272a;
+    }
+    body.light {
+      --bg: #f8fafc;
+      --text: #09090b;
+      --border: #d4d4d8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      transition: background 0.3s ease;
+    }
+    #canvas-container {
+      width: 460px;
+      height: 460px;
+      position: relative;
+      cursor: grab;
+    }
+    #canvas-container:active { cursor: grabbing; }
+    .hud {
+      position: fixed;
+      top: 24px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      background: rgba(24, 24, 27, 0.8);
+      border: 1px solid var(--border);
+      padding: 10px 18px;
+      border-radius: 999px;
+      backdrop-filter: blur(8px);
+      z-index: 10;
+    }
+    .hud span {
+      font-size: 12px;
+      font-family: monospace;
+      letter-spacing: 0.08em;
+      color: #a1a1aa;
+    }
+    .btn {
+      background: #18181b;
+      color: #fff;
+      border: 1px solid #3f3f46;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn:hover { border-color: #fff; transform: translateY(-1px); }
+    .caption {
+      margin-top: 12px;
+      font-family: monospace;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hud">
+    <span>// NÚCLEO 3D: MEIO GLOBO + LOGO AARON.DEV EXTRUDADA</span>
+    <button class="btn" id="btnPulse">⚡ Simular Filtro (Spin)</button>
+    <button class="btn" id="btnTheme">🌗 Alternar Tema</button>
+  </div>
+
+  <div id="canvas-container"></div>
+  <div class="caption">Arraste com o mouse para girar em qualquer ângulo • 100% Código Puro (Zero Assinatura)</div>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+      }
+    }
+  </script>
+
+  <script type="module">
+    import * as THREE from 'three';
+
+    const container = document.getElementById('canvas-container');
+    const scene = new THREE.Scene();
+
+    const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 1000);
+    camera.position.set(0, 0, 6.2);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(460, 460);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.25;
+    container.appendChild(renderer.domElement);
+
+    // Grupo principal que gira no centro
+    const coreGroup = new THREE.Group();
+    scene.add(coreGroup);
+
+    // =========================================================================
+    // ILUMINAÇÃO DE ESTÚDIO (Destaca o chanfro 3D e diferencia do fundo OLED)
+    // =========================================================================
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
+    scene.add(ambientLight);
+
+    const keyLight = new THREE.DirectionalLight(0xffffff, 2.6);
+    keyLight.position.set(4, 5, 6);
+    scene.add(keyLight);
+
+    const rimLight = new THREE.DirectionalLight(0xa1a1aa, 1.8);
+    rimLight.position.set(-5, -4, -4);
+    scene.add(rimLight);
+
+    const topLight = new THREE.PointLight(0xffffff, 1.4, 15);
+    topLight.position.set(0, 4, 3);
+    scene.add(topLight);
+
+    const RADIUS = 1.65;
+
+    // =========================================================================
+    // LADO A (Z <= 0): MEIO GLOBO MINIMALISTA EM GRAFITE ESCURO / WIREFRAME
+    // =========================================================================
+    const globeGroup = new THREE.Group();
+    coreGroup.add(globeGroup);
+
+    // 1. Casca Sólida da Meia Terra (Grafite Escuro #16161a para destacar do fundo #000)
+    const hemiGeo = new THREE.SphereGeometry(RADIUS, 64, 32, 0, Math.PI * 2, 0, Math.PI);
+    // Cortamos ou achatamos apenas no hemisfério traseiro (Z < 0) usando escala/clip ou phi
+    const backHemiGeo = new THREE.SphereGeometry(RADIUS * 0.995, 48, 32, Math.PI, Math.PI);
+    const globeCoreMat = new THREE.MeshStandardMaterial({
+      color: 0x16161a,
+      roughness: 0.65,
+      metalness: 0.35,
+      side: THREE.DoubleSide
+    });
+    const backHemiMesh = new THREE.Mesh(backHemiGeo, globeCoreMat);
+    globeGroup.add(backHemiMesh);
+
+    // 2. Malha Geodésica / Paralelos & Meridianos Minimalistas Cinza Metálico
+    const wireGeo = new THREE.SphereGeometry(RADIUS * 1.002, 24, 16, Math.PI, Math.PI);
+    const wireMat = new THREE.MeshBasicMaterial({
+      color: 0x3f3f46,
+      wireframe: true,
+      transparent: true,
+      opacity: 0.55
+    });
+    const wireMesh = new THREE.Mesh(wireGeo, wireMat);
+    globeGroup.add(wireMesh);
+
+    // 3. Pontos Luminosos de Cidades/Continentes no Meio Globo
+    const dotsGeo = new THREE.BufferGeometry();
+    const dotPositions = [];
+    for (let i = 0; i < 260; i++) {
+      const u = Math.random();
+      const v = Math.random();
+      const theta = Math.PI + u * Math.PI; // Apenas no hemisfério do globo (Z < 0)
+      const phi = Math.acos(2 * v - 1);
+      const r = RADIUS * 1.012;
+      const x = r * Math.sin(phi) * Math.cos(theta);
+      const y = r * Math.cos(phi);
+      const z = r * Math.sin(phi) * Math.sin(theta);
+      dotPositions.push(x, y, z);
+    }
+    dotsGeo.setAttribute('position', new THREE.Float32BufferAttribute(dotPositions, 3));
+    const dotsMat = new THREE.PointsMaterial({
+      color: 0xd4d4d8,
+      size: 0.038,
+      transparent: true,
+      opacity: 0.85
+    });
+    const dotsSystem = new THREE.Points(dotsGeo, dotsMat);
+    globeGroup.add(dotsSystem);
+
+    // 4. Anel Equatorial Metálico (Une o Meio Globo à Face da Logo 3D)
+    const collarGeo = new THREE.CylinderGeometry(RADIUS * 1.01, RADIUS * 1.01, 0.16, 72);
+    collarGeo.rotateX(Math.PI / 2);
+    const collarMat = new THREE.MeshStandardMaterial({
+      color: 0x27272a,
+      metalness: 0.85,
+      roughness: 0.25
+    });
+    const collarMesh = new THREE.Mesh(collarGeo, collarMat);
+    coreGroup.add(collarMesh);
+
+    // Base circular escura onde a Logo 3D se apoia na frente (Z >= 0)
+    const plateGeo = new THREE.CylinderGeometry(RADIUS * 0.99, RADIUS * 0.99, 0.08, 72);
+    plateGeo.rotateX(Math.PI / 2);
+    const plateMat = new THREE.MeshStandardMaterial({
+      color: 0x0c0c0e,
+      roughness: 0.8,
+      metalness: 0.2
+    });
+    const plateMesh = new THREE.Mesh(plateGeo, plateMat);
+    plateMesh.position.z = 0.02;
+    coreGroup.add(plateMesh);
+
+    // =========================================================================
+    // LADO B (Z > 0): SUA LOGO "AARON.DEV" COM GROSSURA E PROFUNDIDADE 3D REAL
+    // Construída matematicamente a partir do seu logo.svg com corte circular exato
+    // =========================================================================
+    const logoGroup = new THREE.Group();
+    coreGroup.add(logoGroup);
+
+    const mainLogoMat = new THREE.MeshStandardMaterial({
+      color: 0xf4f4f5, // Prata/Branco Acetinado Puro
+      metalness: 0.55,
+      roughness: 0.22
+    });
+
+    const accentLineMat = new THREE.MeshStandardMaterial({
+      color: 0x71717a, // Cinza Médio para a linha central (2º nível de profundidade)
+      metalness: 0.7,
+      roughness: 0.3
+    });
+
+    // Escala das coordenadas do SVG (0..100 com centro em 50,50 -> -RADIUS..+RADIUS)
+    const scale = RADIUS / 50;
+
+    // 1. ARO EXTERNO REDONDO 3D (r_out = 48, r_in = 42 no SVG)
+    const outerRingShape = new THREE.Shape();
+    outerRingShape.absarc(0, 0, 48 * scale, 0, Math.PI * 2, false);
+    const outerHole = new THREE.Path();
+    outerHole.absarc(0, 0, 42 * scale, 0, Math.PI * 2, true);
+    outerRingShape.holes.push(outerHole);
+
+    const extrudeRingSettings = {
+      depth: 0.26,
+      bevelEnabled: true,
+      bevelThickness: 0.045,
+      bevelSize: 0.035,
+      bevelSegments: 5,
+      curveSegments: 64
+    };
+    const outerRingMesh = new THREE.Mesh(
+      new THREE.ExtrudeGeometry(outerRingShape, extrudeRingSettings),
+      mainLogoMat
+    );
+    outerRingMesh.position.z = 0.03;
+    logoGroup.add(outerRingMesh);
+
+    // Função utilitária que converte qualquer polígono do seu SVG inclinado (skewX -18)
+    // recortado exatamente dentro do círculo interno (r = 37) em um bloco 3D chanfrado
+    const tan18 = Math.tan((-18 * Math.PI) / 180); // -0.32491969623
+    const INNER_R = 37;
+
+    function transformSvgPoint(px, py) {
+      // No SVG: translate(16.25, 0) skewX(-18) e centro em (50, 50)
+      const xSvg = px + 16.25 + py * tan18;
+      const ySvg = py;
+      // Converte para centro (0,0) e inverte eixo Y do SVG para coordenadas 3D
+      return {
+        x: (xSvg - 50),
+        y: -(ySvg - 50)
+      };
+    }
+
+    // Recorta um polígono convexo pelo círculo de raio R usando amostragem de alta precisão
+    function clipPolygonToCircleShape(svgPts, circleRadius) {
+      // Converte vértices do polígono para espaço centrado
+      const poly = svgPts.map(([px, py]) => transformSvgPoint(px, py));
+
+      // Verifica se ponto (x,y) está dentro do polígono (Ray-casting)
+      function insidePoly(x, y) {
+        let inside = false;
+        for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
+          const xi = poly[i].x, yi = poly[i].y;
+          const xj = poly[j].x, yj = poly[j].y;
+          const intersect = ((yi > y) !== (yj > y)) &&
+            (x < ((xj - xi) * (y - yi)) / (yj - yi + 1e-10) + xi);
+          if (intersect) inside = !inside;
+        }
+        return inside;
+      }
+
+      // Gera contorno denso do polígono e projeta/restringe ao círculo (Interseção Exata Convexa)
+      const sampled = [];
+      const stepsPerEdge = 60;
+      for (let i = 0; i < poly.length; i++) {
+        const a = poly[i];
+        const b = poly[(i + 1) % poly.length];
+        for (let s = 0; s < stepsPerEdge; s++) {
+          const t = s / stepsPerEdge;
+          const px = a.x + (b.x - a.x) * t;
+          const py = a.y + (b.y - a.y) * t;
+          const dist = Math.hypot(px, py);
+          if (dist <= circleRadius) {
+            sampled.push({ x: px, y: py });
+          } else {
+            // Projeta na borda circular se aquele ângulo estiver dentro do polígono infinito
+            const cx = (px / dist) * circleRadius;
+            const cy = (py / dist) * circleRadius;
+            if (insidePoly(cx, cy)) {
+              sampled.push({ x: cx, y: cy });
+            }
+          }
+        }
+      }
+
+      // Remove pontos duplicados muito próximos
+      const clean = [];
+      for (const pt of sampled) {
+        if (
+          clean.length === 0 ||
+          Math.hypot(pt.x - clean[clean.length - 1].x, pt.y - clean[clean.length - 1].y) > 0.15
+        ) {
+          clean.push(pt);
+        }
+      }
+
+      if (clean.length < 3) return null;
+      const shape = new THREE.Shape();
+      shape.moveTo(clean[0].x * scale, clean[0].y * scale);
+      for (let i = 1; i < clean.length; i++) {
+        shape.lineTo(clean[i].x * scale, clean[i].y * scale);
+      }
+      shape.closePath();
+      return shape;
+    }
+
+    function addLogoBlock(svgPolygon, depth, zOffset, material) {
+      const shape = clipPolygonToCircleShape(svgPolygon, INNER_R);
+      if (!shape) return;
+      const geo = new THREE.ExtrudeGeometry(shape, {
+        depth,
+        bevelEnabled: true,
+        bevelThickness: 0.038,
+        bevelSize: 0.028,
+        bevelSegments: 4
+      });
+      const mesh = new THREE.Mesh(geo, material);
+      mesh.position.z = zOffset;
+      logoGroup.add(mesh);
+    }
+
+    // ================= LETRA "A" (Esquerda) + Barra Horizontal Unificada =================
+    // Haste direita do A
+    addLogoBlock([[30, -20], [46, -20], [46, 120], [30, 120]], 0.25, 0.03, mainLogoMat);
+    // Haste diagonal esquerda do A
+    addLogoBlock([[-50, -20], [30, -20], [-2, 120], [-50, 120]], 0.25, 0.03, mainLogoMat);
+    // Ponte horizontal do A
+    addLogoBlock([[-10, 55], [32, 55], [32, 73], [-10, 73]], 0.24, 0.03, mainLogoMat);
+
+    // ================= LINHA DIVISÓRIA CENTRAL (Profundidade Intermediária Cinza) =================
+    addLogoBlock([[48.8, -20], [51.2, -20], [51.2, 120], [48.8, 120]], 0.16, 0.03, accentLineMat);
+
+    // ================= LETRA "N" (Direita) =================
+    // Haste esquerda do N
+    addLogoBlock([[54, -20], [70, -20], [70, 120], [54, 120]], 0.25, 0.03, mainLogoMat);
+    // Haste direita do N
+    addLogoBlock([[94, -20], [150, -20], [150, 120], [94, 120]], 0.25, 0.03, mainLogoMat);
+    // Diagonal central do N
+    addLogoBlock([[54, -20], [70, -20], [110, 120], [94, 120]], 0.255, 0.03, mainLogoMat);
+
+    // =========================================================================
+    // ANIMAÇÃO & INTERAÇÃO (Rotação Contínua + Arrastar + Impulso de Filtro)
+    // =========================================================================
+    let isDragging = false;
+    let prevX = 0;
+    let prevY = 0;
+    let spinBoost = 0;
+
+    container.addEventListener('pointerdown', e => {
+      isDragging = true;
+      prevX = e.clientX;
+      prevY = e.clientY;
+    });
+
+    window.addEventListener('pointerup', () => { isDragging = false; });
+
+    window.addEventListener('pointermove', e => {
+      if (!isDragging) return;
+      const dx = e.clientX - prevX;
+      const dy = e.clientY - prevY;
+      coreGroup.rotation.y += dx * 0.01;
+      coreGroup.rotation.x = Math.max(-0.6, Math.min(0.6, coreGroup.rotation.x + dy * 0.008));
+      prevX = e.clientX;
+      prevY = e.clientY;
+    });
+
+    document.getElementById('btnPulse').addEventListener('click', () => {
+      spinBoost = 0.22; // Dá um giro rápido quando o usuário clica num filtro
+    });
+
+    let isLight = false;
+    document.getElementById('btnTheme').addEventListener('click', () => {
+      isLight = !isLight;
+      document.body.classList.toggle('light', isLight);
+      if (isLight) {
+        mainLogoMat.color.setHex(0x18181b);
+        plateMat.color.setHex(0xe4e4e7);
+        globeCoreMat.color.setHex(0x27272a);
+      } else {
+        mainLogoMat.color.setHex(0xf4f4f5);
+        plateMat.color.setHex(0x0c0c0e);
+        globeCoreMat.color.setHex(0x16161a);
+      }
+    });
+
+    // Inclinação inicial elegante para mostrar a grossura 3D logo de cara
+    coreGroup.rotation.x = 0.12;
+    coreGroup.rotation.y = -0.35;
+
+    function animate() {
+      requestAnimationFrame(animate);
+      if (!isDragging) {
+        coreGroup.rotation.y += 0.008 + spinBoost;
+        spinBoost *= 0.93;
+      }
+      renderer.render(scene, camera);
+    }
+    animate();
+  </script>
+</body>
+</html>
