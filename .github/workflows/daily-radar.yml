@@ -2,13 +2,19 @@ name: Radar Diário de Vagas Remotas
 
 on:
   schedule:
-    # Roda diariamente às 12:00 UTC (09:00 BRT)
-    - cron: '0 12 * * *'
-  workflow_dispatch: # Permite disparar manualmente pelo painel do GitHub
+    # Rede de segurança: 10:00 UTC (06:00 em MT). O cron do GitHub pode atrasar horas,
+    # por isso o disparo pontual das 07:50 MT (11:50 UTC) vem via workflow_dispatch externo (cron-job.org).
+    - cron: '0 10 * * *'
+  workflow_dispatch: # Disparo manual / externo (cron-job.org às 07:50 MT)
+
+concurrency:
+  group: daily-radar
+  cancel-in-progress: false
 
 jobs:
   update-radar:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       contents: write
 
@@ -22,31 +28,22 @@ jobs:
           node-version: 20
 
       - name: Executar Varredura do Job Radar (Zero-Loss)
-        run: |
-          if [ -f "scripts/job_radar.js" ]; then
-            node scripts/job_radar.js all all 24
-          elif [ -f "pessoal/projetos pessoais/radar-web/scripts/job_radar.js" ]; then
-            node "pessoal/projetos pessoais/radar-web/scripts/job_radar.js" all all 24
-          else
-            node .agents/skills/job-radar/scripts/job_radar.js all all 24
-          fi
+        run: node scripts/job_radar.js all all 24
 
       - name: Atualizar Banco JSON do Site
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: |
-          if [ -f "scripts/build_jobs_data.js" ]; then
-            node scripts/build_jobs_data.js
-          elif [ -f "pessoal/projetos pessoais/radar-web/scripts/build_jobs_data.js" ]; then
-            node "pessoal/projetos pessoais/radar-web/scripts/build_jobs_data.js"
-          else
-            node pessoal/radar-web/scripts/build_jobs_data.js
-          fi
+        run: node scripts/build_jobs_data.js
 
       - name: Comitar e Publicar Atualizações
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Radar Bot"
-          git add data/vagas_do_dia.md data/jobs.json 2>/dev/null || git add -A
-          git commit -m "chore(radar): atualização diária automática de vagas [skip ci]" || echo "Nenhuma alteração para comitar"
-          git push
+          git add data/
+          git commit -m "chore(radar): atualização diária automática de vagas" || { echo "Nenhuma alteração para comitar"; exit 0; }
+          # Evita push rejeitado quando o sync do ECO enviou commits durante a varredura
+          for i in 1 2 3 4 5; do
+            git pull --rebase -X theirs origin "${GITHUB_REF_NAME}" && git push && exit 0
+            echo "Push falhou (tentativa $i), tentando novamente..."; sleep $((i * 10))
+          done
+          exit 1
