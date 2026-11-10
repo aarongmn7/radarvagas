@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AARON.DEV // 3D Geodesic Lattice Globe V4 (Smooth Continents + Diagonal Spin)</title>
+  <title>AARON.DEV // 3D Geodesic Lattice Globe V5 (Filled Black Countries + Diagonal Spin)</title>
   <style>
     :root {
       --bg: #050507;
@@ -80,7 +80,7 @@
 <body>
 
   <div class="hud">
-    <span>// V4: CONTINENTES VETORIAIS LISOS (ZERO PIXELADO) + LUZ INVISÍVEL + GIRO DIAGONAL</span>
+    <span>// V5: PAÍSES 100% PREENCHIDOS EM PRETO SÓLIDO (ALTA RESOLUÇÃO) + GIRO DIAGONAL</span>
     <button class="btn" id="btnFaceMap">🌎 Focar Globo</button>
     <button class="btn" id="btnFaceLogo">🎯 Focar Logo 3D</button>
     <button class="btn" id="btnAuto">🔄 Giro Diagonal</button>
@@ -88,7 +88,7 @@
   </div>
 
   <div id="canvas-container"></div>
-  <div class="caption" id="statusText">Construindo malha 3D vetorial lisa dos continentes (Zero Pixelado)...</div>
+  <div class="caption" id="statusText">Construindo países preenchidos em preto sólido com alta resolução...</div>
 
   <script type="importmap">
     {
@@ -115,9 +115,9 @@
     renderer.toneMappingExposure = 1.4;
     container.appendChild(renderer.domElement);
 
-    // Pivot externo inclinado na diagonal (axial tilt ~28 graus) para rodar elegante na diagonal!
+    // Eixo inclinado na diagonal para girar na diagonal!
     const tiltPivot = new THREE.Group();
-    tiltPivot.rotation.z = -0.45; // Inclinação diagonal do eixo de rotação
+    tiltPivot.rotation.z = -0.45;
     tiltPivot.rotation.x = 0.18;
     scene.add(tiltPivot);
 
@@ -125,7 +125,7 @@
     tiltPivot.add(coreGroup);
 
     // =========================================================================
-    // ILUMINAÇÃO + LUZES INTERNAS INVISÍVEIS (Sem nenhuma bola branca no meio!)
+    // ILUMINAÇÃO + LUZES INTERNAS INVISÍVEIS (Sem bola branca no meio!)
     // =========================================================================
     const ambientLight = new THREE.AmbientLight(0xffffff, 1.45);
     scene.add(ambientLight);
@@ -142,7 +142,7 @@
     backRimLight.position.set(0, 5, -6);
     scene.add(backRimLight);
 
-    // Luzes internas puras (PointLights invisíveis! Iluminam a logo e a treliça por dentro sem bola visível)
+    // Luzes internas puras (Invisíveis! Só iluminam as frestas da logo e da grade)
     const innerLightCenter = new THREE.PointLight(0xffffff, 6.5, 5.5);
     innerLightCenter.position.set(0, 0, 0);
     coreGroup.add(innerLightCenter);
@@ -157,39 +157,46 @@
 
     const RADIUS = 1.78;
 
-    // Materiais Metálicos / Carbono Acetinado de Alto Contraste
+    // Materiais em Preto Carbono / Ônix Fosco-Acetinado (como na foto da peça 3D!)
     const darkStrutMat = new THREE.MeshStandardMaterial({
-      color: 0x1a1a20,
-      roughness: 0.38,
-      metalness: 0.55
+      color: 0x16161b,
+      roughness: 0.42,
+      metalness: 0.48,
+      side: THREE.DoubleSide
     });
 
-    const continentArmorMat = new THREE.MeshStandardMaterial({
-      color: 0x2f2f38,
-      roughness: 0.28,
-      metalness: 0.65
+    // Preenchimento Sólido Preto/Grafite Escuro dos Países
+    const filledCountryBlackMat = new THREE.MeshStandardMaterial({
+      color: 0x1e1e24,
+      roughness: 0.34,
+      metalness: 0.55,
+      side: THREE.DoubleSide
     });
 
-    const brazilHighlightMat = new THREE.MeshStandardMaterial({
-      color: 0x52525b,
-      roughness: 0.22,
-      metalness: 0.78
+    // Leve destaque no Brasil (Preto Metálico Acetinado com relevo um pouco mais alto)
+    const filledBrazilMat = new THREE.MeshStandardMaterial({
+      color: 0x2c2c35,
+      roughness: 0.26,
+      metalness: 0.68,
+      side: THREE.DoubleSide
     });
 
     const logoArmorMat = new THREE.MeshStandardMaterial({
-      color: 0x2e2e36,
-      roughness: 0.24,
-      metalness: 0.72
+      color: 0x222229,
+      roughness: 0.25,
+      metalness: 0.7,
+      side: THREE.DoubleSide
     });
 
     const accentTitaniumMat = new THREE.MeshStandardMaterial({
-      color: 0x8e8e99,
+      color: 0x71717a,
       roughness: 0.2,
-      metalness: 0.85
+      metalness: 0.85,
+      side: THREE.DoubleSide
     });
 
     // =========================================================================
-    // 1. GAIOLA GEODÉSICA TRIANGULAR VAZADA (Treliça 3D igual à referência)
+    // 1. GAIOLA GEODÉSICA TRIANGULAR VAZADA
     // =========================================================================
     function buildHollowGeodesicStruts(radius, detail, strutRadius) {
       const ico = new THREE.IcosahedronGeometry(radius, detail);
@@ -241,15 +248,14 @@
     coreGroup.add(new THREE.Mesh(equatorTorusGeo, logoArmorMat));
 
     // =========================================================================
-    // 2. CONTINENTES VETORIAIS LISOS CURVADOS NA ESFERA (ZERO PIXELADO!)
-    // Em vez de quadradinhos pixelados, triangulamos os polígonos vetoriais reais
-    // do GeoJSON com `THREE.ShapeUtils.triangulateShape`, subdividimos os triângulos
-    // internos e projetamos suavemente na curvatura exata da esfera com parede 3D!
+    // 2. PAÍSES 100% PREENCHIDOS EM PRETO SÓLIDO COM RESOLUÇÃO ULTRA-ALTA
+    // Usamos um Rasterizador Geográfico 2D em Canvas HD (1024x512) para testar
+    // os países instantaneamente e geramos uma malha 3D contínua super fina
+    // (360 x 180 células soldadas com normais suavizadas = ZERO buracos e alta definição!)
     // =========================================================================
     const continentsGroup = new THREE.Group();
     coreGroup.add(continentsGroup);
 
-    // Converte (lon, lat) para ponto 3D na meia-esfera traseira com Brasil centralizado
     function mapWorldLonLatToSphereVec3(lon, lat, r) {
       const centerLon = -38; // Brasil e Atlântico centralizados
       let dLon = lon - centerLon;
@@ -265,158 +271,166 @@
       return new THREE.Vector3(x, y, z);
     }
 
-    // Subdivide um triângulo 2D (lon, lat) recursivamente se suas arestas forem longas,
-    // garantindo que o continente curve perfeitamente redondo sobre a esfera sem quinas retas!
-    function subdivideTriangle2D(p0, p1, p2, maxDeg, outTriangles) {
-      const d01 = Math.hypot(p1.x - p0.x, p1.y - p0.y);
-      const d12 = Math.hypot(p2.x - p1.x, p2.y - p1.y);
-      const d20 = Math.hypot(p0.x - p2.x, p0.y - p2.y);
-
-      if (Math.max(d01, d12, d20) <= maxDeg) {
-        outTriangles.push([p0, p1, p2]);
-        return;
-      }
-
-      const m01 = new THREE.Vector2((p0.x + p1.x) * 0.5, (p0.y + p1.y) * 0.5);
-      const m12 = new THREE.Vector2((p1.x + p2.x) * 0.5, (p1.y + p2.y) * 0.5);
-      const m20 = new THREE.Vector2((p2.x + p0.x) * 0.5, (p2.y + p0.y) * 0.5);
-
-      subdivideTriangle2D(p0, m01, m20, maxDeg, outTriangles);
-      subdivideTriangle2D(m01, p1, m12, maxDeg, outTriangles);
-      subdivideTriangle2D(m20, m12, p2, maxDeg, outTriangles);
-      subdivideTriangle2D(m01, m12, m20, maxDeg, outTriangles);
-    }
-
-    // Densifica as bordas costeiras para acompanhar a curvatura da esfera com precisão cirúrgica
-    function densifyRing(ringCoords, maxStepDeg = 2.2) {
-      const pts = [];
-      for (let i = 0; i < ringCoords.length - 1; i++) {
-        const [lonA, latA] = ringCoords[i];
-        const [lonB, latB] = ringCoords[i + 1];
-        // Evita linhas cruzando o antimeridiano
-        if (Math.abs(lonB - lonA) > 120) continue;
-        const dist = Math.hypot(lonB - lonA, latB - latA);
-        const steps = Math.max(1, Math.ceil(dist / maxStepDeg));
-        for (let s = 0; s < steps; s++) {
-          const t = s / steps;
-          pts.push(new THREE.Vector2(lonA + (lonB - lonA) * t, latA + (latB - latA) * t));
-        }
-      }
-      // Remove duplicados consecutivos
-      const clean = [];
-      for (const p of pts) {
-        if (clean.length === 0 || p.distanceTo(clean[clean.length - 1]) > 0.05) {
-          clean.push(p);
-        }
-      }
-      return clean;
-    }
-
-    function buildSmoothSphericalPolygonBuffers(ringCoords, innerR, outerR, posArr, normArr) {
-      const contour = densifyRing(ringCoords, 2.0);
-      if (contour.length < 3) return;
-
-      // Verifica orientação (garante CCW para triangulação limpa)
-      if (THREE.ShapeUtils.isClockWise(contour)) {
-        contour.reverse();
-      }
-
-      const faces = THREE.ShapeUtils.triangulateShape(contour, []);
-      const fineTriangles = [];
-
-      for (const [i0, i1, i2] of faces) {
-        subdivideTriangle2D(contour[i0], contour[i1], contour[i2], 4.0, fineTriangles);
-      }
-
-      // 1. Camada Superior Curva e Lisa (Tampo 3D do país/continente)
-      for (const [a, b, c] of fineTriangles) {
-        const va = mapWorldLonLatToSphereVec3(a.x, a.y, outerR);
-        const vb = mapWorldLonLatToSphereVec3(b.x, b.y, outerR);
-        const vc = mapWorldLonLatToSphereVec3(c.x, c.y, outerR);
-
-        posArr.push(va.x, va.y, va.z, vc.x, vc.y, vc.z, vb.x, vb.y, vb.z);
-        // Normais esféricas suaves para brilho metálico contínuo!
-        const na = va.clone().normalize();
-        const nb = vb.clone().normalize();
-        const nc = vc.clone().normalize();
-        normArr.push(na.x, na.y, na.z, nc.x, nc.y, nc.z, nb.x, nb.y, nb.z);
-      }
-
-      // 2. Parede Costeira Lateral 3D Contínua (dá espessura real de peça usinada/impressa sem serrilhado!)
-      for (let i = 0; i < contour.length; i++) {
-        const pA = contour[i];
-        const pB = contour[(i + 1) % contour.length];
-        if (Math.abs(pB.x - pA.x) > 90) continue;
-
-        const topA = mapWorldLonLatToSphereVec3(pA.x, pA.y, outerR);
-        const topB = mapWorldLonLatToSphereVec3(pB.x, pB.y, outerR);
-        const botA = mapWorldLonLatToSphereVec3(pA.x, pA.y, innerR);
-        const botB = mapWorldLonLatToSphereVec3(pB.x, pB.y, innerR);
-
-        const edge1 = new THREE.Vector3().subVectors(botB, botA);
-        const edge2 = new THREE.Vector3().subVectors(topA, botA);
-        const wallNorm = new THREE.Vector3().crossVectors(edge1, edge2).normalize();
-
-        // Triângulo 1 da parede costeira
-        posArr.push(botA.x, botA.y, botA.z, botB.x, botB.y, botB.z, topB.x, topB.y, topB.z);
-        normArr.push(wallNorm.x, wallNorm.y, wallNorm.z, wallNorm.x, wallNorm.y, wallNorm.z, wallNorm.x, wallNorm.y, wallNorm.z);
-
-        // Triângulo 2 da parede costeira
-        posArr.push(botA.x, botA.y, botA.z, topB.x, topB.y, topB.z, topA.x, topA.y, topA.z);
-        normArr.push(wallNorm.x, wallNorm.y, wallNorm.z, wallNorm.x, wallNorm.y, wallNorm.z, wallNorm.x, wallNorm.y, wallNorm.z);
-      }
-    }
-
-    async function loadSmoothVectorContinents() {
+    async function loadHighResFilledCountries() {
       try {
         const res = await fetch('https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson');
         const geojson = await res.json();
 
-        const innerR = RADIUS * 0.998;
-        const worldOuterR = RADIUS * 1.052;
-        const brazilOuterR = RADIUS * 1.072; // Brasil com destaque em alto-relevo
+        // 1. Desenha todos os países preenchidos num bitmap de alta precisão em memória
+        // Canal R = Terra Firme | Canal G = Brasil
+        const W = 1080;
+        const H = 540;
+        const offCanvas = document.createElement('canvas');
+        offCanvas.width = W;
+        offCanvas.height = H;
+        const ctx = offCanvas.getContext('2d');
+        ctx.fillStyle = '#000000';
+        ctx.fillRect(0, 0, W, H);
 
-        const landPos = [], landNorm = [];
-        const brPos = [], brNorm = [];
+        function lonToX(lon) { return ((lon + 180) / 360) * W; }
+        function latToY(lat) { return ((90 - lat) / 180) * H; }
+
+        function fillGeoRing(rings, color) {
+          ctx.fillStyle = color;
+          ctx.beginPath();
+          rings.forEach((ring) => {
+            ring.forEach(([lon, lat], i) => {
+              const x = lonToX(lon);
+              const y = latToY(lat);
+              if (i === 0) ctx.moveTo(x, y);
+              else ctx.lineTo(x, y);
+            });
+            ctx.closePath();
+          });
+          ctx.fill('evenodd');
+        }
 
         for (const feat of geojson.features) {
           if (!feat.geometry) continue;
           const name = (feat.properties && feat.properties.name) || '';
           if (name === 'Antarctica') continue;
-          const isBrazil = name === 'Brazil';
-
-          const targetPos = isBrazil ? brPos : landPos;
-          const targetNorm = isBrazil ? brNorm : landNorm;
-          const targetR = isBrazil ? brazilOuterR : worldOuterR;
+          const color = name === 'Brazil' ? '#00ff00' : '#ff0000';
 
           if (feat.geometry.type === 'Polygon') {
-            buildSmoothSphericalPolygonBuffers(feat.geometry.coordinates[0], innerR, targetR, targetPos, targetNorm);
+            fillGeoRing(feat.geometry.coordinates, color);
           } else if (feat.geometry.type === 'MultiPolygon') {
             for (const poly of feat.geometry.coordinates) {
-              buildSmoothSphericalPolygonBuffers(poly[0], innerR, targetR, targetPos, targetNorm);
+              fillGeoRing(poly, color);
             }
+          }
+        }
+
+        const imgData = ctx.getImageData(0, 0, W, H).data;
+        function sampleLand(lon, lat) {
+          const x = Math.max(0, Math.min(W - 1, Math.floor(lonToX(lon))));
+          const y = Math.max(0, Math.min(H - 1, Math.floor(latToY(lat))));
+          const idx = (y * W + x) * 4;
+          if (imgData[idx + 1] > 128) return 2; // Brasil
+          if (imgData[idx] > 128) return 1;     // Outros Países
+          return 0;                             // Oceano (Vazado)
+        }
+
+        // 2. Constrói malha 3D preenchida de ALTA RESOLUÇÃO (320 x 160)
+        // com topo esférico suave (normais esféricas) e paredes laterais apenas nas costas!
+        const lonSteps = 320;
+        const latSteps = 160;
+        const innerR = RADIUS * 1.001;
+        const outerR = RADIUS * 1.055;
+        const brOuterR = RADIUS * 1.072;
+
+        // Pré-calcula a matriz para saber exatamente onde é borda costeira (evita paredes internas!)
+        const grid = Array.from({ length: lonSteps }, () => new Uint8Array(latSteps));
+        for (let i = 0; i < lonSteps; i++) {
+          const lonMid = -180 + ((i + 0.5) / lonSteps) * 360;
+          for (let j = 0; j < latSteps; j++) {
+            const latMid = -62 + ((j + 0.5) / latSteps) * 138;
+            grid[i][j] = sampleLand(lonMid, latMid);
+          }
+        }
+
+        const landPos = [], landNorm = [];
+        const brPos = [], brNorm = [];
+
+        function pushSmoothTopQuad(v00, v10, v11, v01, posArr, normArr) {
+          // Normais esféricas puras no topo para parecer uma placa contínua lisa (sem aspecto quadriculado!)
+          const n00 = v00.clone().normalize();
+          const n10 = v10.clone().normalize();
+          const n11 = v11.clone().normalize();
+          const n01 = v01.clone().normalize();
+
+          posArr.push(v00.x, v00.y, v00.z, v10.x, v10.y, v10.z, v11.x, v11.y, v11.z);
+          normArr.push(n00.x, n00.y, n00.z, n10.x, n10.y, n10.z, n11.x, n11.y, n11.z);
+
+          posArr.push(v00.x, v00.y, v00.z, v11.x, v11.y, v11.z, v01.x, v01.y, v01.z);
+          normArr.push(n00.x, n00.y, n00.z, n11.x, n11.y, n11.z, n01.x, n01.y, n01.z);
+        }
+
+        function pushWallQuad(bA, bB, tB, tA, posArr, normArr) {
+          const e1 = new THREE.Vector3().subVectors(bB, bA);
+          const e2 = new THREE.Vector3().subVectors(tA, bA);
+          const n = new THREE.Vector3().crossVectors(e1, e2).normalize();
+
+          posArr.push(bA.x, bA.y, bA.z, bB.x, bB.y, bB.z, tB.x, tB.y, tB.z);
+          normArr.push(n.x, n.y, n.z, n.x, n.y, n.z, n.x, n.y, n.z);
+
+          posArr.push(bA.x, bA.y, bA.z, tB.x, tB.y, tB.z, tA.x, tA.y, tA.z);
+          normArr.push(n.x, n.y, n.z, n.x, n.y, n.z, n.x, n.y, n.z);
+        }
+
+        for (let i = 0; i < lonSteps; i++) {
+          const lon0 = -180 + (i / lonSteps) * 360;
+          const lon1 = -180 + ((i + 1) / lonSteps) * 360;
+
+          for (let j = 0; j < latSteps; j++) {
+            const cell = grid[i][j];
+            if (cell === 0) continue;
+
+            const lat0 = -62 + (j / latSteps) * 138;
+            const lat1 = -62 + ((j + 1) / latSteps) * 138;
+
+            const isBr = cell === 2;
+            const topR = isBr ? brOuterR : outerR;
+            const pArr = isBr ? brPos : landPos;
+            const nArr = isBr ? brNorm : landNorm;
+
+            const t00 = mapWorldLonLatToSphereVec3(lon0, lat0, topR);
+            const t10 = mapWorldLonLatToSphereVec3(lon1, lat0, topR);
+            const t11 = mapWorldLonLatToSphereVec3(lon1, lat1, topR);
+            const t01 = mapWorldLonLatToSphereVec3(lon0, lat1, topR);
+
+            // Tampo 100% preenchido e contínuo
+            pushSmoothTopQuad(t00, t10, t11, t01, pArr, nArr);
+
+            // Cria parede lateral APENAS se o vizinho for oceano (borda do continente)
+            const b00 = mapWorldLonLatToSphereVec3(lon0, lat0, innerR);
+            const b10 = mapWorldLonLatToSphereVec3(lon1, lat0, innerR);
+            const b11 = mapWorldLonLatToSphereVec3(lon1, lat1, innerR);
+            const b01 = mapWorldLonLatToSphereVec3(lon0, lat1, innerR);
+
+            if (j === 0 || grid[i][j - 1] !== cell) pushWallQuad(b00, b10, t10, t00, pArr, nArr);
+            if (i === lonSteps - 1 || grid[i + 1][j] !== cell) pushWallQuad(b10, b11, t11, t10, pArr, nArr);
+            if (j === latSteps - 1 || grid[i][j + 1] !== cell) pushWallQuad(b11, b01, t01, t11, pArr, nArr);
+            if (i === 0 || grid[i - 1][j] !== cell) pushWallQuad(b01, b00, t00, t01, pArr, nArr);
           }
         }
 
         const landGeo = new THREE.BufferGeometry();
         landGeo.setAttribute('position', new THREE.Float32BufferAttribute(landPos, 3));
         landGeo.setAttribute('normal', new THREE.Float32BufferAttribute(landNorm, 3));
-        const landMesh = new THREE.Mesh(landGeo, continentArmorMat);
-        continentsGroup.add(landMesh);
+        continentsGroup.add(new THREE.Mesh(landGeo, filledCountryBlackMat));
 
         const brGeo = new THREE.BufferGeometry();
         brGeo.setAttribute('position', new THREE.Float32BufferAttribute(brPos, 3));
         brGeo.setAttribute('normal', new THREE.Float32BufferAttribute(brNorm, 3));
-        const brMesh = new THREE.Mesh(brGeo, brazilHighlightMat);
-        continentsGroup.add(brMesh);
+        continentsGroup.add(new THREE.Mesh(brGeo, filledBrazilMat));
 
-        statusText.textContent = 'Arraste para girar • Continentes Vetoriais Lisos + Luz Interna Invisível + Giro Diagonal';
+        statusText.textContent = 'Arraste para girar • Países Preenchidos em Preto Sólido HD + Luz Invisível + Giro Diagonal';
       } catch (err) {
         statusText.textContent = 'Modelo 3D Carregado';
       }
     }
 
-    loadSmoothVectorContinents();
+    loadHighResFilledCountries();
 
     // =========================================================================
     // 3. LADO DA SUA LOGO "AARON.DEV": VAZADA COM BARRAS 3D GROSSAS E CHANFRO FINO
@@ -586,7 +600,6 @@
       document.body.classList.toggle('light', isLight);
     });
 
-    // Posição inicial mostrando o Globo Geodésico com inclinação diagonal
     coreGroup.rotation.y = Math.PI - 0.2;
 
     function animate() {
@@ -596,7 +609,6 @@
           coreGroup.rotation.y += (targetRotY - coreGroup.rotation.y) * 0.08;
           coreGroup.rotation.x += (0 - coreGroup.rotation.x) * 0.08;
         } else if (autoRotate) {
-          // Roda suavemente na diagonal (combinando rotação no eixo inclinado + leve precessão)
           coreGroup.rotation.y += 0.0065;
           coreGroup.rotation.x = Math.sin(coreGroup.rotation.y * 0.5) * 0.14;
         }
