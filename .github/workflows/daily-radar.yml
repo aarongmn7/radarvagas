@@ -2,10 +2,16 @@ name: Radar Diário de Vagas Remotas
 
 on:
   schedule:
-    # Rede de segurança: 10:00 UTC (06:00 em MT). O cron do GitHub pode atrasar horas,
-    # por isso o disparo pontual das 07:50 MT (11:50 UTC) vem via workflow_dispatch externo (cron-job.org).
-    - cron: '0 10 * * *'
-  workflow_dispatch: # Disparo manual / externo (cron-job.org às 07:50 MT)
+    # Disparo diário oficial matinal: 11:50 UTC (08:50 BRT / 07:50 MT)
+    # Minuto :50 foge do congestionamento massivo do início de hora (:00) no GitHub Actions
+    - cron: '50 11 * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Forçar atualização mesmo que a edição de hoje já tenha sido gerada'
+        required: false
+        default: false
+        type: boolean
 
 concurrency:
   group: daily-radar
@@ -22,20 +28,43 @@ jobs:
       - name: Checkout do Repositório
         uses: actions/checkout@v4
 
+      - name: Trava de Segurança Diária (Uma Edição por Dia)
+        id: daily_guard
+        run: |
+          LAST_PUB_DATE=$(node -e "try { const d = JSON.parse(require('fs').readFileSync('data/jobs.json','utf8')).lastUpdated; console.log(d ? d.slice(0,10) : ''); } catch { console.log(''); }")
+          TODAY_UTC=$(date -u +%Y-%m-%d)
+          echo "Última edição publicada: '$LAST_PUB_DATE'"
+          echo "Data atual (UTC): '$TODAY_UTC'"
+
+          if [ "$LAST_PUB_DATE" = "$TODAY_UTC" ] && [ "${{ inputs.force }}" != "true" ]; then
+            echo "=========================================================================="
+            echo "🛡️ TRAVA ATIVA: A edição diária de hoje ($TODAY_UTC) já foi publicada com sucesso!"
+            echo "Para respeitar o ciclo diário do Radar e não queimar vagas da tarde hoje,"
+            echo "este disparo foi ignorado. As novas vagas aparecerão na edição de amanhã."
+            echo "=========================================================================="
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Setup Node.js
+        if: steps.daily_guard.outputs.skip != 'true'
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
       - name: Executar Varredura do Job Radar (Zero-Loss)
+        if: steps.daily_guard.outputs.skip != 'true'
         run: node scripts/job_radar.js all all 24
 
       - name: Atualizar Banco JSON do Site
+        if: steps.daily_guard.outputs.skip != 'true'
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node scripts/build_jobs_data.js
 
       - name: Comitar e Publicar Atualizações
+        if: steps.daily_guard.outputs.skip != 'true'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Radar Bot"
