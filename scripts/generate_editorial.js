@@ -99,7 +99,7 @@ Dados da edição de hoje:
 Retorne APENAS um JSON válido com 2 chaves:
 {"headline": "manchete curta e impactante de até 14 palavras", "summary": "resumo analítico de 2 frases diretas para estudantes de computação e devs"}`;
 
-      const models = ['gemini-3.5-flash-lite', 'gemini-3.1-flash-lite', 'gemini-flash-latest'];
+      const models = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash', 'gemini-1.5-flash-latest'];
       for (const model of models) {
         try {
           const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`, {
@@ -116,7 +116,8 @@ Retorne APENAS um JSON válido com 2 chaves:
             const data = await res.json();
             const rawText = data?.candidates?.[0]?.content?.parts?.[0]?.text;
             if (rawText) {
-              const parsed = JSON.parse(rawText);
+              const cleanJson = rawText.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '').trim();
+              const parsed = JSON.parse(cleanJson);
               if (parsed.headline && parsed.summary) {
                 headline = parsed.headline;
                 summary = parsed.summary;

@@ -105,8 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   initDailyStreak();
 
-  // 2. Carregamento do Banco JSON
-  fetch('data/jobs.json')
+  // 2. Carregamento do Banco JSON com anti-cache
+  fetch(`data/jobs.json?v=${Date.now()}`)
     .then(res => {
       if (!res.ok) throw new Error('Erro HTTP ao ler data/jobs.json');
       return res.json();
